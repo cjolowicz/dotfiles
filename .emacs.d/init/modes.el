@@ -1,17 +1,11 @@
-; Add magit mode.
-(require 'magit)
-
-; Add w3m mode.
-(require 'w3m-load)
-
 ; Add fill-column indicator.
 (require 'fill-column-indicator)
 
+; Add magit mode.
+(require 'magit)
+
 ; Add clearsilver mode.
 (autoload 'cs-mode "cs-mode" "Clearsilver mode." t)
-
-; Add expurgate mode.
-(autoload 'expurgate-mode "expurgate-mode" "eXpurgate mode." t)
 
 ; Add CMake mode.
 (autoload 'cmake-mode "cmake-mode" "CMake mode." t)
@@ -21,6 +15,9 @@
 
 ; Add MoinMoin mode.
 (autoload 'moinmoin-mode "moinmoin-mode" "MoinMoin editing mode." t)
+
+; Add graphviz dot mode.
+(autoload 'graphviz-dot-mode "graphviz-dot-mode" "Graphviz dot mode." t)
 
 ; Tell emacs about some file extensions.
 (add-to-list 'auto-mode-alist '("\\.cxx$" . c++-mode))
@@ -35,9 +32,6 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (add-to-list 'auto-mode-alist '("\\.cs$" . cs-mode))
 (add-to-list 'auto-mode-alist '("/patches/" . diff-mode))
-(add-to-list 'auto-mode-alist '("expurgate.*\\.conf$" . expurgate-mode))
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'auto-mode-alist '("\\.wiki$" . moinmoin-mode))
-
-; Load and configure graphviz dot mode.
-(load "graphviz-dot-mode")
+(add-to-list 'auto-mode-alist '("\\.dot$" . graphviz-dot-mode))
