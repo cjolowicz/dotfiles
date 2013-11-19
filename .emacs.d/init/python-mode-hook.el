@@ -18,6 +18,7 @@
     (backward-char)))
 
 (defun my-python-mode-hook ()
+  (set-fill-column 80)
   (local-set-key "\C-c\C-f" 'py-insert-super))
 
 (add-hook 'python-mode-hook 'my-python-mode-hook)

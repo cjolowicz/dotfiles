@@ -18,6 +18,7 @@
     (set (make-local-variable 'tab-stop-list) (nreverse ls))))
 
 (defun my-c-mode-common-hook ()
+  (set-fill-column 80)
   (setq my-tab-width 4)
   (my-build-tab-stop-list my-tab-width)
   (setq c-basic-offset my-tab-width)
