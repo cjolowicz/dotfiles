@@ -1,0 +1,280 @@
+# -*-sh-*-
+
+# Usage: fhelp [FUNCTION]...
+# ----------------------------------------------------------------------
+# Print the documentation for each FUNCTION defined in this file.
+function fhelp() {
+  if [ $# -eq 0 ] ; then
+    sed -n 's/^# Usage: //p' ~/.bash.d/functions | sort
+  fi
+
+  for f
+  do
+    sed -n -e "/^# Usage: $f/,/^function $f/p" ~/.bash.d/functions |
+    sed -e '$d' -e 's/# //'
+  done
+}
+
+# Usage: wcat [FILE]...
+# ----------------------------------------------------------------------
+# For each FILE, find its pathname using which(1) and invoke cat(1) on
+# the result.
+function wcat()  { cat $(which "$@"); }
+
+# Usage: wless [FILE]...
+# ----------------------------------------------------------------------
+# For each FILE, find its pathname using which(1) and invoke less(1) on
+# the result.
+function wless() { less $(which "$@"); }
+
+# Usage: wldd [FILE]...
+# ----------------------------------------------------------------------
+# For each FILE, find its pathname using which(1) and invoke ldd(1) on
+# the result.
+function wldd()  { ldd $(which "$@"); }
+
+# Usage: wfile [-L] [FILE]...
+# ----------------------------------------------------------------------
+# For each FILE, find its pathname using which(1) and invoke file(1) on
+# the result. With option `-L', dereference symlinks, repeatedly.
+function wfile() {
+  if test x"$1" = x"-L"
+  then
+    shift
+    for f
+    do
+      if f=$(which "$f")
+      then file $(follow "$f")
+      fi
+    done
+  else
+    file $(which "$@")
+  fi
+}
+
+# Usage: mvtr SET1 SET2 [FILE]...
+# ----------------------------------------------------------------------
+# Move files using tr(1).
+function mvtr() {
+  local set1=$1; shift
+  local set2=$1; shift
+  for arg
+  do
+    newarg=$(echo "$arg" | tr "$set1" "$set2")
+    [ x"$arg" = x"$newarg" ] && continue
+    mv "$arg" "$newarg"
+  done
+}
+
+# Usage: mvsed PROG [FILE]...
+# ----------------------------------------------------------------------
+# Move files using sed(1).
+function mvsed() {
+  local prog=$1; shift
+  for arg
+  do
+    newarg=$(echo "$arg" | sed "$prog")
+    [ x"$arg" = x"$newarg" ] && continue
+    mv "$arg" "$newarg"
+  done
+}
+
+# Usage: sep [SEPARATOR = `,']
+# ----------------------------------------------------------------------
+# Read lines from stdin, joining them by SEPARATOR.
+function sep() {
+  [ $# -ne 0 ] || set ,
+  sed s/\$/"$1"/ |
+  xargs |
+  sed s/"$1"\$//
+}
+
+# Usage: seddiff PROG [FILE]...
+# ----------------------------------------------------------------------
+# For each FILE, invoke sed with PROG and display the diff between input
+# and output.
+function seddiff() {
+  local prog="$1"; shift
+  for f
+  do
+    sed "$prog" "$f" | diff "$f" -
+  done
+}
+
+# Usage: icat
+# ----------------------------------------------------------------------
+# Read from stdin using gettext, printing each line to stdout.
+function icat() {
+  while read -e line
+  do
+    echo "$line"
+  done
+}
+
+if [ -t 1 ] ; then
+  print_header_begin="$(tput setf 2)"
+  print_header_end="$(tput setf 7)"
+fi
+
+# Usage: print_header [ARG]..
+# ----------------------------------------------------------------------
+# Print a header.
+function print_header() {
+    echo
+    echo "${print_header_begin}==> $* <==${print_header_end}"
+    echo
+}
+
+# Usage: vcat [FILE]...
+# ----------------------------------------------------------------------
+# Print each FILE preceded by its filename.
+function vcat() {
+  for f
+  do
+    print_header "$f"
+    cat "$f"
+  done |
+  less -RXFS
+}
+
+# Usage: realname
+# ----------------------------------------------------------------------
+# Print the real user name to stdout.
+function realname() {
+  awk -F: '( $1 == "'"$USER"'") { print $5 }' /etc/passwd | cut -d, -f1
+}
+
+# Usage: wp ARTICLE
+# ----------------------------------------------------------------------
+# Look up in wikipedia.
+function wp() {
+  w3m http://en.wikipedia.org/wiki/"$@"
+}
+
+# Usage: ll [FILE]..
+# ----------------------------------------------------------------------
+# Display a long file listing.
+function ll() {
+    ls -l --human-readable --time-style=long-iso --color=always "$@" |
+    iconv -f iso-8859-1 -t utf-8
+}
+
+if alias ll >/dev/null 2>&1 ; then unalias ll ; fi # hide the alias
+
+# Usage: colorize REGEX
+# ----------------------------------------------------------------------
+# Colorize stdin writing to stdout.
+function colorize() {
+    if [ $# -gt 0 ]
+    then
+        egrep --color=always "$*|\$"
+    else
+        egrep --color=always .
+    fi
+}
+
+# Usage: penv [PID]..
+# ----------------------------------------------------------------------
+# Print the environment of the process having PID.
+function penv() {
+    [ $# -gt 0 ] || set -- $$
+
+    for pid
+    do
+        if [ $# -gt 1 ] ; then
+            prog=$(basename $(readlink /proc/$pid/exe))
+            print_header "$prog($pid)"
+        fi
+        tr '\0' '\n' < /proc/$pid/environ
+        if [ $# -gt 1 ] ; then
+            echo
+        fi
+    done
+}
+
+# Usage: pmaps [COMMAND]...
+# ----------------------------------------------------------------------
+# For each COMMAND, display the virtual memory areas of any process
+# executing it using the proc(5) file system.
+function pmaps() {
+  for pid in $(pidof "$@")
+  do
+    cat /proc/$pid/maps
+  done
+}
+
+# Usage: findbroken [DIR]..
+# ----------------------------------------------------------------------
+# Print broken symlinks under DIR.
+function findbroken() {
+    [ $# -gt 0 ] || set -- .
+
+    for dir
+    do
+        find -L "$dir" -type l -lname '*'
+    done
+}
+
+# Usage: sum
+# ----------------------------------------------------------------------
+# Compute the sum of the numbers in stdin.
+function sum() {
+    s=0
+    while read i
+    do
+        ((s+=$i))
+    done
+    echo $s
+}
+
+# Usage: avg
+# ----------------------------------------------------------------------
+# Compute the average of the numbers in stdin.
+function avg() {
+    s=0 n=0
+    while read i
+    do
+        ((s+=$i))
+	((n+=1))
+    done
+    echo $(($s / $n))
+}
+
+# Usage: loop COMMAND [ARG]..
+# ----------------------------------------------------------------------
+# Repeatedly execute COMMAND and wait for a key being pressed.
+function loop() {
+    while : ; do "$@" ; read -sn1 || break ; done
+}
+
+# Usage: diffof ARG1 ARG2 COMMAND [ARG]..
+# ----------------------------------------------------------------------
+# Compare the result of invoking COMMAND on ARG1 and ARG2, respectively.
+function diffof() {
+    arg1="$1" arg2="$2" cmd="$3" ; shift 3
+    colordiff --side-by-side --width=$(tput cols) \
+	<("$cmd" "$@" $arg1) \
+	<("$cmd" "$@" $arg2) |
+    less -RXFS
+}
+
+# Usage: xdiff [ARG]..
+# ----------------------------------------------------------------------
+# Invoke hg diff and pass the output through diff-view.
+function xdiff() {
+    hg diff "$@" | diff-view
+}
+
+# Usage: xtip [ARG]..
+# ----------------------------------------------------------------------
+# Invoke hg tip -p and pass the output through diff-view.
+function xtip() {
+    hg tip "$@" | diff-view
+}
+
+# Usage: xlog [ARG]..
+# ----------------------------------------------------------------------
+# Invoke hg log -p and pass the output through diff-view.
+function xlog() {
+    hg log "$@" | diff-view
+}

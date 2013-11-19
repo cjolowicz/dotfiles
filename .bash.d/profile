@@ -1,0 +1,19 @@
+# -*-sh-*-
+
+if [ -d ~/bin ] ; then
+    case $PATH in
+        *:"$HOME/bin":*) ;;
+        *) export PATH=~/bin:"${PATH}" ;;
+    esac
+fi
+
+for dir in ~/man ~/local/man ~/local/share/man ; do
+    if [ -d $dir ] ; then
+        case $MANPATH in
+            *:"$dir":*) ;;
+            *) export MANPATH=$dir:"${MANPATH}" ;;
+        esac
+    fi
+done
+
+ulimit -c unlimited

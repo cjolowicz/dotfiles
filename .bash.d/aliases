@@ -1,0 +1,22 @@
+# -*-sh-*-
+
+alias ls='ls --color=auto'
+alias ll='ls -l --human-readable --time-style=long-iso'
+alias la='ls -a'
+alias lla='ll -a'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias pd='pushd'
+alias d='dirs -v'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias edit='$EDITOR'
+alias cp='cp -i'
+alias mv='mv -i'
+alias html2text='w3m -T text/html -dump' # This works better than html2text.
+alias text2pdf='( enscript -2Bo- | ps2pdf - - )'
+alias w3m='w3m -o confirm_qq=false'

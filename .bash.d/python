@@ -1,0 +1,8 @@
+# -*-sh-*-
+
+export PYTHONSTARTUP=~/.pythonrc
+export VIRTUAL_ENV_DISABLE_PROMPT=yes
+
+if [ -d ~/opt/python/default/bin/activate ] ; then
+    . ~/opt/python/default/bin/activate
+fi

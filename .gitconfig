@@ -1,0 +1,7 @@
+[user]
+	name = Claudio Jolowicz
+	email = cj@dealloc.org
+[core]
+	editor = emacsclient
+[color]
+	ui = true

@@ -1,0 +1,10 @@
+# -*-sh-*-
+
+for dir in ~/.cabal/bin ; do
+    if [ -d "$dir" ] ; then
+        case $PATH in
+            "$dir" | "$dir":* | *:"$dir" | *:"$dir":*) ;;
+            *) export PATH="$dir":"$PATH" ;;
+        esac
+    fi
+done

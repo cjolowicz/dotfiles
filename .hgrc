@@ -1,0 +1,34 @@
+[ui]
+username = Claudio Jolowicz <cj@dealloc.org>
+merge = internal:merge
+
+[extensions]
+children =
+churn =
+color =
+graphlog =
+kerberos = ~/.hg.d/kerberos.py
+mq =
+pager =
+purge =
+rebase =
+record =
+transplant =
+
+[diff]
+showfunc = True
+git = True
+
+[mq]
+secret = True
+
+[hooks]
+# Disable carp module.
+#pretxncommit.carp  =
+
+[web]
+cacerts = /etc/ssl/certs/ca-certificates.crt
+
+[pager]
+pager = LESS='FSRX' less
+attend = annotate, cat, diff, export, glog, log, qdiff, tip, qseries, status

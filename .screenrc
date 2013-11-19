@@ -1,0 +1,63 @@
+# .screenrc: configuration file for screen(1).
+
+# Do not show the startup message.
+startup_message off
+
+# Use key below ESC as command-key (English keyboard).
+escape '^^'
+
+# Share sessions with root.
+multiuser on
+acladd root
+
+# Make it beep.
+vbell off
+
+# Give the terminal a pretty hardstatus line.
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{G} %d/%m %{W}%c %{g}]'
+
+# Increase scrollback buffer.
+defscrollback 4096
+
+# Color captions of split screens.
+caption splitonly "%?%F%{.bW}%:%{.Wb}%?%3n %t%? [%h]%?"
+
+# Use `k' to kill dead windows, `r' to resurrect them.
+zombie kr
+
+# Shortcuts to handle regions.
+bind . resize
+bind = resize =
+bind + resize +1
+bind - resize -1
+bind _ resize max
+
+# Shortcuts to select screens 10 to 19.
+bind -c hiselect 0 select 10
+bind -c hiselect 1 select 11
+bind -c hiselect 2 select 12
+bind -c hiselect 3 select 13
+bind -c hiselect 4 select 14
+bind -c hiselect 5 select 15
+bind -c hiselect 6 select 16
+bind -c hiselect 7 select 17
+bind -c hiselect 8 select 18
+bind -c hiselect 9 select 19
+bind \# command -c hiselect
+
+# Show and hide window caption.
+bind , caption always
+bind ; caption splitonly
+
+# Emacs-style key bindings for copy mode.
+markkeys h=^B:l=^F:$=^E:^B=v:^F=^v
+
+# Initial screens.
+screen
+screen emacs -nw
+
+# Select the first screen.
+select 0
+
+# .screenrc ends here.
