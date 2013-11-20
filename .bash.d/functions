@@ -156,7 +156,7 @@ function wp() {
 # Display a long file listing.
 function ll() {
     ls -l --human-readable --time-style=long-iso --color=always "$@" |
-    iconv -f iso-8859-1 -t utf-8
+    LESS='FSRX' less
 }
 
 if alias ll >/dev/null 2>&1 ; then unalias ll ; fi # hide the alias
