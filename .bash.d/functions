@@ -278,3 +278,10 @@ function xtip() {
 function xlog() {
     hg log "$@" | diff-view
 }
+
+# Usage: mkcd [options] DIR
+# ----------------------------------------------------------------------
+# Create a directory and change to it.
+function mkcd() {
+    mkdir "$@" && cd "${@:(-1)}"
+}
