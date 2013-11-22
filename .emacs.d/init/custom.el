@@ -21,4 +21,6 @@
  '(rst-level-3-face ((t (:background "cyan" :foreground "black"))) t)
  '(rst-level-4-face ((t (:background "cyan" :foreground "black"))) t)
  '(rst-level-5-face ((t (:background "cyan" :foreground "black"))) t)
- '(rst-level-6-face ((t (:background "cyan" :foreground "black"))) t))
+ '(rst-level-6-face ((t (:background "cyan" :foreground "black"))) t)
+ '(font-lock-comment-face ((((class color) (min-colors 8) (background dark))
+			    (:foreground "red")))))
