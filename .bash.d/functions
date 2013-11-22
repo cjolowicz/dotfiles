@@ -5,12 +5,12 @@
 # Print the documentation for each FUNCTION defined in this file.
 function fhelp() {
   if [ $# -eq 0 ] ; then
-    sed -n 's/^# Usage: //p' ~/.bash.d/functions | sort
+    sed -n 's/^# Usage: //p' $BASH_SOURCE | sort
   fi
 
   for f
   do
-    sed -n -e "/^# Usage: $f/,/^function $f/p" ~/.bash.d/functions |
+    sed -n -e "/^# Usage: $f/,/^function $f/p" $BASH_SOURCE |
     sed -e '$d' -e 's/# //'
   done
 }
