@@ -292,7 +292,10 @@ function mkcd() {
 # Invoke diff. If stdin is a terminal, colorize and page the output.
 function diff() {
     if [ -t 1 ] ; then
-        colordiff -u "$@" | LESS=FSRX less
+        (
+            set -o pipefail
+            colordiff -u "$@" | LESS=FSRX less
+        )
     else
         diff -u "$@"
     fi
