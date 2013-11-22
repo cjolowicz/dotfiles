@@ -292,8 +292,8 @@ function mkcd() {
 # Invoke diff. If stdin is a terminal, colorize and page the output.
 function diff() {
     if [ -t 1 ] ; then
-        colordiff "$@" | LESS=FSRX less
+        colordiff -u "$@" | LESS=FSRX less
     else
-        diff "$@"
+        diff -u "$@"
     fi
 }
