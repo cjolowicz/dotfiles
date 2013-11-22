@@ -1,4 +1,6 @@
-; Load Lua mode.
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+
 (require 'lua-mode)
 
 (defun my-lua-mode-common-hook ()

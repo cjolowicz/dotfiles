@@ -1,6 +1,9 @@
 ; Load C mode.
 (require 'cc-mode)
 
+(add-to-list 'auto-mode-alist '("\\.cxx$" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.hpp$" . c++-mode))
+
 ; Don't use more than 8 lines for the compilation window.
 (setq compilation-window-height 8)
 
