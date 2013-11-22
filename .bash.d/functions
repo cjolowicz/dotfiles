@@ -10,7 +10,7 @@ function fhelp() {
 
   for f
   do
-    sed -n -e "/^# Usage: $f/,/^function $f/p" $BASH_SOURCE |
+    sed -n -e "/^# Usage: $f[ \$]/,/^function $f/p" $BASH_SOURCE |
     sed -e '$d' -e 's/# //'
   done
 }
