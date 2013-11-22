@@ -111,17 +111,18 @@ function icat() {
   done
 }
 
-if [ -t 1 ] ; then
-  print_header_begin="$(tput setf 2)"
-  print_header_end="$(tput setf 7)"
-fi
-
 # Usage: print_header [ARG]..
 # ----------------------------------------------------------------------
 # Print a header.
 function print_header() {
+    local begin= end=
+    if [ -t 1 ] ; then
+        begin="$(tput setf 2)"
+        end="$(tput setf 7)"
+    fi
+
     echo
-    echo "${print_header_begin}==> $* <==${print_header_end}"
+    echo "${begin}==> $* <==${end}"
     echo
 }
 
