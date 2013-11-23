@@ -342,14 +342,14 @@ if which -s colordiff ; then
     }
 fi
 
-# Usage: xdiff [ARG]..
-# ----------------------------------------------------------------------
-# Invoke hg diff and pass the output through diff-view.
-function xdiff() {
-    hg diff "$@" | diff-view
-}
-
 if which -s diff-view ; then
+    # Usage: xdiff [ARG]..
+    # ----------------------------------------------------------------------
+    # Invoke hg diff and pass the output through diff-view.
+    function xdiff() {
+        hg diff "$@" | diff-view
+    }
+
     # Usage: xtip [ARG]..
     # ----------------------------------------------------------------------
     # Invoke hg tip -p and pass the output through diff-view.
