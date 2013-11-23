@@ -27,6 +27,12 @@ function wcat()  { cat $(which "$@"); }
 # the result.
 function wless() { less $(which "$@"); }
 
+# Usage: wedit [FILE]...
+# ----------------------------------------------------------------------
+# For each FILE, find its pathname using which(1) and invoke edit(1) on
+# the result.
+function wedit() { edit $(which "$@"); }
+
 # Usage: wldd [FILE]...
 # ----------------------------------------------------------------------
 # For each FILE, find its pathname using which(1) and invoke ldd(1) on
