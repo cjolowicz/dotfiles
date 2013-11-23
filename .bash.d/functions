@@ -143,6 +143,17 @@ function vcat() {
   less -RXFS
 }
 
+# Usage: columns NUM
+# ----------------------------------------------------------------------
+# Arrange input in NUM columns.
+function columns() {
+  if [ $# -eq 0 ]; then
+    column -c$(tput cols)
+  else
+    pr -Tw$(tput cols) -"$@"
+  fi
+}
+
 # Usage: inplace [-b | --backup] FILE COMMAND [ARG]...
 # ----------------------------------------------------------------------
 # Modify FILE by invoking COMMAND with any ARG's given on it.
