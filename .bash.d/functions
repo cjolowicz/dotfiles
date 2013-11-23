@@ -4,27 +4,27 @@
 # ----------------------------------------------------------------------
 # Print the documentation for each FUNCTION defined in this file.
 function fhelp() {
-  if [ $# -eq 0 ] ; then
-    sed -n -e 's/^ *# Usage: //p' -e 's/^ *//' $BASH_SOURCE | sort
-  fi
+    if [ $# -eq 0 ] ; then
+        sed -n -e 's/^ *# Usage: //p' -e 's/^ *//' $BASH_SOURCE | sort
+    fi
 
-  for f
-  do
-    sed -n -e "/^ *# Usage: $f[ \$]/,/^ *function $f/p" -e 's/^ *//' $BASH_SOURCE |
-    sed -e '$d' -e 's/# //'
-  done
+    for f
+    do
+        sed -n -e "/^ *# Usage: $f[ \$]/,/^ *function $f/p" -e 's/^ *//' $BASH_SOURCE |
+        sed -e '$d' -e 's/# //'
+    done
 }
 
 # Usage: add-alias [NAME=VALUE]...
 # ----------------------------------------------------------------------
 # Define and save aliases to ~/.bash.d/aliases.
 function add-alias() {
-  for as
-  do
-    local name="${as%%=*}" value="${as#*=}"
-    echo "alias $name='$value'" >> ~/.bash.d/aliases
-    alias $name="$value"
-  done
+    for as
+    do
+        local name="${as%%=*}" value="${as#*=}"
+        echo "alias $name='$value'" >> ~/.bash.d/aliases
+        alias $name="$value"
+    done
 }
 
 # Usage: wcat [FILE]...
@@ -61,37 +61,37 @@ function wfile() { file $(which "$@"); }
 # ----------------------------------------------------------------------
 # Move files using tr(1).
 function mvtr() {
-  local set1=$1; shift
-  local set2=$1; shift
-  for arg
-  do
-    newarg=$(echo "$arg" | tr "$set1" "$set2")
-    [ x"$arg" = x"$newarg" ] && continue
-    mv "$arg" "$newarg"
-  done
+    local set1=$1; shift
+    local set2=$1; shift
+    for arg
+    do
+        newarg=$(echo "$arg" | tr "$set1" "$set2")
+        [ x"$arg" = x"$newarg" ] && continue
+        mv "$arg" "$newarg"
+    done
 }
 
 # Usage: mvsed PROG [FILE]...
 # ----------------------------------------------------------------------
 # Move files using sed(1).
 function mvsed() {
-  local prog=$1; shift
-  for arg
-  do
-    newarg=$(echo "$arg" | sed "$prog")
-    [ x"$arg" = x"$newarg" ] && continue
-    mv "$arg" "$newarg"
-  done
+    local prog=$1; shift
+    for arg
+    do
+        newarg=$(echo "$arg" | sed "$prog")
+        [ x"$arg" = x"$newarg" ] && continue
+        mv "$arg" "$newarg"
+    done
 }
 
 # Usage: sep [SEPARATOR = `,']
 # ----------------------------------------------------------------------
 # Read lines from stdin, joining them by SEPARATOR.
 function sep() {
-  [ $# -ne 0 ] || set ,
-  sed s/\$/"$1"/ |
-  xargs |
-  sed s/"$1"\$//
+    [ $# -ne 0 ] || set ,
+    sed s/\$/"$1"/ |
+    xargs |
+    sed s/"$1"\$//
 }
 
 # Usage: seddiff PROG [FILE]...
@@ -99,21 +99,21 @@ function sep() {
 # For each FILE, invoke sed with PROG and display the diff between input
 # and output.
 function seddiff() {
-  local prog="$1"; shift
-  for f
-  do
-    sed "$prog" "$f" | diff "$f" -
-  done
+    local prog="$1"; shift
+    for f
+    do
+        sed "$prog" "$f" | diff "$f" -
+    done
 }
 
 # Usage: icat
 # ----------------------------------------------------------------------
 # Read from stdin using gettext, printing each line to stdout.
 function icat() {
-  while read -e line
-  do
-    echo "$line"
-  done
+    while read -e line
+    do
+        echo "$line"
+    done
 }
 
 # Usage: print_header [ARG]..
@@ -135,77 +135,77 @@ function print_header() {
 # ----------------------------------------------------------------------
 # Print each FILE preceded by its filename.
 function vcat() {
-  for f
-  do
-    print_header "$f"
-    cat "$f"
-  done |
-  less -RXFS
+    for f
+    do
+        print_header "$f"
+        cat "$f"
+    done |
+    less -RXFS
 }
 
 # Usage: columns NUM
 # ----------------------------------------------------------------------
 # Arrange input in NUM columns.
 function columns() {
-  if [ $# -eq 0 ]; then
-    column -c$(tput cols)
-  else
-    pr -Tw$(tput cols) -"$@"
-  fi
+    if [ $# -eq 0 ]; then
+        column -c$(tput cols)
+    else
+        pr -Tw$(tput cols) -"$@"
+    fi
 }
 
 # Usage: inplace [-b | --backup] FILE COMMAND [ARG]...
 # ----------------------------------------------------------------------
 # Modify FILE by invoking COMMAND with any ARG's given on it.
 function inplace() {
-  local backup=false
+    local backup=false
 
-  case "$1" in -b | --backup)
-    backup=true ; shift ;;
-  esac
+    case "$1" in -b | --backup)
+        backup=true ; shift ;;
+    esac
 
-  if [ $# -lt 2 ] ; then
-    return 1
-  fi
+    if [ $# -lt 2 ] ; then
+        return 1
+    fi
 
-  local file="$1" ; shift
+    local file="$1" ; shift
 
-  cp -b "$file" "$file".bak &&
-  "$@" "$file".bak > "$file" &&
-  $backup || rm "$file".bak
+    cp -b "$file" "$file".bak &&
+    "$@" "$file".bak > "$file" &&
+    $backup || rm "$file".bak
 }
 
 # Usage: realname
 # ----------------------------------------------------------------------
 # Print the real user name to stdout.
 function realname() {
-  awk -F: '( $1 == "'"$USER"'") { print $5 }' /etc/passwd | cut -d, -f1
+    awk -F: '( $1 == "'"$USER"'") { print $5 }' /etc/passwd | cut -d, -f1
 }
 
 # Usage: wp ARTICLE
 # ----------------------------------------------------------------------
 # Look up in wikipedia.
 function wp() {
-  w3m http://en.wikipedia.org/wiki/"$@"
+    w3m http://en.wikipedia.org/wiki/"$@"
 }
 
 # Usage: ll [FILE]..
 # ----------------------------------------------------------------------
 # Display a long file listing.
 case $(uname) in
-  Darwin)
-    function ll() {
-      CLICOLOR=1 CLICOLOR_FORCE=1 ls -l -h -T "$@" |
-      LESS='FSRX' less
-    }
-    ;;
+    Darwin)
+        function ll() {
+            CLICOLOR=1 CLICOLOR_FORCE=1 ls -l -h -T "$@" |
+            LESS='FSRX' less
+        }
+        ;;
 
-  *)
-    function ll() {
-      ls -l --human-readable --time-style=long-iso --color=always "$@" |
-      LESS='FSRX' less
-    }
-    ;;
+    *)
+        function ll() {
+            ls -l --human-readable --time-style=long-iso --color=always "$@" |
+            LESS='FSRX' less
+        }
+        ;;
 esac
 
 if alias ll >/dev/null 2>&1 ; then unalias ll ; fi # hide the alias
@@ -227,19 +227,19 @@ case $(uname) in Darwin) ;; *)
     # ----------------------------------------------------------------------
     # Print the environment of the process having PID.
     function penv() {
-	[ $# -gt 0 ] || set -- $$
+        [ $# -gt 0 ] || set -- $$
 
-	for pid
-	do
-	    if [ $# -gt 1 ] ; then
-		prog=$(basename $(readlink /proc/$pid/exe))
-		print_header "$prog($pid)"
-	    fi
-	    tr '\0' '\n' < /proc/$pid/environ
-	    if [ $# -gt 1 ] ; then
-		echo
-	    fi
-	done
+        for pid
+        do
+            if [ $# -gt 1 ] ; then
+                prog=$(basename $(readlink /proc/$pid/exe))
+                print_header "$prog($pid)"
+            fi
+            tr '\0' '\n' < /proc/$pid/environ
+            if [ $# -gt 1 ] ; then
+                echo
+            fi
+        done
     }
 
     # Usage: pmaps [COMMAND]...
@@ -249,7 +249,7 @@ case $(uname) in Darwin) ;; *)
     function pmaps() {
       for pid in $(pidof "$@")
       do
-	cat /proc/$pid/maps
+        cat /proc/$pid/maps
       done
     }
 
@@ -257,14 +257,14 @@ case $(uname) in Darwin) ;; *)
     # ----------------------------------------------------------------------
     # Execute COMMAND when process with PID has completed.
     function watchpid() {
-      local pid=$1 ; shift
+        local pid=$1 ; shift
 
-      while [ -e /proc/$pid ]
-      do
-	sleep 1
-      done
+        while [ -e /proc/$pid ]
+        do
+        sleep 1
+        done
 
-      "$@"
+        "$@"
     }
     ;;
 esac
@@ -301,7 +301,7 @@ function avg() {
     while read i
     do
         ((s+=$i))
-	((n+=1))
+        ((n+=1))
     done
     echo $(($s / $n))
 }
@@ -318,11 +318,11 @@ if which -s colordiff ; then
     # ----------------------------------------------------------------------
     # Compare the result of invoking COMMAND on ARG1 and ARG2, respectively.
     function diffof() {
-	arg1="$1" arg2="$2" cmd="$3" ; shift 3
-	colordiff --side-by-side --width=$(tput cols) \
-	    <("$cmd" "$@" $arg1) \
-	    <("$cmd" "$@" $arg2) |
-	LESS='FSRX' less
+        arg1="$1" arg2="$2" cmd="$3" ; shift 3
+        colordiff --side-by-side --width=$(tput cols) \
+            <("$cmd" "$@" $arg1) \
+            <("$cmd" "$@" $arg2) |
+        LESS='FSRX' less
     }
 fi
 
@@ -338,14 +338,14 @@ if which -s diff-view ; then
     # ----------------------------------------------------------------------
     # Invoke hg tip -p and pass the output through diff-view.
     function xtip() {
-	hg tip "$@" | diff-view
+        hg tip "$@" | diff-view
     }
 
     # Usage: xlog [ARG]..
     # ----------------------------------------------------------------------
     # Invoke hg log -p and pass the output through diff-view.
     function xlog() {
-	hg log "$@" | diff-view
+        hg log "$@" | diff-view
     }
 fi
 
@@ -361,13 +361,13 @@ if which -s colordiff ; then
     # ----------------------------------------------------------------------
     # Invoke diff. If stdin is a terminal, colorize and page the output.
     function diff() {
-	if [ -t 1 ] ; then
-	    (
-		set -o pipefail
-		colordiff -u "$@" | LESS='FSRX' less
-	    )
-	else
-	    diff -u "$@"
-	fi
+        if [ -t 1 ] ; then
+            (
+                set -o pipefail
+                colordiff -u "$@" | LESS='FSRX' less
+            )
+        else
+            diff -u "$@"
+        fi
     }
 fi
