@@ -4,12 +4,14 @@ if [ $UID -eq 0 ] ; then
     umask 0022
 fi
 
-if [ -d ~/bin ] ; then
-    case $PATH in
-        *:"$HOME/bin":*) ;;
-        *) export PATH=~/bin:"${PATH}" ;;
-    esac
-fi
+for dir in /usr/local/bin ~/bin ; do
+    if [ -d $dir ] ; then
+        case $PATH in
+            *:"$HOME/bin":*) ;;
+            *) export PATH=$dir:"${PATH}" ;;
+        esac
+    fi
+done
 
 for dir in ~/man ~/local/man ~/local/share/man ; do
     if [ -d $dir ] ; then
