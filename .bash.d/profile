@@ -1,5 +1,9 @@
 # -*-sh-*-
 
+if [ $UID -eq 0 ] ; then
+    umask 0022
+fi
+
 if [ -d ~/bin ] ; then
     case $PATH in
         *:"$HOME/bin":*) ;;
