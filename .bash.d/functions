@@ -143,6 +143,27 @@ function vcat() {
   less -RXFS
 }
 
+# Usage: inplace [-b | --backup] FILE COMMAND [ARG]...
+# ----------------------------------------------------------------------
+# Modify FILE by invoking COMMAND with any ARG's given on it.
+function inplace() {
+  local backup=false
+
+  case "$1" in -b | --backup)
+    backup=true ; shift ;;
+  esac
+
+  if [ $# -lt 2 ] ; then
+    return 1
+  fi
+
+  local file="$1" ; shift
+
+  cp -b "$file" "$file".bak &&
+  "$@" "$file".bak > "$file" &&
+  $backup || rm "$file".bak
+}
+
 # Usage: realname
 # ----------------------------------------------------------------------
 # Print the real user name to stdout.
