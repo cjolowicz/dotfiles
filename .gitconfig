@@ -5,3 +5,5 @@
 	editor = emacsclient
 [color]
 	ui = true
+[push]
+	default = simple
