@@ -1,6 +1,15 @@
 # -*-sh-*-
 
-alias ls='ls --color=auto'
+case $(uname) in
+    Darwin)
+        alias ls='ls -G'
+        ;;
+
+    *)
+        alias ls='ls --color=auto'
+        ;;
+esac
+
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ll -a'
@@ -17,6 +26,12 @@ alias egrep='egrep --color=auto'
 alias edit='$EDITOR'
 alias cp='cp -i'
 alias mv='mv -i'
-alias html2text='w3m -T text/html -dump' # This works better than html2text.
-alias text2pdf='( enscript -2Bo- | ps2pdf - - )'
-alias w3m='w3m -o confirm_qq=false'
+
+if which -s w3m ; then
+    alias html2text='w3m -T text/html -dump' # This works better than html2text.
+    alias w3m='w3m -o confirm_qq=false'
+fi
+
+if which -s enscript && which -s ps2pdf ; then
+    alias text2pdf='( enscript -2Bo- | ps2pdf - - )'
+fi

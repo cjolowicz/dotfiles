@@ -4,8 +4,11 @@ export LANG=en_US.UTF-8
 export PAGER=less
 export EDITOR=emacsclient
 export VISUAL=$EDITOR
-export BROWSER=w3m
 export EMAIL=cj@dealloc.org
+
+if which -s w3m ; then
+    export BROWSER=w3m
+fi
 
 if [ -x /usr/bin/dircolors ] ; then
     eval "$(dircolors -b)"

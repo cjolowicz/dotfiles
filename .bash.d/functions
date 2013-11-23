@@ -5,12 +5,12 @@
 # Print the documentation for each FUNCTION defined in this file.
 function fhelp() {
   if [ $# -eq 0 ] ; then
-    sed -n 's/^# Usage: //p' $BASH_SOURCE | sort
+    sed -n -e 's/^ *# Usage: //p' -e 's/^ *//' $BASH_SOURCE | sort
   fi
 
   for f
   do
-    sed -n -e "/^# Usage: $f[ \$]/,/^function $f/p" $BASH_SOURCE |
+    sed -n -e "/^ *# Usage: $f[ \$]/,/^ *function $f/p" -e 's/^ *//' $BASH_SOURCE |
     sed -e '$d' -e 's/# //'
   done
 }
@@ -31,7 +31,7 @@ function add-alias() {
 # ----------------------------------------------------------------------
 # For each FILE, find its pathname using which(1) and invoke cat(1) on
 # the result.
-function wcat()  { cat $(which "$@"); }
+function wcat() { cat $(which "$@"); }
 
 # Usage: wless [FILE]...
 # ----------------------------------------------------------------------
@@ -49,7 +49,7 @@ function wedit() { edit $(which "$@"); }
 # ----------------------------------------------------------------------
 # For each FILE, find its pathname using which(1) and invoke ldd(1) on
 # the result.
-function wldd()  { ldd $(which "$@"); }
+function wldd() { ldd $(which "$@"); }
 
 # Usage: wfile [FILE]...
 # ----------------------------------------------------------------------
@@ -192,10 +192,21 @@ function wp() {
 # Usage: ll [FILE]..
 # ----------------------------------------------------------------------
 # Display a long file listing.
-function ll() {
-    ls -l --human-readable --time-style=long-iso --color=always "$@" |
-    LESS='FSRX' less
-}
+case $(uname) in
+  Darwin)
+    function ll() {
+      CLICOLOR=1 CLICOLOR_FORCE=1 ls -l -h -T "$@" |
+      LESS='FSRX' less
+    }
+    ;;
+
+  *)
+    function ll() {
+      ls -l --human-readable --time-style=long-iso --color=always "$@" |
+      LESS='FSRX' less
+    }
+    ;;
+esac
 
 if alias ll >/dev/null 2>&1 ; then unalias ll ; fi # hide the alias
 
@@ -211,49 +222,52 @@ function colorize() {
     fi
 }
 
-# Usage: penv [PID]..
-# ----------------------------------------------------------------------
-# Print the environment of the process having PID.
-function penv() {
-    [ $# -gt 0 ] || set -- $$
+case $(uname) in Darwin) ;; *)
+    # Usage: penv [PID]..
+    # ----------------------------------------------------------------------
+    # Print the environment of the process having PID.
+    function penv() {
+	[ $# -gt 0 ] || set -- $$
 
-    for pid
-    do
-        if [ $# -gt 1 ] ; then
-            prog=$(basename $(readlink /proc/$pid/exe))
-            print_header "$prog($pid)"
-        fi
-        tr '\0' '\n' < /proc/$pid/environ
-        if [ $# -gt 1 ] ; then
-            echo
-        fi
-    done
-}
+	for pid
+	do
+	    if [ $# -gt 1 ] ; then
+		prog=$(basename $(readlink /proc/$pid/exe))
+		print_header "$prog($pid)"
+	    fi
+	    tr '\0' '\n' < /proc/$pid/environ
+	    if [ $# -gt 1 ] ; then
+		echo
+	    fi
+	done
+    }
 
-# Usage: pmaps [COMMAND]...
-# ----------------------------------------------------------------------
-# For each COMMAND, display the virtual memory areas of any process
-# executing it using the proc(5) file system.
-function pmaps() {
-  for pid in $(pidof "$@")
-  do
-    cat /proc/$pid/maps
-  done
-}
+    # Usage: pmaps [COMMAND]...
+    # ----------------------------------------------------------------------
+    # For each COMMAND, display the virtual memory areas of any process
+    # executing it using the proc(5) file system.
+    function pmaps() {
+      for pid in $(pidof "$@")
+      do
+	cat /proc/$pid/maps
+      done
+    }
 
-# Usage: watchpid PID COMMAND [ARG]..
-# ----------------------------------------------------------------------
-# Execute COMMAND when process with PID has completed.
-function watchpid() {
-  local pid=$1 ; shift
+    # Usage: watchpid PID COMMAND [ARG]..
+    # ----------------------------------------------------------------------
+    # Execute COMMAND when process with PID has completed.
+    function watchpid() {
+      local pid=$1 ; shift
 
-  while [ -e /proc/$pid ]
-  do
-    sleep 1
-  done
+      while [ -e /proc/$pid ]
+      do
+	sleep 1
+      done
 
-  "$@"
-}
+      "$@"
+    }
+    ;;
+esac
 
 # Usage: findbroken [DIR]..
 # ----------------------------------------------------------------------
@@ -299,16 +313,18 @@ function loop() {
     while : ; do "$@" ; read -sn1 || break ; done
 }
 
-# Usage: diffof ARG1 ARG2 COMMAND [ARG]..
-# ----------------------------------------------------------------------
-# Compare the result of invoking COMMAND on ARG1 and ARG2, respectively.
-function diffof() {
-    arg1="$1" arg2="$2" cmd="$3" ; shift 3
-    colordiff --side-by-side --width=$(tput cols) \
-	<("$cmd" "$@" $arg1) \
-	<("$cmd" "$@" $arg2) |
-    less -RXFS
-}
+if which -s colordiff ; then
+    # Usage: diffof ARG1 ARG2 COMMAND [ARG]..
+    # ----------------------------------------------------------------------
+    # Compare the result of invoking COMMAND on ARG1 and ARG2, respectively.
+    function diffof() {
+	arg1="$1" arg2="$2" cmd="$3" ; shift 3
+	colordiff --side-by-side --width=$(tput cols) \
+	    <("$cmd" "$@" $arg1) \
+	    <("$cmd" "$@" $arg2) |
+	LESS='FSRX' less
+    }
+fi
 
 # Usage: xdiff [ARG]..
 # ----------------------------------------------------------------------
@@ -317,19 +333,21 @@ function xdiff() {
     hg diff "$@" | diff-view
 }
 
-# Usage: xtip [ARG]..
-# ----------------------------------------------------------------------
-# Invoke hg tip -p and pass the output through diff-view.
-function xtip() {
-    hg tip "$@" | diff-view
-}
+if which -s diff-view ; then
+    # Usage: xtip [ARG]..
+    # ----------------------------------------------------------------------
+    # Invoke hg tip -p and pass the output through diff-view.
+    function xtip() {
+	hg tip "$@" | diff-view
+    }
 
-# Usage: xlog [ARG]..
-# ----------------------------------------------------------------------
-# Invoke hg log -p and pass the output through diff-view.
-function xlog() {
-    hg log "$@" | diff-view
-}
+    # Usage: xlog [ARG]..
+    # ----------------------------------------------------------------------
+    # Invoke hg log -p and pass the output through diff-view.
+    function xlog() {
+	hg log "$@" | diff-view
+    }
+fi
 
 # Usage: mkcd [options] DIR
 # ----------------------------------------------------------------------
@@ -338,16 +356,18 @@ function mkcd() {
     mkdir "$@" && cd "${@:(-1)}"
 }
 
-# Usage: diff [options]
-# ----------------------------------------------------------------------
-# Invoke diff. If stdin is a terminal, colorize and page the output.
-function diff() {
-    if [ -t 1 ] ; then
-        (
-            set -o pipefail
-            colordiff -u "$@" | LESS=FSRX less
-        )
-    else
-        diff -u "$@"
-    fi
-}
+if which -s colordiff ; then
+    # Usage: diff [options]
+    # ----------------------------------------------------------------------
+    # Invoke diff. If stdin is a terminal, colorize and page the output.
+    function diff() {
+	if [ -t 1 ] ; then
+	    (
+		set -o pipefail
+		colordiff -u "$@" | LESS='FSRX' less
+	    )
+	else
+	    diff -u "$@"
+	fi
+    }
+fi
