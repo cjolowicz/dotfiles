@@ -230,6 +230,20 @@ function pmaps() {
   done
 }
 
+# Usage: watchpid PID COMMAND [ARG]..
+# ----------------------------------------------------------------------
+# Execute COMMAND when process with PID has completed.
+function watchpid() {
+  local pid=$1 ; shift
+
+  while [ -e /proc/$pid ]
+  do
+    sleep 1
+  done
+
+  "$@"
+}
+
 # Usage: findbroken [DIR]..
 # ----------------------------------------------------------------------
 # Print broken symlinks under DIR.
