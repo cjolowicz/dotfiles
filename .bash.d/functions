@@ -63,10 +63,11 @@ function wfile() { file $(which "$@"); }
 function mvtr() {
     local set1=$1; shift
     local set2=$1; shift
-    for arg
-    do
+    local arg= newarg=
+
+    for arg ; do
         newarg=$(echo "$arg" | tr "$set1" "$set2")
-        [ x"$arg" = x"$newarg" ] && continue
+        [ x"$arg" != x"$newarg" ] || continue
         mv "$arg" "$newarg"
     done
 }
@@ -76,10 +77,12 @@ function mvtr() {
 # Move files using sed(1).
 function mvsed() {
     local prog=$1; shift
+    local arg= newarg=
+
     for arg
     do
         newarg=$(echo "$arg" | sed "$prog")
-        [ x"$arg" = x"$newarg" ] && continue
+        [ x"$arg" != x"$newarg" ] || continue
         mv "$arg" "$newarg"
     done
 }
@@ -100,9 +103,10 @@ function sep() {
 # and output.
 function seddiff() {
     local prog="$1"; shift
-    for f
-    do
-        sed "$prog" "$f" | diff "$f" -
+    local file=
+
+    for file ; do
+        sed "$prog" "$file" | diff "$file" -
     done
 }
 
@@ -110,8 +114,9 @@ function seddiff() {
 # ----------------------------------------------------------------------
 # Read from stdin using gettext, printing each line to stdout.
 function icat() {
-    while read -e line
-    do
+    local line=
+
+    while read -e line ; do
         echo "$line"
     done
 }
@@ -121,6 +126,7 @@ function icat() {
 # Print a header.
 function print_header() {
     local begin= end=
+
     if [ -t 1 ] ; then
         begin="$(tput setf 2)"
         end="$(tput setf 7)"
@@ -135,10 +141,11 @@ function print_header() {
 # ----------------------------------------------------------------------
 # Print each FILE preceded by its filename.
 function vcat() {
-    for f
-    do
-        print_header "$f"
-        cat "$f"
+    local file=
+
+    for file ; do
+        print_header "$file"
+        cat "$file"
     done |
     less -RXFS
 }
@@ -147,7 +154,7 @@ function vcat() {
 # ----------------------------------------------------------------------
 # Arrange input in NUM columns.
 function columns() {
-    if [ $# -eq 0 ]; then
+    if [ $# -eq 0 ] ; then
         column -c$(tput cols)
     else
         pr -Tw$(tput cols) -"$@"
@@ -214,8 +221,7 @@ if alias ll >/dev/null 2>&1 ; then unalias ll ; fi # hide the alias
 # ----------------------------------------------------------------------
 # Colorize stdin writing to stdout.
 function colorize() {
-    if [ $# -gt 0 ]
-    then
+    if [ $# -gt 0 ] ; then
         egrep --color=always "$*|\$"
     else
         egrep --color=always .
@@ -227,6 +233,9 @@ case $(uname) in Darwin) ;; *)
     # ----------------------------------------------------------------------
     # Print the environment of the process having PID.
     function penv() {
+        local pid=
+        local prog=
+
         [ $# -gt 0 ] || set -- $$
 
         for pid
@@ -247,10 +256,11 @@ case $(uname) in Darwin) ;; *)
     # For each COMMAND, display the virtual memory areas of any process
     # executing it using the proc(5) file system.
     function pmaps() {
-      for pid in $(pidof "$@")
-      do
-        cat /proc/$pid/maps
-      done
+        local pid=
+
+        for pid in $(pidof "$@") ; do
+            cat /proc/$pid/maps
+        done
     }
 
     # Usage: watchpid PID COMMAND [ARG]..
@@ -259,9 +269,8 @@ case $(uname) in Darwin) ;; *)
     function watchpid() {
         local pid=$1 ; shift
 
-        while [ -e /proc/$pid ]
-        do
-        sleep 1
+        while [ -e /proc/$pid ] ; do
+            sleep 1
         done
 
         "$@"
@@ -273,10 +282,11 @@ esac
 # ----------------------------------------------------------------------
 # Print broken symlinks under DIR.
 function findbroken() {
+    local dir=
+
     [ $# -gt 0 ] || set -- .
 
-    for dir
-    do
+    for dir ; do
         find -L "$dir" -type l -lname '*'
     done
 }
@@ -285,11 +295,12 @@ function findbroken() {
 # ----------------------------------------------------------------------
 # Compute the sum of the numbers in stdin.
 function sum() {
-    s=0
-    while read i
-    do
+    local s=0 i=
+
+    while read i ; do
         ((s+=$i))
     done
+
     echo $s
 }
 
@@ -297,12 +308,13 @@ function sum() {
 # ----------------------------------------------------------------------
 # Compute the average of the numbers in stdin.
 function avg() {
-    s=0 n=0
-    while read i
-    do
+    local s=0 n=0 i=
+
+    while read i ; do
         ((s+=$i))
         ((n+=1))
     done
+
     echo $(($s / $n))
 }
 
@@ -310,7 +322,10 @@ function avg() {
 # ----------------------------------------------------------------------
 # Repeatedly execute COMMAND and wait for a key being pressed.
 function loop() {
-    while : ; do "$@" ; read -sn1 || break ; done
+    while : ; do
+        "$@"
+        read -sn1 || break
+    done
 }
 
 if which -s colordiff ; then
@@ -318,7 +333,8 @@ if which -s colordiff ; then
     # ----------------------------------------------------------------------
     # Compare the result of invoking COMMAND on ARG1 and ARG2, respectively.
     function diffof() {
-        arg1="$1" arg2="$2" cmd="$3" ; shift 3
+        local arg1="$1" arg2="$2" cmd="$3" ; shift 3
+
         colordiff --side-by-side --width=$(tput cols) \
             <("$cmd" "$@" $arg1) \
             <("$cmd" "$@" $arg2) |
