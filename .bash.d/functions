@@ -33,24 +33,11 @@ function wless() { less $(which "$@"); }
 # the result.
 function wldd()  { ldd $(which "$@"); }
 
-# Usage: wfile [-L] [FILE]...
+# Usage: wfile [FILE]...
 # ----------------------------------------------------------------------
 # For each FILE, find its pathname using which(1) and invoke file(1) on
-# the result. With option `-L', dereference symlinks, repeatedly.
-function wfile() {
-  if test x"$1" = x"-L"
-  then
-    shift
-    for f
-    do
-      if f=$(which "$f")
-      then file $(follow "$f")
-      fi
-    done
-  else
-    file $(which "$@")
-  fi
-}
+# the result.
+function wfile() { file $(which "$@"); }
 
 # Usage: mvtr SET1 SET2 [FILE]...
 # ----------------------------------------------------------------------
