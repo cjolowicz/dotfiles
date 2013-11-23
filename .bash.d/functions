@@ -15,6 +15,18 @@ function fhelp() {
   done
 }
 
+# Usage: add-alias [NAME=VALUE]...
+# ----------------------------------------------------------------------
+# Define and save aliases to ~/.bash.d/aliases.
+function add-alias() {
+  for as
+  do
+    local name="${as%%=*}" value="${as#*=}"
+    echo "alias $name='$value'" >> ~/.bash.d/aliases
+    alias $name="$value"
+  done
+}
+
 # Usage: wcat [FILE]...
 # ----------------------------------------------------------------------
 # For each FILE, find its pathname using which(1) and invoke cat(1) on
