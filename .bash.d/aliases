@@ -29,7 +29,6 @@ alias mv='mv -i'
 
 if which -s w3m ; then
     alias html2text='w3m -T text/html -dump' # This works better than html2text.
-    alias w3m='w3m -o confirm_qq=false'
 fi
 
 if which -s enscript && which -s ps2pdf ; then
