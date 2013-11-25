@@ -6,6 +6,6 @@
 [color]
 	ui = true
 [push]
-	default = simple
+	default = matching
 [alias]
 	unstage = reset HEAD --
