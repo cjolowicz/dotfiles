@@ -387,3 +387,10 @@ if which -s colordiff ; then
         fi
     }
 fi
+
+# Usage: history [options]
+# ----------------------------------------------------------------------
+# Display the bash history.
+function history() {
+    builtin history "$@" | LESS=FSX less
+}
