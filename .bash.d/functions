@@ -328,7 +328,7 @@ function loop() {
     done
 }
 
-if which -s colordiff ; then
+if hash colordiff >/dev/null 2>&1 ; then
     # Usage: diffof ARG1 ARG2 COMMAND [ARG]..
     # ----------------------------------------------------------------------
     # Compare the result of invoking COMMAND on ARG1 and ARG2, respectively.
@@ -342,7 +342,7 @@ if which -s colordiff ; then
     }
 fi
 
-if which -s diff-view ; then
+if hash diff-view >/dev/null 2>&1 ; then
     # Usage: xdiff [ARG]..
     # ----------------------------------------------------------------------
     # Invoke hg diff and pass the output through diff-view.
@@ -372,7 +372,7 @@ function mkcd() {
     mkdir "$@" && cd "${@:(-1)}"
 }
 
-if which -s colordiff ; then
+if colordiff --version >/dev/null 2>&1 ; then
     # Usage: diff [options]
     # ----------------------------------------------------------------------
     # Invoke diff. If stdin is a terminal, colorize and page the output.

@@ -6,7 +6,7 @@ export EDITOR=emacsclient
 export VISUAL=$EDITOR
 export EMAIL=cj@dealloc.org
 
-if which -s w3m ; then
+if w3m -version >/dev/null 2>&1 ; then
     export BROWSER=w3m
 fi
 
