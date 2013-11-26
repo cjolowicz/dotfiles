@@ -3,7 +3,7 @@
 if ! shopt -oq posix ; then
     files=(/etc/bash_completion)
 
-    for dir in /etc/bash_completion.d /usr/local/etc/bash_completion.d ; do
+    for dir in /usr/local/etc/bash_completion.d ; do
         if [ -d $dir ] ; then
             files+=($(find $dir -type f -o -type l))
         fi
