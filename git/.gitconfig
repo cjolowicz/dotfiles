@@ -9,3 +9,5 @@
 	default = matching
 [alias]
 	unstage = reset HEAD --
+[pager]
+	status = true
