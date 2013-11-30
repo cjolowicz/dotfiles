@@ -189,13 +189,6 @@ function realname() {
     awk -F: '( $1 == "'"$USER"'") { print $5 }' /etc/passwd | cut -d, -f1
 }
 
-# Usage: wp ARTICLE
-# ----------------------------------------------------------------------
-# Look up in wikipedia.
-function wp() {
-    w3m http://en.wikipedia.org/wiki/"$@"
-}
-
 # Usage: ll [FILE]..
 # ----------------------------------------------------------------------
 # Display a long file listing.
