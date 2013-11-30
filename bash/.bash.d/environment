@@ -6,10 +6,6 @@ export EDITOR=emacsclient
 export VISUAL=$EDITOR
 export EMAIL=cj@dealloc.org
 
-if w3m -version >/dev/null 2>&1 ; then
-    export BROWSER=w3m
-fi
-
 if [ -x /usr/bin/dircolors ] ; then
     eval "$(dircolors -b)"
 fi

@@ -1,3 +1,4 @@
 if hash w3m >/dev/null 2>&1 ; then
     alias html2text='w3m -T text/html -dump' # This works better than html2text.
+    export BROWSER=w3m
 fi
