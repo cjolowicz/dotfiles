@@ -27,10 +27,6 @@ alias edit='$EDITOR'
 alias cp='cp -i'
 alias mv='mv -i'
 
-if hash w3m >/dev/null 2>&1 ; then
-    alias html2text='w3m -T text/html -dump' # This works better than html2text.
-fi
-
 if hash enscript >/dev/null 2>&1 &&
    hash ps2pdf >/dev/null 2>&1 ; then
     alias text2pdf='( enscript -2Bo- | ps2pdf - - )'
