@@ -1,5 +1,7 @@
-# -*-sh-*-
-
 if [ -s ~/.rvm/scripts/rvm ] ; then
     . ~/.rvm/scripts/rvm
+fi
+
+if [ -d ~/.rvm/bin ] ; then
+    export PATH="$PATH":~/.rvm/bin
 fi
