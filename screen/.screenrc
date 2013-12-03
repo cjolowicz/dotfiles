@@ -13,6 +13,9 @@ acladd root
 # Make it beep.
 vbell off
 
+# Make xterm scrolling work properly with screen.
+termcapinfo xterm-256color|xterm-color|xterm|xterms|xs|rxvt ti@:te@
+
 # Give the terminal a pretty hardstatus line.
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{G} %d/%m %{W}%c %{g}]'
