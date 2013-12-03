@@ -31,4 +31,4 @@ cacerts = /etc/ssl/certs/ca-certificates.crt
 
 [pager]
 pager = LESS='FSRX' less
-attend = annotate, cat, diff, export, glog, log, qdiff, tip, qseries, status, help
+attend = annotate, cat, diff, export, glog, log, qdiff, tip, qseries, status, help, incoming, outgoing
