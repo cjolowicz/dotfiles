@@ -6,6 +6,7 @@ fi
 
 if [ -n "$PS1" ] && [ -d ~/.bash.d ] ; then
     for file in $(ls ~/.bash.d) ; do
+        [ -z "$DEBUG" ] || echo "$file" >&2
         . ~/.bash.d/"$file"
     done
 fi
