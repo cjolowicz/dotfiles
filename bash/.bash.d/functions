@@ -376,7 +376,7 @@ if colordiff --version >/dev/null 2>&1 ; then
                 colordiff -u "$@" | LESS='FSRX' less
             )
         else
-            diff -u "$@"
+            command diff -u "$@"
         fi
     }
 fi
