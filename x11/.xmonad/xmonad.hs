@@ -56,7 +56,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     ++
     [((m .|. modMask, k), windows $ f i)
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
-        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
+        , (f, m) <- [(W.greedyView, 0), (W.shift, controlMask)]]
 
 runExecutable = spawn "exe=`dmenu_path | dmenu -b` && eval \"exec $exe\""
 runInTerminal = spawn "exe=`dmenu_path | dmenu -b` && eval \"exec xterm -e $exe\""
