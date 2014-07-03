@@ -2,6 +2,7 @@ dotfiles
 ========
 
 ```bash
+cd
 git clone git@github.com:cjolowicz/dotfiles.git .dotfiles
 cd .dotfiles
 stow bash
