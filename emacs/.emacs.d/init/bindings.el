@@ -9,6 +9,7 @@
 (global-set-key "\C-cm" (lambda () (interactive) (manual-entry (current-word))))
 (global-set-key "\C-cr" 'revert-buffer)
 (global-set-key "\C-cs" 'save-macro)
+(global-set-key "\C-ct" 'untabify-buffer)
 (global-set-key "\C-cv" 'View-back-to-mark)
 (global-set-key "\C-cz" 'shell)
 (global-set-key "\M-n" 'scroll-up-1)
