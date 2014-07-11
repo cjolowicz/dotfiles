@@ -1,10 +1,10 @@
 (defun find-emacs-conf ()
   (interactive)
-  (find-file "~/.emacs"))
+  (find-file "~/.emacs.d/init.el"))
 
 (defun reload-emacs-conf ()
   (interactive)
-  (load-file "~/.emacs"))
+  (load-file "~/.emacs.d/init.el"))
 
 (defun save-macro (name)
   "save a macro. Take a name as argument and save the last
@@ -57,3 +57,7 @@
   (or (looking-at "[0123456789]+")
       (error "No number at point"))
   (replace-match (number-to-string (-(string-to-number (match-string 0)) 1))))
+
+(defun untabify-buffer ()
+  (interactive)
+  (untabify (point-min) (point-max)))
