@@ -14,6 +14,7 @@ purge =
 rebase =
 record =
 transplant =
+hgsubversion = ~/.hg.d/hgsubversion/hgsubversion
 
 [diff]
 showfunc = True
