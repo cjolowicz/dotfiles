@@ -31,3 +31,5 @@ if hash enscript >/dev/null 2>&1 &&
    hash ps2pdf >/dev/null 2>&1 ; then
     alias text2pdf='( enscript -2Bo- | ps2pdf - - )'
 fi
+
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
