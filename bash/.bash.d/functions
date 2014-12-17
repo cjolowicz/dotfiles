@@ -371,6 +371,13 @@ function mkcd() {
     mkdir "$@" && cd "${@:(-1)}"
 }
 
+# Usage: mkpushd [options] DIR
+# ----------------------------------------------------------------------
+# Create a directory and push it on the directory stack.
+function mkpushd() {
+    mkdir "$@" && pushd "${@:(-1)}"
+}
+
 if colordiff --version >/dev/null 2>&1 ; then
     # Usage: diff [options]
     # ----------------------------------------------------------------------
