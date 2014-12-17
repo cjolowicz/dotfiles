@@ -128,9 +128,15 @@ function print_header() {
     local begin= end=
 
     if [ -t 1 ] ; then
+        set -- -C "$@"
+    fi
+
+    case $1 in -C)
         begin="$(tput setf 2)"
         end="$(tput setf 7)"
-    fi
+        shift
+        ;;
+    esac
 
     echo
     echo "${begin}==> $* <==${end}"
