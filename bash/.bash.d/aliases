@@ -33,3 +33,5 @@ if hash enscript >/dev/null 2>&1 &&
 fi
 
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+alias clip='cut -c-$COLUMNS'
+alias histogram='sort | uniq -c | sort -nrk1'
