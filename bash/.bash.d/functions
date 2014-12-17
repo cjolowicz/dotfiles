@@ -353,14 +353,14 @@ if hash diff-view >/dev/null 2>&1 ; then
     # ----------------------------------------------------------------------
     # Invoke hg tip -p and pass the output through diff-view.
     function xtip() {
-        hg tip "$@" | diff-view
+        hg tip -p "$@" | diff-view
     }
 
     # Usage: xlog [ARG]..
     # ----------------------------------------------------------------------
     # Invoke hg log -p and pass the output through diff-view.
     function xlog() {
-        hg log "$@" | diff-view
+        hg log -p "$@" | diff-view
     }
 fi
 
