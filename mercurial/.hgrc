@@ -23,10 +23,6 @@ git = True
 [mq]
 secret = True
 
-[hooks]
-# Disable carp module.
-#pretxncommit.carp  =
-
 [web]
 cacerts = /etc/ssl/certs/ca-certificates.crt
 
