@@ -400,3 +400,33 @@ fi
 function history() {
     builtin history "$@" | LESS=FSX less
 }
+
+# Usage: waitall [pid]..
+# ----------------------------------------------------------------------
+# Wait for job completion. Return zero if all jobs succeeded.
+function waitall() {
+    local status=0
+
+    [ $# -gt 0 ] || set -- $(jobs -p)
+
+    for pid ; do
+        wait $pid || status=$?
+    done
+
+    return $status
+}
+
+# Usage: waitany [pid]..
+# ----------------------------------------------------------------------
+# Wait for job completion. Return zero if at least one job succeeded.
+function waitany() {
+    local status=1
+
+    [ $# -gt 0 ] || set -- $(jobs -p)
+
+    for pid ; do
+        wait $pid && status=0
+    done
+
+    return $status
+}
