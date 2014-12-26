@@ -3,9 +3,8 @@ dotfiles
 
 ```bash
 cd
-git clone git@github.com:cjolowicz/dotfiles.git .dotfiles
+git clone git@github.com:cjolowicz/dotfiles .dotfiles
 cd .dotfiles
 stow bash
 stow emacs
-stow mercurial
 ```
