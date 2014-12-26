@@ -4,7 +4,12 @@ if [ -f ~/.bash.d/profile ] ; then
     . ~/.bash.d/profile
 fi
 
-if [ -n "$PS1" ] && [ -d ~/.bash.d ] ; then
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+if [ -d ~/.bash.d ] ; then
     for file in $(ls ~/.bash.d) ; do
         [ -z "$DEBUG" ] || echo "$file" >&2
         . ~/.bash.d/"$file"
