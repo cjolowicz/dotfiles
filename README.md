@@ -2,7 +2,7 @@ dotfiles
 ========
 
 ```bash
-git clone git@github.com:cjolowicz/dotfiles ~/.dotfiles
+git clone https://github.com/cjolowicz/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 stow bash
 stow emacs
