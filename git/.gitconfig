@@ -12,3 +12,7 @@
 	unstage = reset HEAD --
 [pager]
 	status = true
+[diff "gzip"]
+	textconv = gzip -cd
+[diff "xml-gzip"]
+	textconv = gzip -cd | xmllint --exc-c14n
