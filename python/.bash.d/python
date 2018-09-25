@@ -1,4 +1,4 @@
 # -*-sh-*-
 
 export PYTHONSTARTUP=~/.pythonrc
-export VIRTUAL_ENV_DISABLE_PROMPT=yes
+#export VIRTUAL_ENV_DISABLE_PROMPT=yes
