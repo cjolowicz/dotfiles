@@ -1,5 +1,8 @@
 ; ~/.emacs: executed by emacs(1) on startup.
 
+; Initialize the package manager.
+(package-initialize)
+
 ; Set the load path.
 (setq load-path (append '("~/.emacs.d/lisp") load-path))
 
