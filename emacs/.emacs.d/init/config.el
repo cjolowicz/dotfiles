@@ -1,9 +1,6 @@
 ; Hide startup message.
 (setq inhibit-startup-message t)
 
-; Start server for emacsclient and others.
-(server-start)
-
 ; Change yes/no questions to y/n type.
 (fset 'yes-or-no-p 'y-or-n-p)
 
