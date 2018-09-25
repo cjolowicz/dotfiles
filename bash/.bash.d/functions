@@ -198,21 +198,10 @@ function realname() {
 # Usage: ll [FILE]..
 # ----------------------------------------------------------------------
 # Display a long file listing.
-case $(uname) in
-    Darwin)
-        function ll() {
-            CLICOLOR=1 CLICOLOR_FORCE=1 ls -l -h -T "$@" |
-            LESS='FSRX' less
-        }
-        ;;
-
-    *)
-        function ll() {
-            ls -l --human-readable --time-style=long-iso --color=always "$@" |
-            LESS='FSRX' less
-        }
-        ;;
-esac
+function ll() {
+    ls -l --human-readable --time-style=long-iso --color=always "$@" |
+    LESS='FSRX' less
+}
 
 if alias ll >/dev/null 2>&1 ; then unalias ll ; fi # hide the alias
 
