@@ -1,6 +1,6 @@
 # -*-sh-*-
 
-export PATH="$HOME/.pyenv/bin:$PATH"
+prepend_directory PATH ~/.pyenv/bin
 
 if which pyenv > /dev/null 2>&1; then
     eval "$(pyenv init -)"
