@@ -1,25 +1,29 @@
 # -*-sh-*-
 
+# This file is source'd first by .bashrc and can define functions to
+# be used by other shell files.
+
+prepend_directory() {
+    local pathvar="$1" ; shift
+    local path="${!pathvar}"
+    local dir=
+
+    for dir ; do
+        if [ -d "$dir" ] ; then
+            case $path in
+                "$dir" | "$dir":* | *:"$dir" | *:"$dir":*) ;;
+                *) export $pathvar="$dir":"$path" ;;
+            esac
+        fi
+    done
+}
+
 if [ $UID -eq 0 ] ; then
     umask 0022
 fi
 
-for dir in /usr/local/bin ~/bin ~/local/bin ; do
-    if [ -d $dir ] ; then
-        case $PATH in
-            *:"$dir":*) ;;
-            *) export PATH=$dir:"${PATH}" ;;
-        esac
-    fi
-done
-
-for dir in ~/man ~/local/man ~/local/share/man ; do
-    if [ -d $dir ] ; then
-        case $MANPATH in
-            *:"$dir":*) ;;
-            *) export MANPATH=$dir:"${MANPATH}" ;;
-        esac
-    fi
-done
+# Ensure these directories are at the front of PATH.
+prepend_directory PATH    /usr/local/bin    ~/local/bin ~/bin
+prepend_directory MANPATH ~/local/share/man ~/local/man ~/man
 
 ulimit -c unlimited
