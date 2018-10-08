@@ -1,5 +1,6 @@
 # -*-sh-*-
 
+alias amend='hg commit --amend --logfile=$(hg root)/.hg/last-message.txt'
 alias backout='hg backout'
 alias branch='hg branch'
 alias branches='hg branches'
@@ -57,6 +58,8 @@ alias revert='hg revert'
 alias rollback='hg rollback'
 alias st='hg st'
 alias status='hg status'
+alias sum='hg sum'
+alias summary='hg summary'
 alias tag='hg tag'
 alias tags='hg tags'
 alias tip='hg tip'
