@@ -15,3 +15,7 @@ if [ -d ~/.bash.d ] ; then
         . ~/.bash.d/"$file"
     done
 fi
+
+# Ensure these directories are at the front of PATH.
+prepend_directory PATH    /usr/local/bin    ~/local/bin ~/bin
+prepend_directory MANPATH ~/local/share/man ~/local/man ~/man
