@@ -1,4 +1,6 @@
-export EDITOR=emacsclient
-export VISUAL=$EDITOR
+# -*-sh-*-
+
+export EDITOR='emacsclient --alternate-editor='
+export VISUAL="$EDITOR"
 
 alias edit='$EDITOR'
