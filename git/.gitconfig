@@ -3,3 +3,5 @@
 	email = mail@claudiojolowicz.com
 [core]
 	editor = emacsclient
+[alias]
+	l1 = log --oneline
