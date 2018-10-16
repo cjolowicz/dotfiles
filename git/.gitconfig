@@ -19,7 +19,7 @@
 	status = true
 	nlog = less -FXR +/^commit.*
 	ndiff = less -FXR~ +/^diff.*
-	nshow = less -FXR +/^diff.*
+	nshow = less -FXR +/^diff.* '+<'
 [diff "gzip"]
 	textconv = gzip -cd
 [diff "xml-gzip"]
