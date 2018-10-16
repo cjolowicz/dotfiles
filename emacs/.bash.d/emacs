@@ -1,0 +1,4 @@
+export EDITOR=emacsclient
+export VISUAL=$EDITOR
+
+alias edit='$EDITOR'
