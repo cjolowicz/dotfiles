@@ -10,8 +10,15 @@
 	default = matching
 [alias]
 	unstage = reset HEAD --
+	l1 = log --oneline
+	nlog = log
+	ndiff = diff
+	nshow = show
 [pager]
 	status = true
+	nlog = less -FXR +/^commit.*
+	ndiff = less -FXR~ +/^diff.*
+	nshow = less -FXR +/^diff.*
 [diff "gzip"]
 	textconv = gzip -cd
 [diff "xml-gzip"]
