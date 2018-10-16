@@ -16,4 +16,4 @@
 [pager]
 	plog = less -FXR +/^commit.*
 	pdiff = less -FXR~ +/^diff.*
-	pshow = less -FXR +/^diff.*
+	pshow = less -FXR +/^diff.* +g
