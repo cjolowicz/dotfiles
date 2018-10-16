@@ -5,6 +5,7 @@
 	editor = emacsclient
 [alias]
 	l1 = log --oneline
+	graph = log --graph --all --oneline
 	plog = log
 	pdiff = diff
 	pshow = show
