@@ -9,3 +9,39 @@
 #
 # https://www.freshblurbs.com/blog/2017/04/16/inspect-docker-volumes-on-mac.html
 alias docker-host-volume='docker run --rm -it -v /:/docker alpine:edge $@'
+
+function docker-volume-ls() {
+    local options=()
+
+    while [ $# -gt 0 ]
+    do
+	option="$1"
+	shift
+
+	case $option in
+            --)
+		break
+		;;
+
+            -*)
+		options+=("$option")
+		;;
+
+            *)
+		set -- "$option" "$@"
+		break
+		;;
+	esac
+    done
+
+    for volume
+    do
+	local mountpoint="$(
+            docker volume inspect $volume |
+            jq -r '.[] | .Mountpoint'
+        )"
+
+	docker run --rm -it -v /:/docker alpine:edge \
+	       ls "${options[@]}" /docker"$mountpoint"
+    done
+}
