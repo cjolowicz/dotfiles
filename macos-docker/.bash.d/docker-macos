@@ -1,0 +1,11 @@
+# -*-sh-*-
+
+# Run a tiny docker container with the root filesystem of the docker
+# host VM mapped to /docker.
+#
+# On macOS, docker volumes live inside the docker host VM. To inspect
+# a docker volume, use `docker volume inspect $volume`, then
+# `docker-host-volume ls /docker/$mountpoint`.
+#
+# https://www.freshblurbs.com/blog/2017/04/16/inspect-docker-volumes-on-mac.html
+alias docker-host-volume='docker run --rm -it -v /:/docker alpine:edge $@'
