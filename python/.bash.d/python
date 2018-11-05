@@ -2,3 +2,5 @@
 
 export PYTHONSTARTUP=~/.pythonrc
 #export VIRTUAL_ENV_DISABLE_PROMPT=yes
+
+prepend_directory PATH $HOME/.local/bin # PEP 370
