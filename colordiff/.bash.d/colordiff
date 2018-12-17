@@ -1,0 +1,6 @@
+# -*-sh-*-
+
+function colordiff() {
+    command colordiff -u -r -x .git -x .hg "$@" |
+	less -R '+/^(Only|diff).*'
+}
