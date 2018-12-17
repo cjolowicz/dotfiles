@@ -4,7 +4,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (yaml-mode haskell-mode)))
+ '(js-indent-level 2)
+ '(markdown-command "/usr/local/bin/pandoc")
+ '(package-selected-packages
+   (quote
+    (markdown-mode dockerfile-mode js2-mode haskell-mode jinja2-mode yaml-mode)))
  '(standard-indent 4)
  '(tab-stop-list (quote (number-sequence 4 200 4))))
 
