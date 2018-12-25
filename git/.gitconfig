@@ -11,7 +11,7 @@
 [alias]
 	unstage = reset HEAD --
 	l1 = log --oneline
-	graph = log --graph --all --decorate --oneline
+	graph = log --oneline --graph --all --decorate
 	nlog = log
 	ndiff = diff
 	nshow = show
