@@ -1,7 +1,13 @@
+# -*-sh-*-
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
 alias pip-system='PIP_REQUIRE_VIRTUALENV= pip'
-alias pip-user='PIP_REQUIRE_VIRTUALENV= pip --user'
+
+pip_user() {
+    PIP_REQUIRE_VIRTUALENV= pip "$@" --user
+}
+
+alias pip-user=pip_user
 
 # macos: add target bindir of `pip --user` to PATH
 for directory in $HOME/Library/Python/*/bin
