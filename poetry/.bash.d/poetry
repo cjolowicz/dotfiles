@@ -1,0 +1,1 @@
+prepend_directory PATH "$HOME/.poetry/bin"
