@@ -3,11 +3,15 @@
 if ! shopt -oq posix ; then
     files=(/etc/bash_completion)
 
-    for dir in /usr/local/etc/bash_completion.d ; do
-        if [ -d $dir ] ; then
-            files+=($(find $dir -type f -o -type l))
-        fi
-    done
+    if [ -f /usr/local/etc/bash_completion ] ; then
+        files+=(/usr/local/etc/bash_completion)
+    else
+        for dir in /usr/local/etc/bash_completion.d ; do
+            if [ -d $dir ] ; then
+                files+=($(find $dir -type f -o -type l))
+            fi
+        done
+    fi
 
     for file in ${files[@]} ; do
         if [ -f $file ] ; then
