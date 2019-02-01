@@ -9,6 +9,6 @@
  '(markdown-command "/usr/local/bin/pandoc")
  '(package-selected-packages
    (quote
-    (toml-mode markdown-mode dockerfile-mode js2-mode haskell-mode jinja2-mode yaml-mode)))
+    (flow-minor-mode toml-mode markdown-mode dockerfile-mode js2-mode haskell-mode jinja2-mode yaml-mode)))
  '(standard-indent 4)
  '(tab-stop-list (quote (number-sequence 4 200 4))))
