@@ -61,3 +61,13 @@
 (set-default 'show-trailing-whitespace           t)
 (set-default 'require-final-newline              t)
 ;(whitespace-global-mode 1)
+
+; Avoid bright background colors in smerge-mode.
+(eval-after-load 'smerge-mode
+  '(progn
+     (set-face-attribute 'smerge-markers nil :foreground "white" :background "brightblack")
+     (set-face-attribute 'smerge-refined-added nil :background "darkgreen")
+     (set-face-attribute 'smerge-refined-removed nil :background "darkred")
+     (set-face-attribute 'smerge-other nil :background "darkgreen")
+     (set-face-attribute 'smerge-mine nil :background "darkred")
+     ))
