@@ -18,6 +18,21 @@ prepend_directory() {
     done
 }
 
+append_directory() {
+    local pathvar="$1" ; shift
+    local path="${!pathvar}"
+    local dir=
+
+    for dir ; do
+        if [ -d "$dir" ] ; then
+            case $path in
+                "$dir" | "$dir":* | *:"$dir" | *:"$dir":*) ;;
+                *) export $pathvar="$path":"$dir" ;;
+            esac
+        fi
+    done
+}
+
 if [ $UID -eq 0 ] ; then
     umask 0022
 fi
