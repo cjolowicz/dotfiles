@@ -3,6 +3,6 @@
 export PYTHONSTARTUP=~/.pythonrc
 #export VIRTUAL_ENV_DISABLE_PROMPT=yes
 
-prepend_directory PATH $HOME/.local/bin # PEP 370
+append_directory PATH $HOME/.local/bin # PEP 370
 
 alias venv='deactivate 2>/dev/null ; . venv/bin/activate'
