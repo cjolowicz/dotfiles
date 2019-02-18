@@ -20,3 +20,4 @@
 (global-set-key   "\C-x\C-c\C-v" 'save-buffers-kill-emacs)
 (global-set-key (kbd "C-c +") 'increment-number-at-point)
 (global-set-key (kbd "C-c -") 'decrement-number-at-point)
+(global-set-key (kbd "C-c SPC") 'insert-space-after-point)

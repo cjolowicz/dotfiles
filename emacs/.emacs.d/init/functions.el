@@ -61,3 +61,7 @@
 (defun untabify-buffer ()
   (interactive)
   (untabify (point-min) (point-max)))
+
+(defun insert-space-after-point ()
+  (interactive)
+  (save-excursion (insert " ")))
