@@ -71,3 +71,6 @@
      (set-face-attribute 'smerge-other nil :background "darkgreen")
      (set-face-attribute 'smerge-mine nil :background "darkred")
      ))
+
+; Load the srcery theme.
+(load-theme 'srcery t)
