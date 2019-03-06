@@ -21,3 +21,4 @@
 (global-set-key (kbd "C-c +") 'increment-number-at-point)
 (global-set-key (kbd "C-c -") 'decrement-number-at-point)
 (global-set-key (kbd "C-c SPC") 'insert-space-after-point)
+(global-set-key (kbd "C-x g") 'magit-status)

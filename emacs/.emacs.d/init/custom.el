@@ -12,7 +12,7 @@
  '(markdown-command "/usr/local/bin/pandoc")
  '(package-selected-packages
    (quote
-    (blackboard-theme dracula-theme solarized-theme srcery-theme alect-themes flow-minor-mode toml-mode markdown-mode dockerfile-mode js2-mode haskell-mode jinja2-mode yaml-mode)))
+    (magit blackboard-theme dracula-theme solarized-theme srcery-theme alect-themes flow-minor-mode toml-mode markdown-mode dockerfile-mode js2-mode haskell-mode jinja2-mode yaml-mode)))
  '(standard-indent 4)
  '(tab-stop-list (quote (number-sequence 4 200 4))))
 (custom-set-faces
