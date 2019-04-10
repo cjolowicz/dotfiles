@@ -8,7 +8,7 @@
 	editor = emacsclient
 	excludesfile = /Users/claudio/.gitignore_global
 [push]
-	default = matching
+	default = current
 [alias]
 	unstage = reset HEAD --
 	l1 = log --oneline
