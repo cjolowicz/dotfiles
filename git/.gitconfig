@@ -7,8 +7,6 @@
 [core]
 	editor = emacsclient
 	excludesfile = /Users/claudio/.gitignore_global
-[color]
-	ui = true
 [push]
 	default = matching
 [alias]
