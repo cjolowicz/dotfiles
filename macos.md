@@ -21,8 +21,10 @@ curl -L https://raw.githubusercontent.com/justinmayer/tacklebox/master/tools/ins
 
 # Python
 brew install python
-curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
+curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python - --src git+https://github.com/mitsuhiko/pipsi.git#egg=pipsi
 brew install pyenv
+pipsi install tox
+pip install virtualfish
 
 # Emacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
