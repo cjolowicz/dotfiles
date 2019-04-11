@@ -29,6 +29,7 @@ brew install moreutils
 brew install pv
 brew install rename
 brew install stow
+brew install sqlite
 brew install tree
 
 # GnuPG
