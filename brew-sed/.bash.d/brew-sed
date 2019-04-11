@@ -1,9 +1,0 @@
-# -*-sh-*-
-
-if [ -d /usr/local/opt/gnu-sed/libexec/gnubin ] ; then
-    export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-fi
-
-if [ -d /usr/local/opt/gnu-sed/libexec/gnuman ] ; then
-    export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
-fi

@@ -1,7 +1,0 @@
-# Usage: nm [arg]..
-# ----------------------------------------------------------------------
-# Front-end to nm.
-function nm() {
-    command nm --print-size --demangle --line-numbers --numeric-sort "$@" |
-    less --tabs=72 --chop-long-lines
-}

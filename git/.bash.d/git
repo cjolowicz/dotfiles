@@ -1,1 +1,0 @@
-alias git-outgoing='git log --branches --not --remotes=origin'

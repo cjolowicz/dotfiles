@@ -1,3 +1,0 @@
-# -*-sh-*-
-
-prepend_directory PATH ~/.cabal/bin

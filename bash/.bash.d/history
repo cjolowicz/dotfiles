@@ -1,8 +1,0 @@
-# -*-sh-*-
-
-HISTCONTROL=ignoredups:ignorespace
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-shopt -s histappend
-shopt -s checkwinsize

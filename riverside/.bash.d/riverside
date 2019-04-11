@@ -1,3 +1,0 @@
-if [ -x ~/.riverside/usr/bin/riverside ] ; then
-    eval "$(~/.riverside/usr/bin/riverside --print-env)"
-fi

@@ -1,5 +1,0 @@
-if [ -s ~/.rvm/scripts/rvm ] ; then
-    . ~/.rvm/scripts/rvm
-fi
-
-prepend_directory PATH ~/.rvm/bin

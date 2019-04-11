@@ -1,8 +1,0 @@
-#!/bin/sh
-
-. $HOME/.profile
-xrdb $HOME/.Xresources
-xmodmap $HOME/.Xmodmap
-unclutter &
-vncconfig -nowin &
-xmonad | dzen2 -ta r &

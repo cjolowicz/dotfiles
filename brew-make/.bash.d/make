@@ -1,2 +1,0 @@
-PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
-MANPATH="/usr/local/opt/make/libexec/gnuman:$MANPATH"

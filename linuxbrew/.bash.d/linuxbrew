@@ -1,3 +1,0 @@
-prepend_directory PATH $HOME/.linuxbrew/bin
-prepend_directory MANPATH $(brew --prefix)/share/man
-prepend_directory INFOPATH $(brew --prefix)/share/info

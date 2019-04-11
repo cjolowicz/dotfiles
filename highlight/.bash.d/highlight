@@ -1,1 +1,0 @@
-alias highlight='highlight --out-format xterm256 --style edit-emacs-reverse --config-file=/Users/claudio/.local/share/highlight/themes/edit-emacs-reverse.theme'
