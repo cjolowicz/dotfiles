@@ -71,6 +71,7 @@ dotfiles fish
 - iTerm2
 - Raindrop.io
 - Docker
+- VirtualBox
 
 ## Preferences
 
