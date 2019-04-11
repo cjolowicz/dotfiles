@@ -1,12 +1,10 @@
-[user]
-	name = Claudio Jolowicz
-	email = claudio.jolowicz@cyren.com
-	signingkey = E6BDB18E3A5888BF
+[include]
+	path = .gitconf.d/user.conf
 [commit]
 	gpgsign = true
 [core]
-	editor = emacsclient
-	excludesfile = /Users/claudio/.gitignore_global
+	editor = emacsclient --alternate-editor=
+	excludesfile = ~/.gitignore_global
 [push]
 	default = current
 [alias]
