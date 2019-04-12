@@ -57,6 +57,7 @@ pip install virtualfish
 
 # Emacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+git -C .emacs.d checkout develop
 brew install emacs
 #brew services start emacs  # GPG_TTY unset on startup
 
