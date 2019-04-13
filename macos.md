@@ -63,6 +63,12 @@ git -C .emacs.d checkout develop
 brew install emacs
 #brew services start emacs  # GPG_TTY unset on startup
 
+# Node.js
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+omf install nvm
+nvm install eode
+brew install yarn
+
 # dotfiles
 git clone git@github.com:cjolowicz/dotfiles.git ~/.dotfiles
 source ~/.dotfiles/fish/.config/fish/functions/dotfiles.fish
