@@ -9,7 +9,8 @@ This function should only modify configuration layer settings."
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
-   '(python
+   '(docker
+     python
      javascript
      yaml
      shell-scripts
