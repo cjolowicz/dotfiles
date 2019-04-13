@@ -84,6 +84,9 @@ dotfiles fish
 
 ## Preferences
 
+- System > Keyboard > Keyboard > Modifier Keys > Caps Lock Key > Escape
+- System > Keyboard > Keyboard > Key Repeat > Fast
+- System > Keyboard > Keyboard > Delay Until Repeat > Short
 - System > Security & Privacy > Privacy > Accessibility > + > iTerm
 - iTerm2 > Appearance > Tabs > Show tab bar in fullscreen > no
 - iTerm2 > Profiles > + > Original
