@@ -1,5 +1,5 @@
 [include]
-	path = .gitconf.d/user.conf
+	path = .gitconfig.d/user.conf
 [commit]
 	gpgsign = true
 [core]
