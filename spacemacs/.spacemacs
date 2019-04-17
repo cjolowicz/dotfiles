@@ -12,7 +12,9 @@ This function should only modify configuration layer settings."
    '(nginx
      docker
      python
-     javascript
+     (javascript :variables
+                 js2-basic-offset 2
+                 js-indent-level 2)
      yaml
      shell-scripts
      helm
