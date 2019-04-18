@@ -105,7 +105,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-highlight-delimiters 'all
    dotspacemacs-enable-server nil
    dotspacemacs-server-socket-dir nil
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
    dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")
    dotspacemacs-frame-title-format "%I@%S"
    dotspacemacs-icon-title-format nil
