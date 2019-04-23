@@ -26,6 +26,7 @@ This function should only modify configuration layer settings."
      multiple-cursors
      treemacs
      org
+     osx
      react
      (shell :variables
             shell-default-height 30
