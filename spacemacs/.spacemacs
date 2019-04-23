@@ -130,8 +130,8 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-  (setq exec-path (cons "/Users/cjolowicz/.pyenv/shims" exec-path))
-  )
+  (setq-default git-magit-status-fullscreen t)
+  (setq exec-path (cons "/Users/cjolowicz/.pyenv/shims" exec-path)))
 
 (defun dotspacemacs/user-load ()
   "Library to load while dumping.
