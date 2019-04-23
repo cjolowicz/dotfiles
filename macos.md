@@ -56,6 +56,7 @@ curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | pyt
 brew install pyenv
 pip install tox-pyenv
 pip install virtualfish
+pip install importmagic epc
 
 # Emacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
