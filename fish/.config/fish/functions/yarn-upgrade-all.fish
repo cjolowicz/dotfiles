@@ -14,8 +14,8 @@ function yarn-upgrade-all --description "Upgrade JavaScript packages"
         echo
 
         yarn upgrade --latest $PACKAGE
-        and yarn run test
-        and yarn run build
+        and yarn run test < /dev/null
+        and yarn run build < /dev/null
         and git commit -am "Upgrade to "$PACKAGE" "$VERSION
         or begin
             set_color red
