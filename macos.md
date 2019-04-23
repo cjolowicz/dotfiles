@@ -60,8 +60,13 @@ pip install virtualfish
 # Emacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 git -C .emacs.d checkout develop
-brew install emacs
+#brew install emacs
 #brew services start emacs  # GPG_TTY unset on startup
+brew tap d12frosted/emacs-plus
+brew install emacs-plus
+ln -s /usr/local/Cellar/emacs-plus/*/Emacs.app/ /Applications/
+brew tap caskroom/fonts
+brew cask install font-source-code-pro
 
 # Node.js
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
