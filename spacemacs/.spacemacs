@@ -146,6 +146,7 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (setq magit-repository-directories '("~/Code/" . 2))
   (global-git-commit-mode t))
 
 (defun dotspacemacs/emacs-custom-settings ()
