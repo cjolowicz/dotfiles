@@ -25,7 +25,12 @@ This function should only modify configuration layer settings."
      markdown
      multiple-cursors
      treemacs
-     org
+     (org :variables
+          org-enable-github-support t
+          org-enable-bootstrap-support t
+          org-enable-org-journal-support t
+          org-enable-hugo-support t
+          org-enable-trello-support t)
      osx
      react
      (shell :variables
