@@ -25,3 +25,5 @@
 	textconv = gzip -cd | xmllint --exc-c14n
 [rebase]
 	autosquash = true
+[tag]
+	forceSignAnnotated = true
