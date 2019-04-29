@@ -56,7 +56,7 @@ curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | pyt
 brew install pyenv
 pip install tox-pyenv
 pip install virtualfish
-pip install importmagic epc
+pip install importmagic epc  # for spacemacs
 
 # Emacs
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
@@ -79,6 +79,10 @@ brew install yarn
 git clone git@github.com:cjolowicz/dotfiles.git ~/.dotfiles
 source ~/.dotfiles/fish/.config/fish/functions/dotfiles.fish
 dotfiles fish
+
+# misc
+brew install hugo
+brew install ctop
 ```
 
 ## Apps
