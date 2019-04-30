@@ -83,6 +83,7 @@ dotfiles fish
 # misc
 brew install hugo
 brew install ctop
+brew install glances
 ```
 
 ## Apps
