@@ -84,6 +84,7 @@ dotfiles fish
 brew install hugo
 brew install ctop
 brew install glances
+brew install cmake
 ```
 
 ## Apps
