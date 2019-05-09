@@ -43,7 +43,7 @@ This function should only modify configuration layer settings."
      version-control
      xclipboard
      )
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(forge)
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '()
    dotspacemacs-install-packages 'used-only))
@@ -153,7 +153,8 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (setq magit-repository-directories '("~/Code/" . 2))
-  (global-git-commit-mode t))
+  (global-git-commit-mode t)
+  (use-package forge :after magit))
 
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
