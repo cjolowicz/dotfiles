@@ -74,6 +74,9 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | b
 omf install nvm
 nvm install eode
 brew install yarn
+npm install -g tern
+npm install -g js-beautify
+npm install -g eslint
 
 # dotfiles
 git clone git@github.com:cjolowicz/dotfiles.git ~/.dotfiles
