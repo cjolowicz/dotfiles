@@ -38,6 +38,7 @@ This function should only modify configuration layer settings."
      shell-scripts
      spell-checking
      syntax-checking
+     theming
      treemacs
      version-control
      xclipboard
