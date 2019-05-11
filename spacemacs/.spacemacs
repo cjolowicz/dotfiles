@@ -17,6 +17,7 @@ This function should only modify configuration layer settings."
      git
      helm
      (javascript :variables
+                 javascript-fmt-tool 'prettier
                  js2-basic-offset 2
                  js-indent-level 2)
      markdown
@@ -29,6 +30,7 @@ This function should only modify configuration layer settings."
           org-enable-hugo-support t
           org-enable-trello-support t)
      osx
+     prettier
      python
      react
      rust
