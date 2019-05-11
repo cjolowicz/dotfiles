@@ -155,6 +155,11 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; https://github.com/syl20bnr/spacemacs/issues/10957
+  (let ((gls (executable-find "gls")))
+    (when gls
+      (setq insert-directory-program gls
+            dired-listing-switches "-aBhl --group-directories-first")))
   (setq magit-repository-directories '("~/Code/" . 2))
   (global-git-commit-mode t)
   (use-package forge :after magit))
