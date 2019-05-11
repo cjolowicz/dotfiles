@@ -9,24 +9,19 @@ This function should only modify configuration layer settings."
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
-   '(cmake
-     rust
-     nginx
+   '(auto-completion
+     better-defaults
+     cmake
      docker
-     python
+     emacs-lisp
+     git
+     helm
      (javascript :variables
                  js2-basic-offset 2
                  js-indent-level 2)
-     yaml
-     shell-scripts
-     helm
-     auto-completion
-     better-defaults
-     emacs-lisp
-     git
      markdown
      multiple-cursors
-     treemacs
+     nginx
      (org :variables
           org-enable-github-support t
           org-enable-bootstrap-support t
@@ -34,14 +29,19 @@ This function should only modify configuration layer settings."
           org-enable-hugo-support t
           org-enable-trello-support t)
      osx
+     python
      react
+     rust
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
+     shell-scripts
      spell-checking
      syntax-checking
+     treemacs
      version-control
      xclipboard
+     yaml
      )
    dotspacemacs-additional-packages '(forge)
    dotspacemacs-frozen-packages '()
