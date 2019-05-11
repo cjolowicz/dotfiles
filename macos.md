@@ -77,6 +77,7 @@ brew install yarn
 npm install -g tern
 npm install -g js-beautify
 npm install -g eslint
+yarn global add prettier
 
 # dotfiles
 git clone git@github.com:cjolowicz/dotfiles.git ~/.dotfiles
