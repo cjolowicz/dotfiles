@@ -19,7 +19,8 @@ This function should only modify configuration layer settings."
      (javascript :variables
                  javascript-fmt-tool 'prettier
                  js2-basic-offset 2
-                 js-indent-level 2)
+                 js-indent-level 2
+                 js-switch-indent-offset 2)
      markdown
      multiple-cursors
      nginx
