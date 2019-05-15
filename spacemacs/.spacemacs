@@ -166,9 +166,6 @@ before packages are loaded."
       (setq insert-directory-program gls
             dired-listing-switches "-aBhl --group-directories-first")))
 
-  ;; Hide mode-line by default.
-  (add-hook 'after-change-major-mode-hook 'hidden-mode-line-mode)
-
   ;; Tell magit where we keep our git repositories.
   (setq magit-repository-directories '("~/Code/" . 2))
 
