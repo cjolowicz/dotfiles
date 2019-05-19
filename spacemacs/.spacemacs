@@ -80,6 +80,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-initial-scratch-message nil
    dotspacemacs-themes '(ample
+                         ample-light
                          spacemacs-dark
                          spacemacs-light)
    dotspacemacs-mode-line-theme '(spacemacs :separator utf-8 :separator-scale 1.5)
