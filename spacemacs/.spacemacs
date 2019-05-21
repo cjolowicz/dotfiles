@@ -503,6 +503,8 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; Open magit status in same window.
+  (setq magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
