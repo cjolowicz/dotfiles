@@ -168,6 +168,9 @@ before packages are loaded."
   ;; Tell magit where we keep our git repositories.
   (setq magit-repository-directories '("~/Code/" . 2))
 
+  ;; Open magit status in same window.
+  (setq magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
+
   ;; Enable use of spacemacs as GIT_EDITOR.
   (global-git-commit-mode t)
 
