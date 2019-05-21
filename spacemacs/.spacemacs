@@ -11,7 +11,9 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(auto-completion
      better-defaults
-     c-c++
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
      cmake
      docker
      emacs-lisp
