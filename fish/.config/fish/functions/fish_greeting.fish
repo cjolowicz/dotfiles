@@ -11,6 +11,7 @@ function fish_greeting -d "Greeting message on shell session start up"
     echo -en "  |,-'--|--'-.|   \n"
     echo ""
     set_color normal
+    fortune
 end
 
 function show_date -d "Prints information about date"
