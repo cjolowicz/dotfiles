@@ -82,6 +82,8 @@ yarn global add prettier
 # Clang
 brew install llvm
 brew install clang-format
+brew install rtags
+brew services start rtags
 
 # dotfiles
 git clone git@github.com:cjolowicz/dotfiles.git ~/.dotfiles
