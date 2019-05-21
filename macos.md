@@ -85,10 +85,14 @@ source ~/.dotfiles/fish/.config/fish/functions/dotfiles.fish
 dotfiles fish
 
 # misc
-brew install hugo
-brew install ctop
-brew install glances
-brew install cmake
+packages=(
+    cmake
+    ctop
+    fortune
+    glances
+    hugo
+)
+brew install ${packages[@]}
 ```
 
 ## Apps
