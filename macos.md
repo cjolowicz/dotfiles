@@ -96,6 +96,7 @@ packages=(
     ctop
     fortune
     glances
+    graphviz
     hugo
 )
 brew install ${packages[@]}
