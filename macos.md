@@ -79,6 +79,10 @@ npm install -g js-beautify
 npm install -g eslint
 yarn global add prettier
 
+# Clang
+brew install llvm
+brew install clang-format
+
 # dotfiles
 git clone git@github.com:cjolowicz/dotfiles.git ~/.dotfiles
 source ~/.dotfiles/fish/.config/fish/functions/dotfiles.fish
