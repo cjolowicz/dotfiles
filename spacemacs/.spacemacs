@@ -170,6 +170,9 @@ before packages are loaded."
       (setq insert-directory-program gls
             dired-listing-switches "-aBhl --group-directories-first")))
 
+  ;; Always prefer horizontal splits.
+  (setq split-height-threshold nil)
+
   ;; Tell magit where we keep our git repositories.
   (setq magit-repository-directories '("~/Code/" . 2))
 
