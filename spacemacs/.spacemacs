@@ -173,6 +173,9 @@ before packages are loaded."
   ;; Always prefer horizontal splits.
   (setq split-height-threshold nil)
 
+  ;; Display TAB as four-characters wide.
+  (setq-default tab-width 4)
+
   ;; Tell magit where we keep our git repositories.
   (setq magit-repository-directories '("~/Code/" . 2))
 
