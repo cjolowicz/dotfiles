@@ -177,6 +177,64 @@ before packages are loaded."
   ;; Display TAB as four-characters wide.
   (setq-default tab-width 4)
 
+  ;; Configure c-style.
+  (c-add-style "google-c-style-with-four-space-indent"
+    '((c-basic-offset . 4)
+      (indent-tabs-mode . nil)
+      (c-comment-only-line-offset . 0)
+      (c-hanging-braces-alist . ((defun-open after)
+                                 (defun-close before after)
+                                 (class-open after)
+                                 (class-close before after)
+                                 (inexpr-class-open after)
+                                 (inexpr-class-close before)
+                                 (namespace-open after)
+                                 (inline-open after)
+                                 (inline-close before after)
+                                 (block-open after)
+                                 (block-close . c-snug-do-while)
+                                 (extern-lang-open after)
+                                 (extern-lang-close after)
+                                 (statement-case-open after)
+                                 (substatement-open after)))
+      (c-hanging-colons-alist . ((case-label)
+                                 (label after)
+                                 (access-label after)
+                                 (member-init-intro before)
+                                 (inher-intro)))
+      (c-hanging-semi&comma-criteria
+       . (c-semi&comma-no-newlines-for-oneline-inliners
+          c-semi&comma-inside-parenlist
+          c-semi&comma-no-newlines-before-nonblanks))
+      (c-indent-comments-syntactically-p . t)
+      (comment-column . 40)
+      (c-indent-comment-alist . ((other . (space . 2))))
+      (c-cleanup-list . (brace-else-brace
+                         brace-elseif-brace
+                         brace-catch-brace
+                         empty-defun-braces
+                         defun-close-semi
+                         list-close-comma
+                         scope-operator))
+      (c-offsets-alist . ((arglist-intro google-c-lineup-expression-plus-4)
+                          (func-decl-cont . ++)
+                          (member-init-intro . ++)
+                          (inher-intro . ++)
+                          (comment-intro . 0)
+                          (arglist-close . c-lineup-arglist)
+                          (topmost-intro . 0)
+                          (block-open . 0)
+                          (inline-open . 0)
+                          (substatement-open . 0)
+                          (statement-cont . +)
+                          (label . /)
+                          (case-label . +)
+                          (statement-case-open . +)
+                          (statement-case-intro . +) ; case w/o {
+                          (access-label . /)
+                          (innamespace . 0)))))
+  (push '(other . "google-c-style-with-four-space-indent") c-default-style)
+
   ;; Tell magit where we keep our git repositories.
   (setq magit-repository-directories '("~/Code/" . 2))
 
@@ -203,7 +261,7 @@ This function is called at the very end of Spacemacs initialization."
  '(org-trello-current-prefix-keybinding "C-c o" nil (org-trello))
  '(package-selected-packages
    (quote
-    (web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode counsel-css company-web web-completion-data helm-rtags google-c-style flycheck-rtags disaster company-rtags rtags company-c-headers clang-format sqlup-mode sql-indent helm-ctest cmake-mode cmake-ide levenshtein toml-mode racer flycheck-rust cargo rust-mode nginx-mode dockerfile-mode docker tablist docker-tramp xcscope cython-mode company-anaconda anaconda-mode pythonic json-navigator hierarchy json-mode json-snatcher json-reformat company-tern dash-functional web-beautify tern prettier-js livid-mode skewer-mode js2-refactor multiple-cursors js2-mode js-doc import-js grizzl impatient-mode simple-httpd add-node-modules-path yaml-mode insert-shebang helm-gtags ggtags flycheck-bashate fish-mode counsel-gtags company-shell yasnippet-snippets xterm-color unfill smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download org-brain mwim multi-term mmm-mode markdown-toc markdown-mode magit-svn magit-gitflow magit-popup htmlize helm-org-rifle helm-gitignore helm-git-grep helm-company helm-c-yasnippet gnuplot gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip evil-org evil-magit magit transient git-commit with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company browse-at-remote auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler writeroom-mode winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package treemacs-projectile treemacs-evil toc-org symon string-inflection spaceline-all-the-icons restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox overseer org-plus-contrib org-bullets open-junk-file nameless move-text macrostep lorem-ipsum link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio font-lock+ flycheck-package flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline diminish define-word counsel-projectile column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line))))
+    (graphviz-dot-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode counsel-css company-web web-completion-data helm-rtags google-c-style flycheck-rtags disaster company-rtags rtags company-c-headers clang-format sqlup-mode sql-indent helm-ctest cmake-mode cmake-ide levenshtein toml-mode racer flycheck-rust cargo rust-mode nginx-mode dockerfile-mode docker tablist docker-tramp xcscope cython-mode company-anaconda anaconda-mode pythonic json-navigator hierarchy json-mode json-snatcher json-reformat company-tern dash-functional web-beautify tern prettier-js livid-mode skewer-mode js2-refactor multiple-cursors js2-mode js-doc import-js grizzl impatient-mode simple-httpd add-node-modules-path yaml-mode insert-shebang helm-gtags ggtags flycheck-bashate fish-mode counsel-gtags company-shell yasnippet-snippets xterm-color unfill smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download org-brain mwim multi-term mmm-mode markdown-toc markdown-mode magit-svn magit-gitflow magit-popup htmlize helm-org-rifle helm-gitignore helm-git-grep helm-company helm-c-yasnippet gnuplot gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip evil-org evil-magit magit transient git-commit with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company browse-at-remote auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler writeroom-mode winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package treemacs-projectile treemacs-evil toc-org symon string-inflection spaceline-all-the-icons restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox overseer org-plus-contrib org-bullets open-junk-file nameless move-text macrostep lorem-ipsum link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio font-lock+ flycheck-package flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline diminish define-word counsel-projectile column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
