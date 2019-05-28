@@ -18,6 +18,7 @@ This function should only modify configuration layer settings."
      cmake
      docker
      emacs-lisp
+     graphviz
      git
      helm
      html
