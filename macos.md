@@ -98,7 +98,7 @@ packages=(
     glances
     graphviz
     hugo
-    markdown
+    pandoc
 )
 brew install ${packages[@]}
 ```
