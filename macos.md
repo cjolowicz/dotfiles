@@ -6,102 +6,14 @@
 # Base
 xcode-select --install  # it was already installed
 ssh-keygen -t rsa -b 4096 -C $EMAIL
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install git
-
-# Standard utilities
-brew install bash
-brew install coreutils
-brew install findutils
-brew install gawk
-brew install gnu-sed
-brew install gnu-tar
-brew install grep
-brew install m4
-brew install make
-brew install zlib
-
-# Additional utilities
-brew install ack
-brew install hub
-brew install ispell
-brew install moreutils
-brew install pv
-brew install rename
-brew install ripgrep
-brew install sqlite
-brew install stow
-brew install trash
-brew install tree
-
-# GnuPG
-brew install gnupg
-brew install pinentry-mac
-gpg --full-generate-key  # 4096 bits
-gpg --armor --export $key
-
-# Fish
-brew install fish
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
-brew tap caskroom/fonts
-brew cask install font-hack-nerd-font
-curl -L https://get.oh-my.fish | fish
-omf install bobthefish
-curl -L https://raw.githubusercontent.com/justinmayer/tacklebox/master/tools/install.fish | fish
-
-# Python
-brew install python
-curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python - --src git+https://github.com/mitsuhiko/pipsi.git#egg=pipsi
-brew install pyenv
-pip install tox-pyenv
-pip install virtualfish
-pip install importmagic epc  # for spacemacs
-
-# Emacs
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-git -C .emacs.d checkout develop
-#brew install emacs
-#brew services start emacs  # GPG_TTY unset on startup
-brew tap d12frosted/emacs-plus
-brew install emacs-plus
-ln -s /usr/local/Cellar/emacs-plus/*/Emacs.app/ /Applications/
-brew tap caskroom/fonts
-brew cask install font-source-code-pro
-
-# Node.js
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-omf install nvm
-nvm install eode
-brew install yarn
-npm install -g tern
-npm install -g js-beautify
-npm install -g eslint
-yarn global add prettier
-
-# Clang
-brew install llvm
-brew install clang-format
-brew install rtags
-brew services start rtags
 
 # dotfiles
 git clone git@github.com:cjolowicz/dotfiles.git ~/.dotfiles
 source ~/.dotfiles/fish/.config/fish/functions/dotfiles.fish
 dotfiles fish
-
-# misc
-packages=(
-    cmake
-    ctop
-    fortune
-    glances
-    graphviz
-    hugo
-    pandoc
-)
-brew install ${packages[@]}
 ```
+
+See also [Homebrew packages](brew.md).
 
 ## Apps
 
