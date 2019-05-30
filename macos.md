@@ -120,3 +120,7 @@ brew install ${packages[@]}
 - iTerm2 > Profiles > Default > Keys > Left Option acts as Esc+
 - iTerm2 > Profiles > Default > Text > Font > Change Font > Hack Nerd Font Regular 13pt
 - iTerm2 > Profiles > Default > Text > Font > Use a different font for non-ASCII text > Hack Nerd Font Regular 13pt
+
+## Other
+
+- Google Chrome extension [[https://chrome.google.com/webstore/detail/edit-with-emacs/ljobjlafonikaiipfkggjbhkghgicgoh][Edit with Emacs]]
