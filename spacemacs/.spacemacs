@@ -172,6 +172,11 @@ before packages are loaded."
       (setq insert-directory-program gls
             dired-listing-switches "-aBhl --group-directories-first")))
 
+  ;; Switch focus to Chrome after editing in edit-server.
+  (add-hook
+   'edit-server-done-hook
+   (lambda () (shell-command "open -a \"Google Chrome\"")))
+
   ;; Always prefer horizontal splits.
   (setq split-height-threshold nil)
 
