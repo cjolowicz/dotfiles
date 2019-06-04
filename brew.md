@@ -23,6 +23,7 @@
 - git
 - hub
 - ispell
+- lsof
 - moreutils
 - pv
 - rename
