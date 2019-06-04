@@ -1,18 +1,5 @@
 # macos
 
-## Shell
-
-```sh
-# Base
-xcode-select --install  # it was already installed
-ssh-keygen -t rsa -b 4096 -C $EMAIL
-
-# dotfiles
-git clone git@github.com:cjolowicz/dotfiles.git ~/.dotfiles
-source ~/.dotfiles/fish/.config/fish/functions/dotfiles.fish
-dotfiles fish
-```
-
 See also [Homebrew packages](brew.md).
 
 ## Apps

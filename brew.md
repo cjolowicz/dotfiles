@@ -4,6 +4,18 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+## XCode
+
+```sh
+xcode-select --install  # it was already installed
+```
+
+## SSH
+
+```sh
+ssh-keygen -t rsa -b 4096 -C $EMAIL
+```
+
 ## Standard utilities
 
 - bash
@@ -55,6 +67,12 @@ brew cask install font-hack-nerd-font
 curl -L https://get.oh-my.fish | fish
 omf install bobthefish
 curl -L https://raw.githubusercontent.com/justinmayer/tacklebox/master/tools/install.fish | fish
+```
+
+```sh
+git clone git@github.com:cjolowicz/dotfiles.git ~/.dotfiles
+source ~/.dotfiles/fish/.config/fish/functions/dotfiles.fish
+dotfiles fish
 ```
 
 ## Python
