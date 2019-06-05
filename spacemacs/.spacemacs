@@ -244,7 +244,7 @@ before packages are loaded."
   (push '(other . "google-c-style-with-four-space-indent") c-default-style)
 
   ;; Tell magit where we keep our git repositories.
-  (setq magit-repository-directories '("~/Code/" . 2))
+  (setq magit-repository-directories '(("~/Code/" . 3)))
 
   ;; Open magit status in same window.
   (setq magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
