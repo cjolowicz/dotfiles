@@ -14,3 +14,5 @@ dotfiles fish
 The `dotfiles` function is a wrapper for
 [stow](https://www.gnu.org/software/stow/stow.html) and accepts the same command
 line options.
+
+:tada:
