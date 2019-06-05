@@ -5,7 +5,6 @@ See also [Homebrew packages](brew.md).
 ## Apps
 
 - iTerm2
-- Raindrop.io
 - Docker
 - VirtualBox
 
