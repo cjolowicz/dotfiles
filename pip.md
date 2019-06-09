@@ -7,15 +7,14 @@ This file lists Python packages installed globally using `pip install`.
 
 ## Spacemacs
 
+- "ptvsd>=4.2"
 - autoflake 
 - black 
 - epc 
 - flake8 
 - importmagic 
-- pytest 
-- yapf 
-- "ptvsd>=4.2"
-- python-language-server
 - pyls-isort
 - pyls-mypy
-
+- pytest 
+- python-language-server
+- yapf 
