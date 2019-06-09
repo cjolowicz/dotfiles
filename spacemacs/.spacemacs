@@ -43,7 +43,10 @@ This function should only modify configuration layer settings."
      osx
      pandoc
      prettier
-     python
+     (python :variables
+             python-test-runner 'pytest
+             python-formatter 'black
+             python-fill-column 99)
      react
      rust
      (shell :variables
