@@ -80,11 +80,10 @@ dotfiles fish
 - python
 - pyenv
 
+See [pip.md](pip.md)
+
 ```
 curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python - --src git+https://github.com/mitsuhiko/pipsi.git#egg=pipsi
-pip install tox-pyenv
-pip install virtualfish
-pip install importmagic epc  # for spacemacs
 ```
 
 ## Emacs
