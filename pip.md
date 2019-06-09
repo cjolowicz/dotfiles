@@ -12,6 +12,7 @@ This file lists Python packages installed globally using `pip install`.
 - black 
 - epc 
 - flake8 
+- flake8-bugbear
 - importmagic 
 - pyls-isort
 - pyls-mypy
