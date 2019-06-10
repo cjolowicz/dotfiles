@@ -113,12 +113,7 @@ nvm install eode
 - yarn
 - jq
 
-```
-npm install -g tern
-npm install -g js-beautify
-npm install -g eslint
-yarn global add prettier
-```
+See [npm.md](npm.md)
 
 ## Clang
 
