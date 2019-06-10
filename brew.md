@@ -111,6 +111,7 @@ nvm install eode
 ```
 
 - yarn
+- jq
 
 ```
 npm install -g tern
