@@ -9,7 +9,8 @@ This function should only modify configuration layer settings."
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
-   '(auto-completion
+   '((auto-completion :variables
+                      auto-completion-complete-with-key-sequence "jk")
      better-defaults
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
