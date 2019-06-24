@@ -26,6 +26,7 @@ This function should only modify configuration layer settings."
      html
      (javascript :variables
                  javascript-fmt-tool 'prettier
+                 javascript-import-tool 'import-js
                  js2-basic-offset 2
                  js-indent-level 2
                  js-switch-indent-offset 2
