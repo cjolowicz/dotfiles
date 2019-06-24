@@ -9,3 +9,4 @@ These packages were installed using the command `npm install -g`.
 These packages were installed using the command `yarn global add`.
 
 - prettier
+- import-js
