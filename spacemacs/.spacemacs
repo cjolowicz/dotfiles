@@ -30,6 +30,8 @@ This function should only modify configuration layer settings."
                  js-indent-level 2
                  js-switch-indent-offset 2
                  node-add-modules-path t)
+     (json :variables
+           json-fmt-tool 'prettier)
      (markdown :variables
                markdown-command "pandoc")
      multiple-cursors
