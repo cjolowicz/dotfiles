@@ -36,6 +36,7 @@ ssh-keygen -t rsa -b 4096 -C $EMAIL
 - hub
 - ispell
 - lsof
+- mercurial
 - moreutils
 - pv
 - rename
