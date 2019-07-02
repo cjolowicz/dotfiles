@@ -22,4 +22,4 @@ See also [Homebrew packages](brew.md).
 
 ## Other
 
-- Google Chrome extension [[https://chrome.google.com/webstore/detail/edit-with-emacs/ljobjlafonikaiipfkggjbhkghgicgoh][Edit with Emacs]]
+- Google Chrome extension [Edit with Emacs](https://chrome.google.com/webstore/detail/edit-with-emacs/ljobjlafonikaiipfkggjbhkghgicgoh)
