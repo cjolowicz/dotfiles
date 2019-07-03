@@ -260,6 +260,10 @@ before packages are loaded."
   ;; Don't auto-refresh the status buffer (unless it's the current buffer).
   (setq magit-refresh-status-buffer nil)
 
+  ;; Don't auto-revert buffers of visited repository files.
+  (setq auto-revert-buffer-list-filter
+        'magit-auto-revert-repository-buffers-p)
+
   ;; Enable use of spacemacs as GIT_EDITOR.
   (global-git-commit-mode t)
 
