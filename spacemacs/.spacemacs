@@ -257,6 +257,9 @@ before packages are loaded."
   ;; Open magit status in same window.
   (setq magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
 
+  ;; Don't auto-refresh the status buffer (unless it's the current buffer).
+  (setq magit-refresh-status-buffer nil)
+
   ;; Enable use of spacemacs as GIT_EDITOR.
   (global-git-commit-mode t)
 
