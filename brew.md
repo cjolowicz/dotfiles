@@ -131,6 +131,7 @@ brew services start rtags
 - cmake
 - ctop
 - fortune
+- gifsicle
 - glances
 - graphviz
 - hugo
