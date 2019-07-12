@@ -130,6 +130,7 @@ brew services start rtags
 
 - cmake
 - ctop
+- editorconfig
 - ffmpeg
 - fortune
 - gifsicle
