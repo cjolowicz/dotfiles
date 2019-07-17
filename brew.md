@@ -128,6 +128,10 @@ brew services start rtags
 
 ## Miscellaneous
 
+```
+brew tap heroku/brew
+```
+
 - cmake
 - ctop
 - editorconfig
@@ -136,5 +140,6 @@ brew services start rtags
 - gifsicle
 - glances
 - graphviz
+- heroku
 - hugo
 - pandoc
