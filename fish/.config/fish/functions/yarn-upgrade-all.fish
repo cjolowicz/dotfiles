@@ -73,7 +73,7 @@ options:
         yarn upgrade $options $PACKAGE
         and yarn run test < /dev/null
         and yarn run build < /dev/null
-        and git commit -am "Upgrade to "$PACKAGE" "$VERSION
+        and git commit -am "[package] Upgrade to "$PACKAGE" "$VERSION
         or begin
             set_color red
             echo "last command exited with status $status" >&2
