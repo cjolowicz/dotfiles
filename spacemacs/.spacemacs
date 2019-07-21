@@ -112,7 +112,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-distinguish-gui-tab nil
    dotspacemacs-default-layout-name "Default"
    dotspacemacs-display-default-layout nil
-   dotspacemacs-auto-resume-layouts nil
+   dotspacemacs-auto-resume-layouts t
    dotspacemacs-auto-generate-layout-names nil
    dotspacemacs-large-file-size 1
    dotspacemacs-auto-save-file-location 'cache
