@@ -2,6 +2,7 @@
 
 This file lists Python packages installed globally using `pip install`.
 
+- nox
 - tox-pyenv
 - virtualfish
 
