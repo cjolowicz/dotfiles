@@ -14,8 +14,7 @@ This function should only modify configuration layer settings."
      better-defaults
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t
-            c-c++-backend 'rtags)
+            c-c++-enable-clang-support t)
      chrome
      cmake
      docker
