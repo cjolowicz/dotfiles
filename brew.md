@@ -143,3 +143,4 @@ brew tap heroku/brew
 - heroku
 - hugo
 - pandoc
+- travis
