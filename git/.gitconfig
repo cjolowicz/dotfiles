@@ -14,6 +14,7 @@
 	nlog = log
 	ndiff = diff
 	nshow = show
+	root = rev-parse --show-toplevel
 [pager]
 	status = true
 	nlog = less -FXR +/^commit.*
