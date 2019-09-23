@@ -61,7 +61,7 @@ This function should only modify configuration layer settings."
      xclipboard
      yaml
      )
-   dotspacemacs-additional-packages '(forge)
+   dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '()
    dotspacemacs-install-packages 'used-only))
@@ -260,9 +260,7 @@ before packages are loaded."
 
   ;; Enable use of spacemacs as GIT_EDITOR.
   (global-git-commit-mode t)
-
-  ;; Use forge package.
-  (use-package forge :after magit))
+)
 
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
