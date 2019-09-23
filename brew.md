@@ -132,6 +132,7 @@ brew services start rtags
 brew tap heroku/brew
 ```
 
+- bat
 - cmake
 - ctop
 - editorconfig
