@@ -10,3 +10,4 @@ These packages were installed using the command `yarn global add`.
 
 - prettier
 - import-js
+- prisma
