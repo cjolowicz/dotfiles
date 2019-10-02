@@ -61,7 +61,7 @@ This function should only modify configuration layer settings."
      xclipboard
      yaml
      )
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(graphql-mode)
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '()
    dotspacemacs-install-packages 'used-only))
