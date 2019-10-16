@@ -79,7 +79,6 @@ dotfiles fish
 ## Python
 
 - python
-- pyenv
 
 See [pip.md](pip.md)
 
