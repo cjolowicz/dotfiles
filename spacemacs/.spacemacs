@@ -19,6 +19,7 @@ This function should only modify configuration layer settings."
      cmake
      docker
      emacs-lisp
+     emoji
      graphviz
      git
      helm
