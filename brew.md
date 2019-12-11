@@ -138,6 +138,7 @@ brew tap heroku/brew
 - ffmpeg
 - fortune
 - gifsicle
+- git-extras
 - glances
 - graphviz
 - heroku
