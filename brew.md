@@ -145,3 +145,11 @@ brew tap heroku/brew
 - hugo
 - pandoc
 - travis
+
+## Cask
+
+```
+brew cask install $package
+```
+
+- gimp
