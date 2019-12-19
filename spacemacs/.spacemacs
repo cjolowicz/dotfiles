@@ -33,6 +33,7 @@ This function should only modify configuration layer settings."
                  node-add-modules-path t)
      (json :variables
            json-fmt-tool 'prettier)
+     lsp
      (markdown :variables
                markdown-command "pandoc")
      multiple-cursors
