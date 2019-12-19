@@ -42,6 +42,7 @@ This function should only modify configuration layer settings."
      pandoc
      prettier
      (python :variables
+             python-backend 'lsp
              python-test-runner 'pytest
              python-formatter 'black
              python-fill-column 99)
