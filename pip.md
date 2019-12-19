@@ -19,5 +19,5 @@ This file lists Python packages installed globally using `pip install`.
 - pyls-isort
 - pyls-mypy
 - pytest 
-- python-language-server
+- python-language-server[all]
 - yapf 
