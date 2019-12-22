@@ -21,3 +21,7 @@ This file lists Python packages installed globally using `pip install`.
 - pytest 
 - python-language-server[all]
 - yapf 
+
+# pipx
+
+- pre-commit
