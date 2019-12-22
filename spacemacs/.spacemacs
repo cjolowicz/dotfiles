@@ -263,6 +263,9 @@ before packages are loaded."
 
   ;; Enable use of spacemacs as GIT_EDITOR.
   (global-git-commit-mode t)
+
+  ;; Use <right-option> + <u> for umlaut, etc.
+  (setq mac-right-option-modifier nil)
 )
 
 (defun dotspacemacs/emacs-custom-settings ()
