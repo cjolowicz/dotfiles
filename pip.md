@@ -16,10 +16,7 @@ This file lists Python packages installed globally using `pip install`.
 - flake8 
 - flake8-bugbear
 - importmagic 
-- pyls-isort
-- pyls-mypy
 - pytest 
-- python-language-server[all]
 - yapf 
 
 # pipx
