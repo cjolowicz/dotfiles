@@ -18,7 +18,3 @@ The following packages were installed for Spacemacs:
 - importmagic 
 - pytest 
 - yapf 
-
-# pipx
-
-- pre-commit
