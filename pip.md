@@ -7,7 +7,7 @@ This file lists Python packages installed globally using `pip install`.
 - tox-pyenv
 - virtualfish
 
-## Spacemacs
+The following packages were installed for Spacemacs:
 
 - "ptvsd>=4.2"
 - autoflake 
