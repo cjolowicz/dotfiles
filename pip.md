@@ -10,7 +10,6 @@ The following packages were installed for Spacemacs:
 
 - "ptvsd>=4.2"
 - autoflake 
-- black 
 - epc 
 - flake8 
 - flake8-bugbear
