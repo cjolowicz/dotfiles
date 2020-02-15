@@ -139,6 +139,7 @@ brew tap heroku/brew
 - fortune
 - gifsicle
 - git-extras
+- github/gh/gh
 - glances
 - graphviz
 - heroku
