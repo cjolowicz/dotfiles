@@ -7,4 +7,5 @@ This file lists Python packages installed globally using `pipx install`.
 - git-filter-repo
 - mypy
 - nox
+- python-gitlab
 - pre-commit
