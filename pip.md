@@ -13,6 +13,5 @@ The following packages were installed for Spacemacs:
 - epc 
 - flake8 
 - flake8-bugbear
-- importmagic 
 - pytest 
 - yapf 
