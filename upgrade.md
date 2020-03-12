@@ -1,20 +1,22 @@
 # Upgrading
 
-## Homebrew
+These upgrade instructions are arranged by installer.
+
+## brew
 
 ```sh
 brew update
 brew upgrade
 ```
 
-## Curl
+## curl
 
 ```sh
 pyenv update
 poetry self update
 ```
 
-## Pip
+## pip
 
 Use [pip-upgrade](https://github.com/cjolowicz/scripts/blob/master/python/pip-upgrade.sh).
 
@@ -24,13 +26,13 @@ pip-upgrade --command=autoflake epc ptvsd
 /usr/local/opt/python/bin/python3.7 -m pip install --upgrade virtualfish
 ```
 
-## Pipx
+## pipx
 
 ```sh
 pipx upgrade ...
 ```
 
-## Spacemacs
+## spacemacs
 
 ```sh
 git -C $HOME/.emacs.d pull --rebase

@@ -1,7 +1,4 @@
-# pipx
-
-This file lists Python packages installed globally using `pipx install`.
-
+# pipx install
 - black
 - cookiecutter
 - git-filter-repo

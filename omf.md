@@ -1,0 +1,3 @@
+# omf install
+- bobthefish
+- nvm

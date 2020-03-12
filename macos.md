@@ -1,7 +1,5 @@
 # macos
 
-See also [Homebrew packages](brew.md).
-
 ## Apps
 
 - iTerm2
@@ -23,3 +21,24 @@ See also [Homebrew packages](brew.md).
 ## Other
 
 - Google Chrome extension [Edit with Emacs](https://chrome.google.com/webstore/detail/edit-with-emacs/ljobjlafonikaiipfkggjbhkghgicgoh)
+
+## Shell
+
+Install XCode:
+
+```sh
+xcode-select --install  # it was already installed
+```
+
+Generate SSH key:
+
+```sh
+ssh-keygen -t rsa -b 4096 -C $EMAIL
+```
+
+Generate GPG key:
+
+```sh
+gpg --full-generate-key  # 4096 bits
+gpg --armor --export $key
+```

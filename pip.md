@@ -1,12 +1,9 @@
-# pip
-
-This file lists Python packages installed globally using `pip install`.
-
+# pip install
 - pipx
 - tox-pyenv
 - virtualfish
 
-The following packages were installed for Spacemacs:
+Legacy (originally installed for Spacemacs):
 
 - "ptvsd>=4.2"
 - autoflake 
