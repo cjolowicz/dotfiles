@@ -135,6 +135,7 @@ brew tap heroku/brew
 - cmake
 - ctop
 - editorconfig
+- entr
 - ffmpeg
 - fortune
 - gifsicle
