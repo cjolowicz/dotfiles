@@ -23,7 +23,6 @@ Use [pip-upgrade](https://github.com/cjolowicz/scripts/blob/master/python/pip-up
 ```sh
 pip-upgrade --command=tox tox-pyenv
 pip-upgrade --command=autoflake epc ptvsd
-/usr/local/opt/python/bin/python3.7 -m pip install --upgrade virtualfish
 ```
 
 ## pipx

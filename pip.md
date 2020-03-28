@@ -1,7 +1,6 @@
 # pip install
 - pipx
 - tox-pyenv
-- virtualfish
 
 Legacy (originally installed for Spacemacs):
 
