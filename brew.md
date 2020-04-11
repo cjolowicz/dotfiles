@@ -18,6 +18,7 @@
 - editorconfig
 - emacs-plus
 - entr
+- exa
 - ffmpeg
 - findutils
 - fish
