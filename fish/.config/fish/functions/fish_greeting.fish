@@ -3,8 +3,8 @@ function fish_greeting -d "Greeting message on shell session start up"
     echo -en "        |         \n"
     echo -en "       / \        \n"
     echo -en "      / _ \       " (show_date) "\n"
-    echo -en "     |.o '.|      " (show_tty) "\n"
-    echo -en "     |'._.'|      " (show_uptime) "\n"
+    echo -en "     |.o '.|      " (show_uptime) "\n"
+    echo -en "     |'._.'|      \n"
     echo -en "     |     |      \n"
     echo -en "   ,'|  |  |`.    \n"
     echo -en "  /  |  |  |  \   \n"
@@ -17,13 +17,6 @@ end
 function show_date -d "Prints information about date"
     set_color cyan
     echo -en (date)
-    set_color normal
-end
-
-function show_tty -d "Print information about tty"
-    echo -en "on "
-    set_color cyan
-    echo -en (basename (tty))
     set_color normal
 end
 
