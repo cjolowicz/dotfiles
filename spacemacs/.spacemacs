@@ -57,7 +57,6 @@ This function should only modify configuration layer settings."
      syntax-checking
      themes-megapack
      theming
-     treemacs
      typescript
      version-control
      xclipboard
