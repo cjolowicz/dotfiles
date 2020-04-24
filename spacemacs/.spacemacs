@@ -170,6 +170,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; Use dired without icons.
+  (treemacs-icons-dired-mode nil)
+
   ;; Use GNU ls.
   ;; https://github.com/syl20bnr/spacemacs/issues/10957
   (let ((gls (executable-find "gls")))
