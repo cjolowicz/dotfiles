@@ -57,6 +57,7 @@
 - trash
 - travis
 - tree
+- typescript
 - yarn
 - zlib
 
