@@ -1,6 +1,5 @@
 # pip install
 - pipx
-- tox-pyenv
 
 Legacy (originally installed for Spacemacs):
 

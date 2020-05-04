@@ -21,7 +21,6 @@ poetry self update
 Use [pip-upgrade](https://github.com/cjolowicz/scripts/blob/master/python/pip-upgrade.sh).
 
 ```sh
-pip-upgrade --command=tox tox-pyenv
 pip-upgrade --command=autoflake epc ptvsd
 ```
 
