@@ -23,7 +23,8 @@ This function should only modify configuration layer settings."
      graphviz
      git
      helm
-     html
+     (html :variables
+           web-fmt-tool 'prettier)
      (javascript :variables
                  javascript-fmt-tool 'prettier
                  javascript-import-tool 'import-js
