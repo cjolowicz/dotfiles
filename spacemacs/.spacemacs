@@ -250,6 +250,13 @@ before packages are loaded."
                           (innamespace . 0)))))
   (push '(other . "google-c-style-with-four-space-indent") c-default-style)
 
+  ;; Do not show the diff for the changes that are about to be committed.
+  (remove-hook 'server-switch-hook 'magit-commit-diff)
+
+  ;; Show process window when initiating a commit (for pre-commit output).
+  ;; https://emacs.stackexchange.com/questions/16546/magit-show-git-hook-output
+  (add-hook 'server-switch-hook 'magit-process-buffer)
+
   ;; Tell magit where we keep our git repositories.
   (setq magit-repository-directories '(("~/Code/" . 3)))
 
