@@ -10,6 +10,7 @@
 - pre-commit
 - tox
 - tox-pyenv
+- yq
 
 # pipx inject
 - tox: tox-pyenv
