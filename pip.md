@@ -1,5 +1,5 @@
 # pip install
-- pipx
+- pipx-in-pipx
 
 Legacy (originally installed for Spacemacs):
 
