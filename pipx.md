@@ -2,6 +2,7 @@
 - black
 - cookiecutter
 - git-filter-repo
+- grip
 - j2cli
 - mypy
 - nox
