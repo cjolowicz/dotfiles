@@ -51,7 +51,6 @@
 - python
 - rename
 - ripgrep
-- rtags
 - sqlite
 - stow
 - trash
@@ -60,10 +59,6 @@
 - typescript
 - yarn
 - zlib
-
-## brew services start
-
-- rtags
 
 ## brew cask install
 
