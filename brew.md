@@ -45,6 +45,7 @@
 - make
 - mercurial
 - moreutils
+- mutt
 - pandoc
 - pinentry-mac
 - pv
