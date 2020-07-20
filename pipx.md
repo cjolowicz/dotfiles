@@ -1,4 +1,5 @@
 # pipx install
+- argcomplete
 - black
 - cookiecutter
 - git-filter-repo
