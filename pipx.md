@@ -2,6 +2,7 @@
 - argcomplete
 - black
 - cookiecutter
+- copier
 - git-filter-repo
 - grip
 - j2cli
