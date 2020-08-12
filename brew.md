@@ -52,6 +52,7 @@
 - python
 - rename
 - ripgrep
+- rs/tap/curlie
 - sqlite
 - stow
 - trash
