@@ -35,6 +35,7 @@
 - graphviz
 - grep
 - heroku
+- hexyl
 - hub
 - hugo
 - ispell
