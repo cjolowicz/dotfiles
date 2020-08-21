@@ -41,3 +41,9 @@ curl -L https://get.oh-my.fish | fish
 ```sh
 curl -L https://raw.githubusercontent.com/justinmayer/tacklebox/master/tools/install.fish | fish
 ```
+
+## rustup
+
+```sh
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
