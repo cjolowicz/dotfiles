@@ -9,6 +9,7 @@
 - mypy
 - nox
 - pip-run
+- pypyp
 - python-gitlab
 - pre-commit
 - tox
