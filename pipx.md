@@ -18,4 +18,5 @@
 - yq
 
 # pipx inject
+- nox: nox-poetry
 - tox: tox-pyenv
