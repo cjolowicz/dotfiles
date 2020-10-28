@@ -65,6 +65,7 @@
 
 ## brew cask install
 
+- cool-retro-term
 - font-hack-nerd-font
 - font-source-code-pro
 - gimp
