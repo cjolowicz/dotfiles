@@ -49,7 +49,6 @@ OSH_THEME="powerline-multiline"
 # Add wisely, as too many completions slow down shell startup.
 completions=(
   git
-  composer
   ssh
 )
 
