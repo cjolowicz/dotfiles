@@ -1,0 +1,2 @@
+# curl
+bash -c "$(curl -fsSL https://raw.github.com/ohmybash/oh-my-bash/master/tools/install.sh)"
