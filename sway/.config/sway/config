@@ -60,6 +60,8 @@ output * bg /usr/share/backgrounds/fedora-workstation/paisaje.jpg fill
 # Read `man 5 sway-input` for more information about this section.
 input "type:keyboard" {
     xkb_options caps:escape
+    repeat_delay 200
+    repeat_rate 35
 }
 
 ### Key bindings
