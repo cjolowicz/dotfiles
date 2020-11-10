@@ -4,3 +4,4 @@
 - kitty
 - powerline
 - powerline-fonts
+- stow
