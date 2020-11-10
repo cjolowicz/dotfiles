@@ -53,6 +53,7 @@ This function should only modify configuration layer settings."
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
+     (python :variables python-backend 'lsp python-lsp-server 'pyls)
      treemacs)
 
 
