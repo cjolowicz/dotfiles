@@ -6,6 +6,7 @@
 - gh
 - i3status-rs
 - kitty
+- neofetch
 - powerline
 - powerline-fonts
 - python36
