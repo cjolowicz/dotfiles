@@ -54,7 +54,8 @@ This function should only modify configuration layer settings."
      ;; syntax-checking
      ;; version-control
      (python :variables python-backend 'lsp python-lsp-server 'pyls)
-     treemacs)
+     treemacs
+     yaml)
 
 
    ;; List of additional packages that will be installed without being wrapped
