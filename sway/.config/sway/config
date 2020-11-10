@@ -64,6 +64,10 @@ input "type:keyboard" {
     repeat_rate 35
 }
 
+input "type:pointer" {
+    scroll_factor 4.0
+}
+
 ### Key bindings
 #
 # Basics:
