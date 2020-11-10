@@ -8,4 +8,5 @@
 - python37
 - python38
 - python310
+- qutebrowser
 - stow
