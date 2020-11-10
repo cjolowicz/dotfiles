@@ -1,6 +1,7 @@
 # dnf
 ## dnf install
 - emacs
+- i3status-rs
 - kitty
 - powerline
 - powerline-fonts
