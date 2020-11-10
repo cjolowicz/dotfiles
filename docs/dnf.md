@@ -10,3 +10,4 @@
 - python310
 - qutebrowser
 - stow
+- sway
