@@ -24,7 +24,7 @@ default_border pixel
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/default.png fill
+output * bg /usr/share/backgrounds/fedora-workstation/paisaje.jpg fill
 #
 # Example configuration:
 #
