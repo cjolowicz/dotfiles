@@ -12,3 +12,4 @@
 - qutebrowser
 - stow
 - sway
+- wl-clipboard
