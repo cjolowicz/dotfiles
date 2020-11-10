@@ -12,4 +12,5 @@
 - qutebrowser
 - stow
 - sway
+- vim
 - wl-clipboard
