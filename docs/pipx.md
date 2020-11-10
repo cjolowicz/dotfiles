@@ -1,6 +1,7 @@
 # pipx
 - autoflake
 - black
+- cookiecutter
 - flake8
 - nox nox-poetry
 - pipenv
