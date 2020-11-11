@@ -1,6 +1,7 @@
 # dnf
 ## dnf copr enable
 - dsommers/openvpn3
+- skidnik/termite
 ## dnf config-manager --add-repo
 - https://cli.github.com/packages/rpm/gh-cli.repo
 ## dnf install
@@ -21,5 +22,6 @@
 - sway
 - swayidle
 - swaylock
+- termite
 - vim
 - wl-clipboard
