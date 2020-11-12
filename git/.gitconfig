@@ -1,3 +1,5 @@
 [user]
 	name = Claudio Jolowicz
 	email = mail@claudiojolowicz.com
+[core]
+	editor = emacsclient
