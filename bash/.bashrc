@@ -103,6 +103,7 @@ bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 export PATH="$PATH:$HOME/.local/bin"
 unalias -a
+alias -- -='cd -'
 alias ..='cd ../'
 alias ...='cd ../../'
 alias g='git graph'
