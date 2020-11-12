@@ -7,6 +7,8 @@
 	l1 = log --oneline
 	plog = log
 	pdiff = diff
+	pshow = show
 [pager]
 	plog = less -FXR +/^commit.*
 	pdiff = less -FXR~ +/^diff.*
+	pshow = less -FXR +/^diff.*
