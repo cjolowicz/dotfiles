@@ -18,6 +18,7 @@
 - python38
 - python310
 - qutebrowser
+- ripgrep
 - rofi
 - stow
 - sway
