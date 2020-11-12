@@ -7,6 +7,7 @@
 ## dnf install
 - emacs
 - gh
+- git-extras
 - i3status-rs
 - kitty
 - neofetch
