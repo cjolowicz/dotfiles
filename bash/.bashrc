@@ -101,6 +101,7 @@ export ALTERNATE_EDITOR=
 set -o vi
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
+ulimit -c unlimited
 export PATH="$PATH:$HOME/.local/bin"
 unalias -a
 alias -- -='cd -'
