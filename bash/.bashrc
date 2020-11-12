@@ -105,5 +105,6 @@ export PATH="$PATH:$HOME/.local/bin"
 alias g='git graph'
 alias d='dirs -v'
 alias cp='cp --verbose --interactive'
+alias ll='ls -l --all --human-readable --time-style=long-iso'
 alias mv='mv --verbose --interactive'
 alias mkdir='mkdir --verbose --parents'
