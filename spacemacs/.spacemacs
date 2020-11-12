@@ -60,7 +60,9 @@ This function should only modify configuration layer settings."
              python-formatter 'black
              python-fill-column 99)
 
-     treemacs
+     (treemacs :variables
+               treemacs-use-icons-dired nil)
+
      yaml)
 
 
