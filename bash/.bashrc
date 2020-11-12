@@ -105,3 +105,4 @@ export PATH="$PATH:$HOME/.local/bin"
 alias g='git graph'
 alias d='dirs -v'
 alias cp='cp --verbose --interactive'
+alias mv='mv --verbose --interactive'
