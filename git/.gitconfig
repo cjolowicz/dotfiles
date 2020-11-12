@@ -6,5 +6,7 @@
 [alias]
 	l1 = log --oneline
 	plog = log
+	pdiff = diff
 [pager]
 	plog = less -FXR +/^commit.*
+	pdiff = less -FXR~ +/^diff.*
