@@ -111,6 +111,8 @@ alias mv='mv --verbose --interactive'
 alias pd=pushd
 alias edit=$EDITOR
 alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 alias less='less --no-init --quit-if-one-screen --RAW-CONTROL-CHARS --chop-long-lines'
 alias mkdir='mkdir --verbose --parents'
 alias path='echo -e ${PATH//:/\\n}'
