@@ -79,6 +79,9 @@ source $OSH/oh-my-bash.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
+export VISUAL=emacsclient
+export EDITOR=emacsclient
+export ALTERNATE_EDITOR=
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
