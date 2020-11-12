@@ -111,3 +111,4 @@ alias pd=pushd
 alias edit=$EDITOR
 alias less='less --no-init --quit-if-one-screen --RAW-CONTROL-CHARS --chop-long-lines --clear-screen'
 alias mkdir='mkdir --verbose --parents'
+alias path='echo -e ${PATH//:/\\n}'
