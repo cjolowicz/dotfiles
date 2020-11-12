@@ -5,3 +5,6 @@
 	editor = emacsclient
 [alias]
 	l1 = log --oneline
+	plog = log
+[pager]
+	plog = less -FXR +/^commit.*
