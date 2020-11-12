@@ -3,6 +3,8 @@
 	email = mail@claudiojolowicz.com
 [core]
 	editor = emacsclient
+[pull]
+	ff = only
 [alias]
 	l1 = log --oneline
 	graph = log --graph --all --oneline
