@@ -3,6 +3,8 @@
 	email = mail@claudiojolowicz.com
 [core]
 	editor = emacsclient
+[init]
+	defaultBranch = main
 [pull]
 	ff = only
 [alias]
