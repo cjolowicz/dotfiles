@@ -103,3 +103,4 @@ bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 export PATH="$PATH:$HOME/.local/bin"
 alias g='git graph'
+alias d='dirs -v'
