@@ -56,7 +56,9 @@ This function should only modify configuration layer settings."
      (python :variables
              python-backend 'lsp
              python-lsp-server 'pyls
-             python-test-runner 'pytest)
+             python-test-runner 'pytest
+             python-formatter 'black
+             python-fill-column 99)
 
      treemacs
      yaml)
