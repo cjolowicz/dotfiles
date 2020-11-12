@@ -109,4 +109,5 @@ alias ll='ls -l --all --human-readable --time-style=long-iso'
 alias mv='mv --verbose --interactive'
 alias pd=pushd
 alias edit=$EDITOR
+alias less='less --no-init --quit-if-one-screen --RAW-CONTROL-CHARS --chop-long-lines --clear-screen'
 alias mkdir='mkdir --verbose --parents'
