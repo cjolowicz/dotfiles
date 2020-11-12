@@ -137,3 +137,47 @@ function fhelp() {
             sed -e '$d' -e 's/# //'
     done
 }
+
+# Usage: wcat [FILE]...
+# ----------------------------------------------------------------------
+# For each FILE, find its pathname using which(1) and invoke cat(1) on
+# the result.
+function wcat() {
+    cat $(which "$@")
+}
+
+# Usage: wless [FILE]...
+# ----------------------------------------------------------------------
+# For each FILE, find its pathname using which(1) and invoke less(1) on
+# the result.
+function wless() {
+    less $(which "$@")
+}
+
+# Usage: wldd [FILE]...
+# ----------------------------------------------------------------------
+# For each FILE, find its pathname using which(1) and invoke ldd(1) on
+# the result.
+function wldd() {
+    ldd $(which "$@")
+}
+
+# Usage: wfile [-L] [FILE]...
+# ----------------------------------------------------------------------
+# For each FILE, find its pathname using which(1) and invoke file(1) on
+# the result. With option `-L', dereference symlinks, repeatedly.
+function wfile() {
+    local file=
+    if [ "$1" = "-L" ]
+    then
+        shift
+        for file
+        do
+            if file=$(which "$file")
+            then file $(realpath "$file")
+            fi
+        done
+    else
+        file $(which "$@")
+    fi
+}
