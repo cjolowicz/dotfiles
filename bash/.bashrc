@@ -120,3 +120,20 @@ alias fgrep='fgrep --color=auto'
 alias less='less --no-init --quit-if-one-screen --RAW-CONTROL-CHARS --chop-long-lines'
 alias mkdir='mkdir --verbose --parents'
 alias path='echo -e ${PATH//:/\\n}'
+
+# Usage: fhelp [FUNCTION]...
+# ----------------------------------------------------------------------
+# Print the documentation for each FUNCTION defined in this file.
+function fhelp() {
+    local name=
+
+    if [ $# -eq 0 ] ; then
+        sed -n 's/^# Usage: //p' ~/.bashrc | sort
+    fi
+
+    for name
+    do
+        sed -n -e "/^# Usage: $name/,/^function $name/p" ~/.bashrc |
+            sed -e '$d' -e 's/# //'
+    done
+}
