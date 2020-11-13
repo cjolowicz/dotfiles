@@ -3,6 +3,7 @@
 - black
 - cookiecutter
 - flake8
+- isort
 - mypy
 - nox nox-poetry
 - pipenv
