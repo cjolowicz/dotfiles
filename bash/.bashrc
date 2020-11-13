@@ -105,8 +105,9 @@ ulimit -c unlimited
 export PATH="$PATH:$HOME/.local/bin"
 unalias -a
 alias -- -='cd -'
-alias ..='cd ../'
-alias ...='cd ../../'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias g='git graph'
 alias d='dirs -v'
 alias cp='cp --verbose --interactive'
