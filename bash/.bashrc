@@ -103,6 +103,7 @@ bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 ulimit -c unlimited
 export PATH="$PATH:$HOME/.local/bin"
+export LESS="--no-init --quit-if-one-screen --RAW-CONTROL-CHARS --chop-long-lines"
 unalias -a
 alias -- -='cd -'
 alias ..='cd ..'
@@ -119,7 +120,6 @@ alias edit=$EDITOR
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias less='less --no-init --quit-if-one-screen --RAW-CONTROL-CHARS --chop-long-lines'
 alias mkdir='mkdir --verbose --parents'
 alias path='echo -e ${PATH//:/\\n}'
 
