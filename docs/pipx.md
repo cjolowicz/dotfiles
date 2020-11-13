@@ -8,6 +8,7 @@
 - nox nox-poetry
 - pipenv
 - poetry
+- pre-commit
 - python-language-server[all] pyls-isort pyls-mypy pyls-black
 - tox
 - virtualenv
