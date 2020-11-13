@@ -514,6 +514,9 @@ before packages are loaded."
   ;; Display TAB as four-characters wide.
   (setq-default tab-width 4)
 
+  ;; Always prefer horizontal splits.
+  (setq split-height-threshold nil)
+
   ;; Open magit status in same window.
   (setq magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
 
