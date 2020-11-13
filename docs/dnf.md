@@ -14,6 +14,7 @@
 - openvpn3-client
 - powerline
 - powerline-fonts
+- python35
 - python36
 - python37
 - python38
