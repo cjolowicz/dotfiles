@@ -12,6 +12,7 @@
 - kitty
 - neofetch
 - openvpn3-client
+- pandoc
 - powerline
 - powerline-fonts
 - python35
