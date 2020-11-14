@@ -58,6 +58,7 @@ This function should only modify configuration layer settings."
              python-test-runner 'pytest
              python-formatter 'black
              python-fill-column 99)
+     rust
      (treemacs :variables
                treemacs-use-icons-dired nil)
      version-control
