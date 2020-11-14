@@ -52,7 +52,6 @@ This function should only modify configuration layer settings."
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
-     ;; version-control
      (python :variables
              python-backend 'lsp
              python-lsp-server 'pyls
@@ -63,6 +62,7 @@ This function should only modify configuration layer settings."
      (treemacs :variables
                treemacs-use-icons-dired nil)
 
+     version-control
      yaml)
 
 
