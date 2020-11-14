@@ -2,6 +2,5 @@
 config.load_autoconfig()
 
 c.colors.webpage.prefers_color_scheme_dark = True
-c.colors.webpage.darkmode.enabled = True
 c.statusbar.show = "never"
 c.tabs.show = "never"
