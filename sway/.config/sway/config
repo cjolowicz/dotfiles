@@ -150,6 +150,17 @@ input "type:pointer" {
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
+    # Move the workspace to another output.
+    bindsym $mod+$alt+Shift+$left move workspace to output left
+    bindsym $mod+$alt+Shift+$down move workspace to output down
+    bindsym $mod+$alt+Shift+$up move workspace to output up
+    bindsym $mod+$alt+Shift+$right move workspace to output right
+    # Ditto, with arrow keys
+    bindsym $mod+$alt+Shift+Left move workspace to output left
+    bindsym $mod+$alt+Shift+Down move workspace to output down
+    bindsym $mod+$alt+Shift+Up move workspace to output up
+    bindsym $mod+$alt+Shift+Right move workspace to output right
 #
 # Layout stuff:
 #
