@@ -1,57 +1,46 @@
+color: #808080;
+background-color: #1c1c1c;
+
 /* CSS Selector for the entire wofi window */
 window {
-    margin: 5px;
-    border: 2px solid red;
-    background-color: red;
 }
 
 /* Selector for the text box for filtering items */
 #input {
-    margin: 5px;
-    border: 2px solid blue;
-    background-color: blue;
+    color: #8a8a8a;
 }
 
 /* Selector for the box containing all entries */
 #inner-box {
-    margin: 5px;
-    border: 2px solid yellow;
-    background-color: yellow;
 }
 
 /* Selector for a box that everything else sits inside of */
 #outer-box {
-    margin: 5px;
-    border: 2px solid green;
-    background-color: green;
 }
 
 /* Selector for the scroll window containing inner-box */
 #scroll {
-    margin: 5px;
-    border: 2px solid orange;
-    background-color: orange;
 }
 
 /* Selector for the box containing the name of the program/option inserted */
 #text {
-    margin: 5px;
-    border: 2px solid cyan;
-    background-color: cyan;
+    color: #808080;
 }
 
 /* Selector for the currently focused entry in the list. */
 #entry:selected {
-    background-color: rgba(0,0,0,0);
+    background-color: #d75f00;
 }
 
 /* Selector for the currently focused text inside of the entry in the list. */
 #text:selected {
-    background-color: red;
+    color: #1c1c1c;
 }
 
 /* Selector for the box containing text and if present, images */
-#entry {}
+#entry {
+}
 
 /* Selector for images displayed in entries */
-#img {}
+#img {
+}
