@@ -30,3 +30,4 @@
 - termite
 - vim
 - wl-clipboard
+- wofi
