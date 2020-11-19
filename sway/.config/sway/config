@@ -91,6 +91,10 @@ input "type:pointer" {
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Enter sway command
+    bindsym $mod+Shift+semicolon exec zenity --entry --text="Enter command" | xargs swaymsg
+    for_window [app_id="zenity"] focus, floating enabled, border pixel 1, resize set width 400
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.

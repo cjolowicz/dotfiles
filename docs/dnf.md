@@ -5,11 +5,13 @@
 ## dnf config-manager --add-repo
 - https://cli.github.com/packages/rpm/gh-cli.repo
 ## dnf install
+- docker-compose
 - emacs
 - gh
 - git-extras
 - i3status-rs
 - kitty
+- moby-engine (https://fedoramagazine.org/docker-and-fedora-32/)
 - neofetch
 - openvpn3-client
 - pandoc
