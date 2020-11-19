@@ -3,6 +3,7 @@
 - black
 - cookiecutter
 - flake8
+- glances
 - isort
 - mypy
 - nox nox-poetry
