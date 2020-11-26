@@ -23,9 +23,6 @@ set $menu dmenu_path | wofi --show drun -i | xargs swaymsg exec --
 # Your preferred browser
 set $browser qutebrowser
 
-# Do not display window titles.
-default_border pixel
-
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
