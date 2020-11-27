@@ -26,7 +26,8 @@ set $browser qutebrowser
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/fedora-workstation/paisaje.jpg fill
+exec ~/.azotebg
+
 #
 # Example configuration:
 #
