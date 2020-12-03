@@ -12,6 +12,7 @@
 - git-extras
 - i3status-rs
 - kitty
+- libffi-devel
 - moby-engine (https://fedoramagazine.org/docker-and-fedora-32/)
 - neofetch
 - openvpn3-client
