@@ -11,6 +11,7 @@
 - poetry
 - pre-commit
 - python-language-server[all] pyls-isort pyls-mypy pyls-black
+- qutebrowser
 - tox
 - virtualenv
 - watchdog

@@ -25,7 +25,6 @@
 - python38
 - python310
 - python3-devel
-- qutebrowser
 - ripgrep
 - rofi
 - stow
