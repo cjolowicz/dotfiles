@@ -6,6 +6,7 @@
 - https://cli.github.com/packages/rpm/gh-cli.repo
 ## dnf install
 - azote
+- clang
 - docker-compose
 - emacs
 - gh
