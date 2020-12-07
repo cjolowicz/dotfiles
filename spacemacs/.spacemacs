@@ -40,6 +40,8 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      auto-completion
      ;; better-defaults
+     (c-c++ :variables
+            c-c++-backend 'lsp-clangd)
      cmake
      docker
      emacs-lisp
