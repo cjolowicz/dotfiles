@@ -518,6 +518,10 @@ before packages are loaded."
   ;; Display TAB as four-characters wide.
   (setq-default tab-width 4)
 
+  ;; Do not indent inside namespaces.
+  (defun my-c++-mode-hook () (c-set-offset 'innamespace [0]))
+  (add-hook 'c++-mode-hook 'my-c++-mode-hook)
+
   ;; Always prefer horizontal splits.
   (setq split-height-threshold nil)
 
