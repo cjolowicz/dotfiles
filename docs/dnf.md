@@ -7,6 +7,7 @@
 ## dnf install
 - azote
 - clang
+- cmake
 - docker-compose
 - emacs
 - gh
