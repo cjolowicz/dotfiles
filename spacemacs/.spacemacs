@@ -47,7 +47,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      helm
-     lsp
+     (lsp :variables lsp-enable-indentation nil)
      lua
      markdown
      multiple-cursors
@@ -517,6 +517,9 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; Display TAB as four-characters wide.
   (setq-default tab-width 4)
+
+  ;; Use four spaces for indentation.
+  (setq-default c-basic-offset 4)
 
   ;; Customize C++ mode.
   (defun my-c++-mode-hook ()
