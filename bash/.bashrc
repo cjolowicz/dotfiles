@@ -218,3 +218,4 @@ function vcat() {
 function dotfiles() {
     stow --dir ~/Code/github.com/cjolowicz/dotfiles --target ~ "$@"
 }
+. "$HOME/.cargo/env"
