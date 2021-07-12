@@ -63,6 +63,7 @@ This function should only modify configuration layer settings."
              python-formatter 'black
              python-fill-column 99)
      rust
+     sql
      syntax-checking
      (treemacs :variables
                treemacs-use-icons-dired nil)
