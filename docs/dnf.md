@@ -1,4 +1,7 @@
 # dnf
+## dnf group install
+- virtualization (`--with-optional`)
+  - sudo systemctl enable libvirtd
 ## dnf copr enable
 - dsommers/openvpn3
 - skidnik/termite
@@ -9,16 +12,24 @@
 - clang
 - cmake
 - docker-compose
+- ed
+- elfutils-libelf-devel
 - emacs
 - gh
 - git-extras
 - i3status-rs
+- info
+- kernel-devel
 - kitty
 - libffi-devel
+- m4
 - moby-engine (https://fedoramagazine.org/docker-and-fedora-32/)
 - neofetch
+- nodejs
+- nodejs-yarn
 - openvpn3-client
 - pandoc
+- patch
 - powerline
 - powerline-fonts
 - python35
