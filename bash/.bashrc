@@ -123,6 +123,12 @@ alias fgrep='fgrep --color=auto'
 alias mkdir='mkdir --verbose --parents'
 alias path='echo -e ${PATH//:/\\n}'
 
+# Configure user-wide NPM packages
+# https://github.com/sindresorhus/guides/blob/main/npm-global-without-sudo.md
+NPM_PACKAGES="${HOME}/.npm-packages"
+export PATH="$PATH:$NPM_PACKAGES/bin"
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
 # Usage: fhelp [FUNCTION]...
 # ----------------------------------------------------------------------
 # Print the documentation for each FUNCTION defined in this file.
