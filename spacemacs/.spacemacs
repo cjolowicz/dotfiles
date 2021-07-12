@@ -524,6 +524,9 @@ before packages are loaded."
   ;; Display TAB as four-characters wide.
   (setq-default tab-width 4)
 
+  ;; Use Allman style for indentation.
+  (setq c-default-style "bsd")
+
   ;; Use four spaces for indentation.
   (setq-default c-basic-offset 4)
 
