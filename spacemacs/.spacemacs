@@ -534,8 +534,6 @@ before packages are loaded."
   ;; Open magit status in same window.
   (setq magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
 
-  ;; Use emacs as git editor.
-  (global-git-commit-mode t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
