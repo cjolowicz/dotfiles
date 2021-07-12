@@ -45,6 +45,7 @@ This function should only modify configuration layer settings."
      cmake
      docker
      emacs-lisp
+     emoji
      git
      helm
      html
