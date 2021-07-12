@@ -58,7 +58,7 @@ This function should only modify configuration layer settings."
      ;; spell-checking
      (python :variables
              python-backend 'lsp
-             python-lsp-server 'pyls
+             python-lsp-server 'pylsp
              python-test-runner 'pytest
              python-formatter 'black
              python-fill-column 99)
