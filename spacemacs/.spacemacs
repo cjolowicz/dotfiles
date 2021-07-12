@@ -51,7 +51,7 @@ This function should only modify configuration layer settings."
      helm
      html
      ivy
-     (lsp :variables lsp-enable-indentation nil)
+     lsp
      lua
      markdown
      multiple-cursors
