@@ -56,6 +56,7 @@ This function should only modify configuration layer settings."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
+     perl5
      (python :variables
              python-backend 'lsp
              python-lsp-server 'pylsp
