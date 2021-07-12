@@ -44,6 +44,7 @@ This function should only modify configuration layer settings."
             c-c++-backend 'lsp-clangd)
      cmake
      docker
+     dtrt-indent
      emacs-lisp
      emoji
      git
