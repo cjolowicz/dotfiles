@@ -1,6 +1,5 @@
-[user]
-	name = Claudio Jolowicz
-	email = mail@claudiojolowicz.com
+[include]
+	path = .gitconfig.d/user.conf
 [core]
 	editor = emacsclient
 [init]
