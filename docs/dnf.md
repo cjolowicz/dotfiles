@@ -15,6 +15,7 @@
 - ed
 - elfutils-libelf-devel
 - emacs
+- fd-find
 - gh
 - git-extras
 - i3status-rs
