@@ -545,6 +545,10 @@ before packages are loaded."
 
   ;; Disable breadcrumb headerline in LSP.
   (setq lsp-headerline-breadcrumb-enable nil)
+
+  ;; Bind projectile-find-test-file to `SPC p t', overwriting the existing
+  ;; binding for spacemacs/treemacs-project-toggle.
+  (spacemacs/set-leader-keys "pt" 'projectile-find-test-file)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
