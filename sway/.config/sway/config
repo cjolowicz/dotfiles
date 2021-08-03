@@ -71,7 +71,7 @@ exec swayidle timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output 
 # Read `man 5 sway-input` for more information about this section.
 input "type:keyboard" {
     xkb_layout pl
-    xkb_options caps:escape
+    xkb_options caps:swapescape
     repeat_delay 300
     repeat_rate 30
 }
