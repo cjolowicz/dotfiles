@@ -553,6 +553,9 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; Open magit status in same window.
   (setq magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
+
+  ;; Disable breadcrumb headerline in LSP.
+  (setq lsp-headerline-breadcrumb-enable nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
