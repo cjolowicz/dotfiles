@@ -1,5 +1,6 @@
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 export VISUAL=emacsclient
 export EDITOR=emacsclient
 
