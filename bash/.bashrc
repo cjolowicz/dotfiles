@@ -110,3 +110,10 @@ function vcat() {
         cat "$file"
     done
 }
+
+# Usage: dotfiles [PACKAGE]...
+# ----------------------------------------------------------------------
+# Stow dotfiles.
+function dotfiles() {
+    stow --dir ~/Code/github.com/cjolowicz/dotfiles --target ~ "$@"
+}
