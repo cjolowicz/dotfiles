@@ -11,6 +11,7 @@ alias ....='cd ../../..'
 alias d='dirs -v'
 alias cp='cp --verbose --interactive'
 alias ls='ls --color=auto'
+alias ll='ls -l --all --human-readable --time-style=long-iso'
 alias mv='mv --verbose --interactive'
 alias pd=pushd
 alias grep='grep --color=auto'
