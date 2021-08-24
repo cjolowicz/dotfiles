@@ -53,6 +53,12 @@ This function should only modify configuration layer settings."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
+     (python :variables
+             python-backend 'lsp
+             python-lsp-server 'pylsp
+             python-test-runner 'pytest
+             python-formatter 'black
+             python-fill-column 88)
      syntax-checking
      version-control
      (treemacs :variables treemacs-use-icons-dired nil))
