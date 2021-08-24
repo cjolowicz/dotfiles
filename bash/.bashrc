@@ -15,6 +15,7 @@ alias ls='ls --color=auto'
 alias ll='ls -l --all --human-readable --time-style=long-iso'
 alias mv='mv --verbose --interactive'
 alias pd=pushd
+alias edit=$EDITOR
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
