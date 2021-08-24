@@ -71,11 +71,11 @@ pipx install virtualenv
 pipx install isort
 pipx install pre-commit
 pipx install pytest
-pipx install python-language-server[all]
-pipx inject python-language-server pyls-isort
-pipx inject python-language-server pyls-mypy
-pipx inject python-language-server pyls-black
-pipx inject python-language-server pyls-memestra
+pipx install python-lsp-server
+pipx inject python-lsp-server pyls-isort
+pipx inject python-lsp-server pyls-mypy
+pipx inject python-lsp-server pyls-black
+pipx inject python-lsp-server pyls-memestra
 pipx install autoflake
 python3 -m pip install --user importmagic epc
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
