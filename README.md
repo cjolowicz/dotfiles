@@ -52,6 +52,7 @@ brew install ripgrep
 brew install github/gh/gh
 brew install tree
 brew install coreutils
+brew install findutils
 ```
 
 ## User configuration
