@@ -58,12 +58,7 @@ brew install tree
 ```sh
 echo /usr/local/bin/bash | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/bash
-echo '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"' >> ~/.bash_profile
 ```
-
-## Spacemacs
-
-- Add osx layer
 
 ## iTerm
 
