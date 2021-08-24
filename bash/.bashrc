@@ -111,5 +111,5 @@ function vcat() {
 # ----------------------------------------------------------------------
 # Stow dotfiles.
 function dotfiles() {
-    stow --dir ~/Code/github.com/cjolowicz/dotfiles --target ~ "$@"
+    stow --dir ~/.dotfiles --target ~ "$@"
 }
