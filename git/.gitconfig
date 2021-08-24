@@ -3,6 +3,8 @@
 [core]
 	editor = emacsclient --alternate-editor=
 	excludesfile = ~/.gitignore_global
+[init]
+	defaultBranch = main
 [commit]
 	gpgsign = true
 [tag]
@@ -11,8 +13,6 @@
 	default = current
 [pull]
 	ff = only
-[init]
-	defaultBranch = main
 [rebase]
 	autosquash = true
 [alias]
