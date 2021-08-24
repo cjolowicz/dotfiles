@@ -2,6 +2,7 @@
 	path = .gitconfig.d/user.conf
 [core]
 	editor = emacsclient --alternate-editor=
+	excludesfile = ~/.gitignore_global
 [push]
 	default = current
 [pull]
