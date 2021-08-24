@@ -1,0 +1,22 @@
+[include]
+	path = .gitconfig.d/user.conf
+[core]
+	editor = emacsclient --alternate-editor=
+[push]
+	default = current
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[rebase]
+	autosquash = true
+[alias]
+	l1 = log --oneline
+	graph = log --graph --all --oneline
+	plog = log
+	pdiff = diff
+	pshow = show
+[pager]
+	plog = less -FXR +/^commit.*
+	pdiff = less -FXR~ +/^diff.*
+	pshow = less -FXR +/^diff.* +g
