@@ -53,6 +53,10 @@ brew install github/gh/gh
 brew install tree
 brew install coreutils
 brew install findutils
+brew install gawk
+brew install gnu-tar  # already installed: gnu-sed
+brew install grep
+brew install make
 ```
 
 ## User configuration
