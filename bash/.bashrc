@@ -82,3 +82,18 @@ function wfile() {
         file $(which "$@")
     fi
 }
+
+# Usage: heading [ARG]..
+# ----------------------------------------------------------------------
+# Print a heading.
+function heading() {
+    local bold=
+    local reset=
+
+    if [ -t 1 ] ; then
+        bold="\e[1m"
+        reset="\e[0m"
+    fi
+
+    printf "\n==> ${bold}%s${reset} <==\n\n" "$*"
+}
