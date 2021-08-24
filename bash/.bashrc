@@ -97,3 +97,16 @@ function heading() {
 
     printf "\n==> ${bold}%s${reset} <==\n\n" "$*"
 }
+
+# Usage: vcat [FILE]...
+# ----------------------------------------------------------------------
+# Print each FILE preceded by its filename.
+function vcat() {
+    local file=
+
+    for file
+    do
+        heading "$file"
+        cat "$file"
+    done
+}
