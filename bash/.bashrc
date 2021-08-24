@@ -51,6 +51,14 @@ function wless() {
     less $(which "$@")
 }
 
+# Usage: wedit [FILE]...
+# ----------------------------------------------------------------------
+# For each FILE, find its pathname using which(1) and invoke EDITOR on
+# the result.
+function wedit() {
+    $EDITOR $(which "$@")
+}
+
 # Usage: wldd [FILE]...
 # ----------------------------------------------------------------------
 # For each FILE, find its pathname using which(1) and invoke ldd(1) on
