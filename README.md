@@ -51,6 +51,7 @@ pyenv install 3.9.6
 brew install ripgrep
 brew install github/gh/gh
 brew install tree
+brew install coreutils
 ```
 
 ## User configuration
