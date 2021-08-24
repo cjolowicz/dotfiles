@@ -59,6 +59,19 @@ brew install gnupg
 brew install grep
 brew install make
 brew install pinentry-mac
+brew install pipx
+pipx install black
+pipx install build
+pipx install mypy
+pipx install flake8
+pipx install nox
+pipx inject nox nox-poetry
+pipx install tox
+pipx install twine
+pipx install virtualenv
+pipx install isort
+pipx install pre-commit
+pipx install pytest
 ```
 
 ## User configuration
