@@ -80,6 +80,7 @@ pipx install autoflake
 python3 -m pip install --user importmagic epc
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 brew install llvm
+brew install cmake
 ```
 
 ## User configuration
