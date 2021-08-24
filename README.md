@@ -9,7 +9,7 @@
 - Telemetry: Disable
 - Siri: Disable
 
-## Preferences
+## System Preferences
 
 - System > Keyboard > Keyboard > Modifier Keys > Caps Lock Key > Escape
 - System > Keyboard > Keyboard > Key Repeat > Fast
@@ -48,6 +48,9 @@ brew install pyenv
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 brew install zlib  # already installed: openssl readline sqlite3 xz
 pyenv install 3.9.6
+brew install ripgrep
+brew install github/gh/gh
+brew install tree
 ```
 
 ## User configuration
@@ -61,3 +64,8 @@ echo '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/et
 ## Spacemacs
 
 - Add osx layer
+
+## iTerm
+
+- Font: Source Code Pro 13p
+- Hide scrollbars
