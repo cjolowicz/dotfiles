@@ -55,8 +55,10 @@ brew install coreutils
 brew install findutils
 brew install gawk
 brew install gnu-tar  # already installed: gnu-sed
+brew install gnupg
 brew install grep
 brew install make
+brew install pinentry-mac
 ```
 
 ## User configuration
