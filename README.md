@@ -45,7 +45,6 @@ brew tap homebrew/cask-fonts
 brew install svn  # install dep for font-source-code-pro
 brew install --cask font-source-code-pro
 brew install pyenv
-echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 brew install zlib  # already installed: openssl readline sqlite3 xz
 pyenv install 3.9.6
 brew install ripgrep
