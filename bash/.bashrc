@@ -2,6 +2,9 @@ eval "$(starship init bash)"
 eval "$(pyenv init -)"
 eval "$(pyenv init --path)"
 
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
 alias -- -='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
