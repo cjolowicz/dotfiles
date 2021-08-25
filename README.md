@@ -86,6 +86,7 @@ brew install font-hack-nerd-font
 brew install slack
 brew install zoom
 brew install glances
+brew install mercurial
 ```
 
 ## User configuration
