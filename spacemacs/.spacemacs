@@ -566,6 +566,10 @@ before packages are loaded."
   ;; Bind projectile-find-test-file to `SPC p t', overwriting the existing
   ;; binding for spacemacs/treemacs-project-toggle.
   (spacemacs/set-leader-keys "pt" 'projectile-find-test-file)
+
+  ;; Display emojis but not in code.
+  (global-emojify-mode)
+  (setq emojify-program-contexts '(none))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
