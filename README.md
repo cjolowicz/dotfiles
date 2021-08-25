@@ -84,6 +84,7 @@ brew install cmake
 brew install starship
 brew install font-hack-nerd-font
 brew install slack
+brew install zoom
 ```
 
 ## User configuration
