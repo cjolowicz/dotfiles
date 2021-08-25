@@ -82,6 +82,7 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
 brew install llvm
 brew install cmake
 brew install starship
+brew install font-hack-nerd-font
 ```
 
 ## User configuration
@@ -93,5 +94,5 @@ chsh -s /usr/local/bin/bash
 
 ## iTerm
 
-- Font: Source Code Pro 13p
+- Font: Hack Nerd Font 13p
 - Hide scrollbars
