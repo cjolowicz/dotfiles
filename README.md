@@ -85,6 +85,7 @@ brew install starship
 brew install font-hack-nerd-font
 brew install slack
 brew install zoom
+brew install glances
 ```
 
 ## User configuration
