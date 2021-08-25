@@ -1,5 +1,6 @@
 eval "$(starship init bash)"
 eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 
 alias -- -='cd -'
 alias ..='cd ..'
