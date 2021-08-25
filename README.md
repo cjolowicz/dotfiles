@@ -83,6 +83,7 @@ brew install llvm
 brew install cmake
 brew install starship
 brew install font-hack-nerd-font
+brew install slack
 ```
 
 ## User configuration
