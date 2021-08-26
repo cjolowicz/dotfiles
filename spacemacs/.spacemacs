@@ -563,6 +563,9 @@ before packages are loaded."
   ;; Open magit status in same window.
   (setq magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
 
+  ;; Tell magit where we keep our git repositories.
+  (setq magit-repository-directories '(("~/Code/" . 3)))
+
   ;; Disable breadcrumb headerline in LSP.
   (setq lsp-headerline-breadcrumb-enable nil)
 
