@@ -554,6 +554,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; We never intentionally quit Emacs with Cmd-q.
+  (global-unset-key (kbd "H-q"))
+
   ;; Always prefer horizontal splits.
   (setq split-height-threshold nil)
 
