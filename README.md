@@ -87,6 +87,7 @@ brew install slack
 brew install zoom
 brew install glances
 brew install mercurial
+brew install qutebrowser
 ```
 
 ## User configuration
