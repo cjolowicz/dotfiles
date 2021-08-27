@@ -19,11 +19,11 @@
 
 ## Restore
 
-- Finder: Copy Backup/Users/cjolowicz/Code to home directory
+- Finder: Copy Backup/$HOME/Code to home directory
 
 ```sh
-cp -va Backup/Users/cjolowicz/.ssh .
-cp -va Backup/Users/cjolowicz/.gnupg .
+cp -va Backup/$HOME/.ssh .
+cp -va Backup/$HOME/.gnupg .
 ```
 
 ## Installations
