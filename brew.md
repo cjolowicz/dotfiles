@@ -38,4 +38,5 @@ brew install glances
 brew install mercurial
 brew install qutebrowser
 brew install exa
+brew install koekeishiya/formulae/yabai
 ```
