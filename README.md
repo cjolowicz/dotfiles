@@ -35,6 +35,7 @@ cp -va Backup/$HOME/.gnupg .
 xcode-select --install
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
 pyenv install 3.9.6
+CFLAGS=-Wno-unreachable-code pyenv install 3.5.10
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 ```
 
