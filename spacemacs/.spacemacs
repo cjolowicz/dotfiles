@@ -577,9 +577,26 @@ before packages are loaded."
   (spacemacs/set-leader-keys "pt" 'projectile-find-test-file)
   (spacemacs/set-leader-keys "pi" 'projectile-find-test-file)
 
-  ;; Display emojis but not in code.
+  ;; Display emojis.
   (global-emojify-mode)
-  (setq emojify-program-contexts '(none))
+
+  ;; XXX Workarounds until #15046 is merged.
+  ;; https://github.com/syl20bnr/spacemacs/pull/15046
+
+  ;; Enable company-mode in text-mode buffers.
+  (add-hook 'text-mode-hook #'company-mode)
+
+  ;; Enable the company-emoji backend in text-mode buffers.
+  (add-hook 'text-mode-hook #'company-emoji-init)
+
+  ;; Add Unicode on insertion with `SPC i e'.
+  (defun spacemacs/emoji-insert-and-possibly-complete (_)
+    "Use company-emoji to complete 'to' unicode."
+    (when company-emoji-insert-unicode
+      (delete-char -1)
+      (company-complete)))
+
+  (advice-add 'emoji-cheat-sheet-plus--insert-selection :after #'spacemacs/emoji-insert-and-possibly-complete)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
