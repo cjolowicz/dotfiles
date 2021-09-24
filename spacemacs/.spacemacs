@@ -67,6 +67,7 @@ This function should only modify configuration layer settings."
              python-fill-column 88)
      rust
      syntax-checking
+     themes-megapack
      version-control
      (treemacs :variables treemacs-use-icons-dired nil)
      yaml
