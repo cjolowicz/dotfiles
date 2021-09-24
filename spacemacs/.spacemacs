@@ -582,6 +582,7 @@ before packages are loaded."
   (global-emojify-mode)
 
   ;; Enable company-mode in text-mode buffers.
+  ;; https://github.com/syl20bnr/spacemacs/pull/15045
   (add-hook 'text-mode-hook #'company-mode)
   )
 
