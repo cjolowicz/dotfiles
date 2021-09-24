@@ -581,23 +581,8 @@ before packages are loaded."
   ;; Display emojis.
   (global-emojify-mode)
 
-  ;; XXX Workarounds until #15046 is merged.
-  ;; https://github.com/syl20bnr/spacemacs/pull/15046
-
   ;; Enable company-mode in text-mode buffers.
   (add-hook 'text-mode-hook #'company-mode)
-
-  ;; Enable the company-emoji backend in text-mode buffers.
-  (add-hook 'text-mode-hook #'company-emoji-init)
-
-  ;; Add Unicode on insertion with `SPC i e'.
-  (defun spacemacs/emoji-insert-and-possibly-complete (_)
-    "Use company-emoji to complete 'to' unicode."
-    (when company-emoji-insert-unicode
-      (delete-char -1)
-      (company-complete)))
-
-  (advice-add 'emoji-cheat-sheet-plus--insert-selection :after #'spacemacs/emoji-insert-and-possibly-complete)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
