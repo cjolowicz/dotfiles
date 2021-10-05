@@ -22,6 +22,7 @@
 	pdiff = diff
 	pshow = show
 	summary = show --no-patch --pretty=%s
+	haul = !git fetch --prune --all && git merge --ff-only
 [pager]
 	plog = less -FXR +/^commit.*
 	pdiff = less -FXR~ +/^diff.*
