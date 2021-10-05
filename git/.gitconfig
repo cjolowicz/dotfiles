@@ -21,6 +21,7 @@
 	plog = log
 	pdiff = diff
 	pshow = show
+	summary = show --no-patch --pretty=%s
 [pager]
 	plog = less -FXR +/^commit.*
 	pdiff = less -FXR~ +/^diff.*
