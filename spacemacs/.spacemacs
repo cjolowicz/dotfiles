@@ -47,6 +47,7 @@ This function should only modify configuration layer settings."
      emoji
      git
      helm
+     html
      ivy
      javascript
      lsp
