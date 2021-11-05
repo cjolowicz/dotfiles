@@ -19,11 +19,11 @@
 	l1 = log --oneline
 	graph = log --graph --all --oneline
 	plog = log
-	pdiff = diff
+	pdiff = diff --stat --patch
 	pshow = show
 	summary = show --no-patch --pretty=%s
 	haul = !git fetch --prune --all && git merge --ff-only
 [pager]
 	plog = less -FXR +/^commit.*
-	pdiff = less -FXR~ +/^diff.*
+	pdiff = less -FXR~ +/^diff.* +g
 	pshow = less -FXR +/^diff.* +g
