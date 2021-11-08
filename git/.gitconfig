@@ -21,7 +21,7 @@
 	plog = log
 	pdiff = diff --stat --patch
 	pshow = show
-	summary = show --no-patch --pretty=%s
+	title = show --no-patch --pretty=%s
 	haul = !git fetch --prune --all && git merge --ff-only
 [pager]
 	plog = less -FXR +/^commit.*
