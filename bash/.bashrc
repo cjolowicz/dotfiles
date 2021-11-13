@@ -2,6 +2,8 @@ eval "$(starship init bash)"
 eval "$(pyenv init -)"
 eval "$(pyenv init --path)"
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
