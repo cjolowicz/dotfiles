@@ -9,6 +9,7 @@ c.tabs.position = "bottom"
 c.fonts.default_family = "Source Code Pro"
 c.fonts.default_size = "13pt"
 
+c.url.start_pages = ["https://github.com/"]
 c.url.searchengines = {
     "DEFAULT": "https://google.com/search?hl=en&q={}",
     "!a": "https://www.amazon.de/s?k={}",
