@@ -1,6 +1,4 @@
 eval "$(starship init bash)"
-eval "$(pyenv init -)"
-eval "$(pyenv init --path)"
 eval "$(asdf exec direnv hook bash)"
 
 # A shortcut for asdf managed direnv.

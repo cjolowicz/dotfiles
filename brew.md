@@ -14,7 +14,6 @@ ln -s /usr/local/opt/emacs-plus@28/Emacs.app /Applications
 brew tap homebrew/cask-fonts
 brew install svn  # install dep for font-source-code-pro
 brew install --cask font-source-code-pro
-brew install pyenv
 brew install zlib  # already installed: openssl readline sqlite3 xz
 brew install ripgrep
 brew install github/gh/gh

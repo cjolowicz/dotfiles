@@ -15,3 +15,4 @@ export EDITOR=emacsclient
 [[ -r "/usr/local/opt/asdf/libexec/asdf.sh" ]] && . "/usr/local/opt/asdf/libexec/asdf.sh"
 
 [[ -r ~/.bashrc ]] && . ~/.bashrc
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
