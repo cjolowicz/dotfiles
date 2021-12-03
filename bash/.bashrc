@@ -1,17 +1,24 @@
+# Initialize prompt using starship.
 eval "$(starship init bash)"
+
+# Initialize asdf-direnv for rewriting PATH per-directory.
 eval "$(asdf exec direnv hook bash)"
 
 # A shortcut for asdf managed direnv.
 direnv() { asdf exec direnv "$@"; }
 
+# Initialize fzf for a nicer history search.
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Binding for fzf_cd conflicts with `ESC c` in vi mode.
 bind -m vi-command -r '\ec'
 bind -m vi-insert -r '\ec'
+
+# Support ^L in vi mode.
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
+# A few aliases.
 alias -- -='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
