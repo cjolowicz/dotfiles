@@ -6,7 +6,9 @@ direnv() { asdf exec direnv "$@"; }
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-bind -r '\ec'  # fzf_cd conflicts with `ESC c` in vi mode
+# Binding for fzf_cd conflicts with `ESC c` in vi mode.
+bind -m vi-command -r '\ec'
+bind -m vi-insert -r '\ec'
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
