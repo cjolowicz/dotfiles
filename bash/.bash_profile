@@ -8,6 +8,7 @@ export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 export PATH="$PATH:/usr/local/opt/llvm/bin"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export VISUAL=emacsclient
 export EDITOR=emacsclient
 
@@ -16,4 +17,3 @@ export EDITOR=emacsclient
 [[ -r "/usr/local/opt/asdf/libexec/asdf.sh" ]] && . "/usr/local/opt/asdf/libexec/asdf.sh"
 
 [[ -r ~/.bashrc ]] && . ~/.bashrc
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
