@@ -18,6 +18,9 @@ bind -m vi-insert -r '\ec'
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
+# Use bat to view manpages (aka batman).
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 # A few aliases.
 alias -- -='cd -'
 alias ..='cd ..'
