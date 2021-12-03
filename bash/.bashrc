@@ -14,6 +14,9 @@ direnv() { asdf exec direnv "$@"; }
 bind -m vi-command -r '\ec'
 bind -m vi-insert -r '\ec'
 
+# Display fzf in full screen.
+export FZF_DEFAULT_OPTS='--no-height --no-reverse'
+
 # Support ^L in vi mode.
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
