@@ -39,6 +39,7 @@ brew install qutebrowser
 brew install exa
 brew install bat
 brew install fzf
+brew install miniconda
 ```
 
 ```sh
