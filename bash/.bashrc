@@ -120,7 +120,11 @@ function heading() {
     printf "\n==> ${bold}%s${reset} <==\n\n" "$*"
 }
 
+# Usage: usage COMMAND [ARG]..
 # ----------------------------------------------------------------------
+# Print the help.
+function usage() {
+    $@ --help | bat --language=man
 }
 
 # Usage: dotfiles [PACKAGE]...
