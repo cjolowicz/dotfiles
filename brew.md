@@ -45,4 +45,7 @@ brew install diff-so-fancy
 
 ```sh
 $(brew --prefix)/opt/fzf/install
+
+conda install mamba -n base -c conda-forge
+conda update -n base -c defaults conda
 ```
