@@ -40,6 +40,7 @@ brew install exa
 brew install bat
 brew install fzf
 brew install miniconda
+brew install diff-so-fancy
 ```
 
 ```sh
