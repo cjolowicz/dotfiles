@@ -63,18 +63,10 @@ function fhelp() {
 
 # Usage: wcat [FILE]...
 # ----------------------------------------------------------------------
-# For each FILE, find its pathname using which(1) and invoke cat(1) on
+# For each FILE, find its pathname using which(1) and invoke bat(1) on
 # the result.
 function wcat() {
-    cat $(which "$@")
-}
-
-# Usage: wless [FILE]...
-# ----------------------------------------------------------------------
-# For each FILE, find its pathname using which(1) and invoke less(1) on
-# the result.
-function wless() {
-    less $(which "$@")
+    bat $(which "$@")
 }
 
 # Usage: wedit [FILE]...
@@ -128,17 +120,7 @@ function heading() {
     printf "\n==> ${bold}%s${reset} <==\n\n" "$*"
 }
 
-# Usage: vcat [FILE]...
 # ----------------------------------------------------------------------
-# Print each FILE preceded by its filename.
-function vcat() {
-    local file=
-
-    for file
-    do
-        heading "$file"
-        cat "$file"
-    done
 }
 
 # Usage: dotfiles [PACKAGE]...
