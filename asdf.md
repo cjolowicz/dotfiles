@@ -38,7 +38,7 @@ Run `direnv allow` within the project to trust this file.
 xcode-select --install
 brew install openssl readline sqlite3 xz zlib
 
-versions="3.10.1 3.11.0a3 3.9.9 3.8.12 3.7.12"
+versions="3.10.2 3.11.0a4 3.9.10 3.8.12 3.7.12"
 
 asdf plugin-add python
 echo $versions | xargs -n1 asdf install python 
