@@ -127,6 +127,32 @@ function usage() {
     $@ --help | bat --language=man
 }
 
+# Usage: activate [VENV]
+# ----------------------------------------------------------------------
+# Activate Python virtual environment.
+function activate() {
+    if [ $# -eq 0 ]
+    then
+        if [ -f venv/bin/activate ] ; then
+            . venv/bin/activate
+        elif [ -f .venv/bin/activate ] ; then
+            . .venv/bin/activate
+        else
+            echo "venv not found" >&2
+            return 1
+        fi
+    else
+        if [ -f "$HOME/.venvs/$1/bin/activate" ] ; then
+            . "$HOME/.venvs/$1/bin/activate"
+        elif [ -f "$1/bin/activate" ] ; then
+            . "$1/bin/activate"
+        else
+            echo "venv not found" >&2
+            return 1
+        fi
+    fi
+}
+
 # Usage: dotfiles [PACKAGE]...
 # ----------------------------------------------------------------------
 # Stow dotfiles.
