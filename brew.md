@@ -64,11 +64,12 @@ brew services start d12frosted/emacs-plus/emacs-plus@29
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 # Applications.
-brew install --cask iterm2
-brew install --cask docker
-brew install --cask dropbox
+brew install iterm2
+brew install docker
+brew install dropbox
 brew install slack
 brew install zoom
+brew install google-chrome
 brew install qutebrowser
 # https://github.com/qutebrowser/qutebrowser/issues/6771
 sudo xattr -rd com.apple.quarantine /Applications/qutebrowser.app
