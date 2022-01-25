@@ -26,3 +26,9 @@ These need to be globally importable for Spacemacs:
 ```sh
 python3 -m pip install --user importmagic epc
 ```
+
+For Poetry:
+
+```sh
+curl -sSL https://install.python-poetry.org | python3 -
+```
