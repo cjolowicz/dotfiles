@@ -70,6 +70,7 @@ brew install dropbox
 brew install slack
 brew install zoom
 brew install google-chrome
+brew install firefox
 brew install qutebrowser
 # https://github.com/qutebrowser/qutebrowser/issues/6771
 sudo xattr -rd com.apple.quarantine /Applications/qutebrowser.app
