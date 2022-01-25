@@ -45,21 +45,13 @@ stow spacemacs
 
 ## Installations
 
-- [brew](brew.md)
-- [pipx](pipx.md)
-
 ```sh
 xcode-select --install
-git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 ```
 
-## User configuration
-
-```sh
-echo /usr/local/bin/bash | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/bash
-```
+- [brew](brew.md)
+- [asdf](asdf.md)
+- [pipx](pipx.md)
 
 ## iTerm
 
