@@ -63,5 +63,8 @@ chsh -s /usr/local/bin/bash
 
 ## iTerm
 
-- Font: Hack Nerd Font 13p
-- Hide scrollbars
+- Profiles > Default > Text > Font: Hack Nerd Font 13p
+- Profiles > Default > Windows > Transparency: 25
+- Appearance > Windows > Hide scrollbars
+- Appearance > Tabs > Show tab bar in fullscreen: disable
+- Appearance > Panes > Show per-pane title bar with split panes: disable
