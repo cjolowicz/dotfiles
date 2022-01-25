@@ -32,6 +32,15 @@
 ```sh
 cp -va Backup/$HOME/.ssh .
 cp -va Backup/$HOME/.gnupg .
+
+cd .dotfiles
+stow ssh
+stow bash
+stow git
+stow asdf
+stow gnupg
+stow qutebrowser
+stow spacemacs
 ```
 
 ## Installations
