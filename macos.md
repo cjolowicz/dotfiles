@@ -17,6 +17,14 @@
 - System > Dock > Automatically hide and show the Dock
 - System > Spaces > Disable: Automatically rearrange based on recent use
 
+## Finder Preferences
+
+- Finder > Sidebar > $user
+- Finder > General > New Finder Windows show: $user
+- Finder > Context Menu > Show View Options > Sort By: Snap To Grid > Use as Defaults
+- Finder > Context Menu > Show View Options > Use as Defaults
+- Apple > Force Quit... > Finder: Relaunch
+
 ## Restore
 
 - Finder: Copy Backup/$HOME/Code to home directory
