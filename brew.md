@@ -35,6 +35,7 @@ $(brew --prefix)/opt/fzf/install
 brew install diff-so-fancy
 brew install starship
 brew install glances
+brew install entr
 
 # Libraries.
 brew install zlib
