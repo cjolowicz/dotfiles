@@ -28,23 +28,11 @@ else
     log "Spacemacs is up-to-date"
 fi
 
-pythonbuild=.asdf/plugins/python/pyenv/plugins/python-build/bin/python-build
+log "Upgrading asdf plugins"
+asdf plugin update --all
 
 for python in 3.{7..11}
 do
-    installed=$(
-        find .asdf/installs/python/ -mindepth 1 -maxdepth 1 -printf '%f\n' |
-            grep "^${python}")
-
-    latest=$(
-        $pythonbuild --definitions |
-            grep "^${python}" | sort -V | tail -n1)
-
-    if [ "$installed" != "$latest" ]
-    then
-        log "Upgrading Python $python from $installed to $latest"
-        asdf install python $latest
-    else
-        log "Python $python is up-to-date ($latest)"
-    fi
+    log "Upgrading Python $python"
+    asdf install python latest:$python
 done
