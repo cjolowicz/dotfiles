@@ -74,6 +74,8 @@ brew install firefox
 brew install qutebrowser
 # https://github.com/qutebrowser/qutebrowser/issues/6771
 sudo xattr -rd com.apple.quarantine /Applications/qutebrowser.app
+brew install openvpn
+sudo brew services start openvpn
 
 # Python.
 brew install pipx
