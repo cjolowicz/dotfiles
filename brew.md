@@ -77,6 +77,7 @@ brew install qutebrowser
 sudo xattr -rd com.apple.quarantine /Applications/qutebrowser.app
 brew install openvpn
 sudo brew services start openvpn
+brew install spotify
 
 # Python.
 brew install pipx
