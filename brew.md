@@ -79,6 +79,7 @@ brew install openvpn
 sudo brew services start openvpn
 brew install spotify
 brew install signal
+brew install virtualbox
 
 # Python.
 brew install pipx
