@@ -125,7 +125,7 @@ function heading() {
 # ----------------------------------------------------------------------
 # Print the help.
 function usage() {
-    $@ --help | bat --language=man
+    $@ --help | bat --language=man --style=plain
 }
 
 # Usage: activate [VENV]
