@@ -51,6 +51,7 @@ brew install github/gh/gh
 brew install make
 brew install llvm
 brew install cmake
+brew install jq
 
 # Fonts.
 brew tap homebrew/cask-fonts
