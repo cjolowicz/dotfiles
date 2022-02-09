@@ -16,6 +16,7 @@
 - System > Keyboard > Keyboard > Delay Until Repeat > Short
 - System > Dock > Automatically hide and show the Dock
 - System > Spaces > Disable: Automatically rearrange based on recent use
+- System > General > Default web browser: qutebrowser
 
 ## Finder Preferences
 
