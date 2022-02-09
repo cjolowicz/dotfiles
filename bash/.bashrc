@@ -44,6 +44,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias mkdir='mkdir --verbose --parents'
 alias path='echo -e ${PATH//:/\\n}'
+alias cat='bat -p'
 
 # Usage: fhelp [FUNCTION]...
 # ----------------------------------------------------------------------
