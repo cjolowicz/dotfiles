@@ -12,7 +12,7 @@ log "Upgrading Homebrew packages"
 brew update && brew upgrade
 
 log "Upgrading pipx applications"
-pipx upgrade-all
+pipx upgrade-all --include-injected
 
 log "Upgrading pip user-wide packages"
 pip install --user --upgrade importmagic epc
