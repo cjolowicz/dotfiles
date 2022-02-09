@@ -28,11 +28,10 @@ else
     log "Spacemacs is up-to-date"
 fi
 
-log "Upgrading asdf plugins"
+log "Upgrading asdf"
 asdf plugin update --all
 
 for python in 3.{7..11}
 do
-    log "Upgrading Python $python"
     asdf install python latest:$python
 done
