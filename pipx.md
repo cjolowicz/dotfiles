@@ -20,6 +20,7 @@ pipx inject python-lsp-server pyls-black
 pipx inject python-lsp-server pyls-memestra
 pipx install autoflake
 pipx install rich-cli
+pipx install py-spy
 ```
 
 These need to be globally importable for Spacemacs:
