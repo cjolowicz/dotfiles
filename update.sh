@@ -26,6 +26,9 @@ else
     echo "Already up-to-date."
 fi
 
+header "Poetry"
+poetry self update
+
 header "asdf"
 asdf plugin update --all
 
