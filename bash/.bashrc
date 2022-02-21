@@ -129,6 +129,13 @@ function usage() {
     $@ --help | bat --language=man --style=plain
 }
 
+# Usage: venv [VENV]
+# ----------------------------------------------------------------------
+# Create Python virtual environment.
+function venv() {
+    virtualenv "${@:1: $#-1}" "$HOME/.venvs/${@: -1}"
+}
+
 # Usage: activate [VENV]
 # ----------------------------------------------------------------------
 # Activate Python virtual environment.
