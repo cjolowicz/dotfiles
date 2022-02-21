@@ -3,7 +3,9 @@
 set -euo pipefail
 
 function header() {
+    echo
     rich "[b]$*[/b]" --rule
+    echo
 }
 
 header "Homebrew"
