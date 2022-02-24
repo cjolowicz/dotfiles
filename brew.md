@@ -82,6 +82,7 @@ sudo brew services start openvpn
 brew install spotify
 brew install signal
 brew install virtualbox
+brew install evernote
 
 # Python.
 brew install pipx
