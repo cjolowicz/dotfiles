@@ -27,7 +27,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # Enable color theme for file listings.
 export LS_COLORS="$(vivid generate iceberg-dark)"
 export EXA_COLORS="\
-da=38;5;58\
+:da=38;5;58\
 :uu=38;5;31\
 :ur=38;5;208\
 :uw=38;5;202\
