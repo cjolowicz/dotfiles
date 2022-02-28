@@ -33,9 +33,9 @@ alias g='git graph'
 alias c='eval $(__fzf_cd__)'
 alias d='dirs -v'
 alias cp='cp --verbose --interactive'
-alias ls='exa'
-alias la='exa --all'
-alias ll='exa --long --all --time-style=long-iso'
+alias ls='exa --icons'
+alias la='exa --icons --all'
+alias ll='exa --icons --all --long --time-style=long-iso'
 alias mv='mv --verbose --interactive'
 alias pd=pushd
 alias edit=$EDITOR
