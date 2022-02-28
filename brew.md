@@ -36,6 +36,10 @@ brew install diff-so-fancy
 brew install starship
 brew install glances
 brew install entr
+brew install vivid
+brew install dust
+brew install fd
+brew install tavianator/tap/bfs
 
 # Libraries.
 brew install zlib
