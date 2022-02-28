@@ -24,6 +24,24 @@ bind -m vi-insert 'Control-l: clear-screen'
 # Use bat to view manpages (aka batman).
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+# Enable color theme for file listings.
+export LS_COLORS="$(vivid generate iceberg-dark)"
+export EXA_COLORS="\
+da=38;5;58\
+:uu=38;5;31\
+:ur=38;5;208\
+:uw=38;5;202\
+:ux=38;5;214\
+:ue=38;5;215\
+:gr=38;5;208\
+:gw=38;5;202\
+:gx=38;5;214\
+:tr=38;5;208\
+:tw=38;5;202\
+:tx=38;5;214\
+:sn=38;5;70\
+:sb=38;5;28"
+
 # A few aliases.
 alias -- -='cd -'
 alias ..='cd ..'
