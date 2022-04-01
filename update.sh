@@ -17,13 +17,13 @@ pipx upgrade-all --include-injected
 header "pip"
 pip install --user --upgrade importmagic epc
 
-git -C .emacs.d fetch
+git -C ~/.emacs.d fetch
 
 header "Spacemacs"
-if ! git -C .emacs.d diff --quiet develop origin/develop
+if ! git -C ~/.emacs.d diff --quiet develop origin/develop
 then
-    git -C .emacs.d plog -p --stat --reverse develop..origin/develop
-    git -C .emacs.d pull
+    git -C ~/.emacs.d plog -p --stat --reverse develop..origin/develop
+    git -C ~/.emacs.d pull
 else
     echo "Already up-to-date."
 fi
