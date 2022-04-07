@@ -578,6 +578,9 @@ before packages are loaded."
   ;; Tell magit where we keep our git repositories.
   (setq magit-repository-directories '(("~/Code/" . 3)))
 
+  ;; Suppress a warning when magit starts up.
+  (setq forge-add-default-bindings nil)
+
   ;; Disable breadcrumb headerline in LSP.
   (setq lsp-headerline-breadcrumb-enable nil)
 
