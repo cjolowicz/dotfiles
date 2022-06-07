@@ -30,11 +30,3 @@ fi
 
 header "Poetry"
 poetry self update
-
-header "asdf"
-asdf plugin update --all
-
-for python in 3.{7..11}
-do
-    asdf install python latest:$python
-done
