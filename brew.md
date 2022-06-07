@@ -49,6 +49,7 @@ brew install xz  # already installed
 
 # Developer tools.
 brew install git
+brew install python@3.{10,9,8,7}
 brew install mercurial
 brew install svn  # install dep for font-source-code-pro
 brew install github/gh/gh
