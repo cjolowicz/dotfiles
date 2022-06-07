@@ -1,12 +1,6 @@
 # Initialize prompt using starship.
 eval "$(starship init bash)"
 
-# Initialize asdf-direnv for rewriting PATH per-directory.
-eval "$(asdf exec direnv hook bash)"
-
-# A shortcut for asdf managed direnv.
-direnv() { asdf exec direnv "$@"; }
-
 # Initialize fzf for a nicer history search.
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
