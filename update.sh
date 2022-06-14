@@ -15,7 +15,8 @@ header "pipx"
 pipx upgrade-all --include-injected
 
 header "pip"
-pip install --user --upgrade importmagic epc
+python3.10 -m pip install --upgrade pip
+python3.10 -m pip install --user --upgrade importmagic epc
 
 git -C ~/.emacs.d fetch
 
