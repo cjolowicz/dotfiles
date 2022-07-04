@@ -48,6 +48,8 @@ alias cp='cp --verbose --interactive'
 alias ls='exa --icons'
 alias la='exa --icons --all'
 alias ll='exa --icons --all --long --time-style=long-iso'
+alias lst='ls --tree'
+alias llt='ll --tree'
 alias mv='mv --verbose --interactive'
 alias pd=pushd
 alias edit=$EDITOR
