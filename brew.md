@@ -49,15 +49,20 @@ brew install xz  # already installed
 
 # Developer tools.
 brew install git
-brew install python@3.{10,9,8,7}
-brew install mercurial
+brew install libgit2
+brew install icdiff
 brew install svn  # install dep for font-source-code-pro
+brew install mercurial
 brew install github/gh/gh
+brew install python@3.{10,9,8,7}
+brew install go
+brew install ruby
 brew install make
 brew install llvm
 brew install cmake
 brew install jq
 brew install pandoc
+brew install asciidoctor
 
 # Fonts.
 brew tap homebrew/cask-fonts
