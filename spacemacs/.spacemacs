@@ -618,6 +618,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(dired-directory ((t (:inherit font-lock-function-name-face :weight bold))))
  '(highlight-parentheses-highlight ((nil (:weight ultra-bold))) t)
  '(markup-big-face ((t (:inherit markup-gen-face))))
  '(markup-complex-replacement-face ((t (:inherit markup-meta-face :foreground "purple3" :box (:line-width (1 . 1) :color "plum1")))))
