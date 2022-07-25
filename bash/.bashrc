@@ -1,6 +1,9 @@
 # Initialize prompt using starship.
 eval "$(starship init bash)"
 
+# Initialize direnv.
+eval "$(direnv hook bash)"
+
 # Initialize fzf for a nicer history search.
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
