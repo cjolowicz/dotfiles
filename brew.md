@@ -49,6 +49,7 @@ brew install xz  # already installed
 
 # Developer tools.
 brew install git
+brew install git-extras
 brew install libgit2
 brew install icdiff
 brew install svn  # install dep for font-source-code-pro
