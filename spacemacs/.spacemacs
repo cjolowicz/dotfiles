@@ -48,6 +48,10 @@ This function should only modify configuration layer settings."
      emacs-lisp
      emoji
      git
+     (go :variables
+         go-tab-width 4
+         gofmt-command "goimports"
+         go-use-golangci-lint t)
      graphviz
      helm
      html
