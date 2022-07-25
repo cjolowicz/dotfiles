@@ -63,6 +63,7 @@ brew install cmake
 brew install jq
 brew install pandoc
 brew install asciidoctor
+brew install direnv
 
 # Fonts.
 brew tap homebrew/cask-fonts
