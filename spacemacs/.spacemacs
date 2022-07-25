@@ -43,6 +43,7 @@ This function should only modify configuration layer settings."
      ;; better-defaults
      (c-c++ :variables c-c++-backend 'lsp-clangd)
      cmake
+     dap
      docker
      dtrt-indent
      emacs-lisp
