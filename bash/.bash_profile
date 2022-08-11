@@ -19,6 +19,7 @@ export PATH="/usr/local/opt/python@3.7/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export PATH="/usr/local/opt/python@3.9/bin:$PATH"
 export PATH="/usr/local/opt/python@3.10/bin:$PATH"
+export PATH="/usr/local/opt/python@3.10/libexec/bin:$PATH"
 export PATH="$HOME/Library/Python/3.10/bin:$PATH"
 export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
