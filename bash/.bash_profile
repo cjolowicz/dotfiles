@@ -2,7 +2,6 @@ export GOPATH=$HOME/go
 
 # append to PATH
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:/usr/local/opt/llvm/bin"
 export PATH="$PATH:$GOPATH/bin"
 
 # prepend to PATH
