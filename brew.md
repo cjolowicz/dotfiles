@@ -66,6 +66,7 @@ brew install jq
 brew install pandoc
 brew install asciidoctor
 brew install direnv
+brew install vim
 
 # Fonts.
 brew tap homebrew/cask-fonts
