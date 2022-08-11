@@ -99,6 +99,7 @@ brew install virtualbox
 brew install evernote
 
 # Python.
+brew install pyenv
 brew install pipx
 brew install miniconda
 conda install mamba -n base -c conda-forge
