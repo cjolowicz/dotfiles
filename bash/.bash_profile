@@ -26,6 +26,9 @@ export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export VISUAL=emacsclient
 export EDITOR=emacsclient
 
+export PY_PYTHON=3.10
+export PY_PYTHON3=3.10
+
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 [[ -r ~/.bashrc ]] && . ~/.bashrc
