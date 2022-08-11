@@ -40,6 +40,7 @@ brew install vivid
 brew install dust
 brew install fd
 brew install tavianator/tap/bfs
+brew install hexyl
 
 # Libraries.
 brew install zlib
