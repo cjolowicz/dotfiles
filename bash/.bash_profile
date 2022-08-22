@@ -23,6 +23,7 @@ export PATH="$HOME/Library/Python/3.10/bin:$PATH"
 export VISUAL=emacsclient
 export EDITOR=emacsclient
 
+export PYTHON_CONFIGURE_OPTS='--enable-framework --enable-optimizations --with-lto'
 export PY_PYTHON=3.10
 export PY_PYTHON3=3.10
 
@@ -44,4 +45,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
