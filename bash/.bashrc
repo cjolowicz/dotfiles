@@ -62,6 +62,7 @@ alias fgrep='fgrep --color=auto'
 alias mkdir='mkdir --verbose --parents'
 alias path='echo -e ${PATH//:/\\n}'
 alias cat='bat -p'
+alias diff='batdiff'
 
 # Usage: fhelp [FUNCTION]...
 # ----------------------------------------------------------------------
@@ -184,4 +185,11 @@ function activate() {
 # Stow dotfiles.
 function dotfiles() {
     stow --dir ~/.dotfiles --target ~ "$@"
+}
+
+# Usage: batdiff [DIFF-ARG]..
+# ----------------------------------------------------------------------
+# Display diff with syntax highlighting.
+function batdiff() {
+    command diff "$@" | bat --plain --language=diff
 }
