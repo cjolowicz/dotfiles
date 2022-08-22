@@ -63,6 +63,7 @@ alias mkdir='mkdir --verbose --parents'
 alias path='echo -e ${PATH//:/\\n}'
 alias cat='bat -p'
 alias diff='batdiff'
+alias tree='exatree'
 
 # Usage: fhelp [FUNCTION]...
 # ----------------------------------------------------------------------
@@ -192,4 +193,11 @@ function dotfiles() {
 # Display diff with syntax highlighting.
 function batdiff() {
     command diff "$@" | bat --plain --language=diff
+}
+
+# Usage: exatree [EXA-ARG]..
+# ----------------------------------------------------------------------
+# Display tree using exa.
+function exatree() {
+    ll --tree --color=always "$@" | less -R
 }
