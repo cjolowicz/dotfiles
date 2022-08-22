@@ -45,7 +45,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias g='git graph'
-alias c='eval $(__fzf_cd__)'
+alias c='icd Code/github.com'
 alias d='dirs -v'
 alias cp='cp --verbose --interactive'
 alias ls='exa --icons'
@@ -200,4 +200,16 @@ function batdiff() {
 # Display tree using exa.
 function exatree() {
     ll --tree --color=always "$@" | less -R
+}
+
+# Usage: icd [DIR]
+# ----------------------------------------------------------------------
+# Interactive chdir within DIR (defaults to $HOME).
+function icd() {
+    local command="$(cd "$@" ; __fzf_cd__)"
+
+    if [ -n "$command" ] ; then
+        cd "$@"
+        eval "$command"
+    fi
 }
