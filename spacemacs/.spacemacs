@@ -603,6 +603,10 @@ before packages are loaded."
   ;; Enable company-mode in text-mode buffers.
   ;; https://github.com/syl20bnr/spacemacs/pull/15045
   (add-hook 'text-mode-hook #'company-mode)
+
+  ;; Ensure right option key works as AltGr on macOS.
+  ;; https://github.com/syl20bnr/spacemacs/issues/5188
+  (setq-default mac-right-option-modifier nil)
 )
 
 
