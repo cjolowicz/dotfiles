@@ -642,7 +642,11 @@ before packages are loaded."
                ))
     (dolist (char-regexp alist)
       (set-char-table-range composition-function-table (car char-regexp)
-                            `([,(cdr char-regexp) 0 font-shape-gstring])))))
+                            `([,(cdr char-regexp) 0 font-shape-gstring]))))
+
+  ;; Use adoc mode for .asciidoc files
+  (add-to-list 'auto-mode-alist '("\\.asciidoc\\'" . adoc-mode))
+  )
 
 
 ;; Do not write anything past this comment. This is where Emacs will
