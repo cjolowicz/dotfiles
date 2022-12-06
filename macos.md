@@ -1,4 +1,4 @@
-# MacOS Big Sur > Monterey
+# MacOS Big Sur > Ventura
 
 ## OS Installation
 
@@ -56,7 +56,8 @@ xcode-select --install
 
 ## iTerm
 
-- Profiles > Default > Text > Font: Hack Nerd Font 13p
+- Profiles > Default > Text > Font: Fira Code 13p
+- Profiles > Default > Text > Font > Use ligatures > On
 - Profiles > Default > Windows > Transparency: 25
 - Appearance > Windows > Hide scrollbars
 - Appearance > Tabs > Show tab bar in fullscreen: disable
