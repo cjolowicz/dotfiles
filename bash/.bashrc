@@ -199,7 +199,7 @@ function batdiff() {
 # ----------------------------------------------------------------------
 # Display tree using exa.
 function exatree() {
-    ll --tree --color=always "$@" | less -R
+    ll --tree --color=always "$@" | LESS=FXSR less
 }
 
 # Usage: icd [DIR]
