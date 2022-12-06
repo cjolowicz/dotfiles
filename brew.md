@@ -77,7 +77,7 @@ brew install --cask font-fira-code
 # Emacs.
 brew tap d12frosted/emacs-plus
 brew install emacs-plus@29 --with-spacemacs-icon
-ln -s /usr/local/opt/emacs-plus@29/Emacs.app /Applications
+ln -s /usr/local/opt/emacs-plus@29/Emacs.app /Applications  # XXX make alias
 brew services start d12frosted/emacs-plus/emacs-plus@29
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
