@@ -28,6 +28,7 @@ export PY_PYTHON3=3.11
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 [[ -r ~/.bashrc ]] && . ~/.bashrc
+[[ -r ~/.profile.private ]] && . ~/.profile.private
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
