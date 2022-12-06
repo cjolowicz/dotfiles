@@ -22,6 +22,7 @@ pipx install autoflake
 pipx install rich-cli
 pipx install py-spy
 pipx install cogapp
+pipx install openai
 ```
 
 These need to be globally importable for Spacemacs:
