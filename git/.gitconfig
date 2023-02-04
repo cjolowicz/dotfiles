@@ -16,6 +16,7 @@
 	ff = only
 [rebase]
 	autosquash = true
+	updateRefs = true
 [alias]
 	l1 = log --oneline
 	graph = log --graph --all --oneline
