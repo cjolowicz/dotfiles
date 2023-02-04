@@ -73,6 +73,7 @@ brew tap homebrew/cask-fonts
 brew install --cask font-source-code-pro
 brew install font-hack-nerd-font
 brew install --cask font-fira-code
+brew install font-fira-code-nerd-font
 
 # Emacs.
 brew tap d12frosted/emacs-plus
