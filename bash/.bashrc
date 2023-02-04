@@ -87,7 +87,7 @@ function fhelp() {
 # For each FILE, find its pathname using which(1) and invoke bat(1) on
 # the result.
 function wcat() {
-    bat $(which "$@")
+    cat $(which "$@")
 }
 
 # Usage: wedit [FILE]...
@@ -213,3 +213,51 @@ function icd() {
         eval "$command"
     fi
 }
+
+# Usage: shebang COMMAND
+# ----------------------------------------------------------------------
+# Show the shebang of the given command on PATH.
+function shebang() {
+    local command=
+
+    for command ; do
+        script="$(which $command)"
+
+        head -n1 "$script" | cut -c3-
+    done
+}
+
+# Usage: metadata APP KEY
+# ----------------------------------------------------------------------
+# Show the metadata of the given Python app on PATH.
+function metadata() {
+    local json=false
+
+    case $1 in --json) json=true; shift;; esac
+
+    local app="$1" ; shift
+    local python=$(shebang $app)
+
+    if $json ; then
+        $python <<EOF | jq -C . | LESS=FSRX less
+import json
+from importlib.metadata import metadata
+print(json.dumps(metadata("$app").json))
+EOF
+    elif [ $# -eq 0 ] ; then
+        $python <<EOF
+from importlib.metadata import metadata
+for key in sorted(set(metadata("$app"))):
+  print(key)
+EOF
+    else
+        for key ; do
+            $python <<EOF
+from importlib.metadata import metadata
+for value in metadata("$app").get_all("$key"):
+  print(value)
+EOF
+        done
+    fi
+}
+
