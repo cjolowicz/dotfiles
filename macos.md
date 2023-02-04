@@ -56,7 +56,7 @@ xcode-select --install
 
 ## iTerm
 
-- Profiles > Default > Text > Font: Fira Code 13p
+- Profiles > Default > Text > Font: Fira Code Nerd Font 13p
 - Profiles > Default > Text > Font > Use ligatures > On
 - Profiles > Default > Windows > Transparency: 25
 - Appearance > Windows > Hide scrollbars
