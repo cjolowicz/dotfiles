@@ -40,7 +40,7 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      asciidoc
      auto-completion
-     ;; better-defaults
+     better-defaults
      (c-c++ :variables c-c++-backend 'lsp-clangd)
      cmake
      dap
