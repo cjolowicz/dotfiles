@@ -273,7 +273,7 @@ It should only modify the values of Spacemacs settings."
    ;; Default font or prioritized list of fonts. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
-   dotspacemacs-default-font '("Fira Code"
+   dotspacemacs-default-font '("FiraCode Nerd Font Mono"
                                :size 13.0
                                :weight normal
                                :width normal)
@@ -667,7 +667,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(dired-directory ((t (:inherit font-lock-function-name-face :weight bold))))
- '(fixed-pitch ((t (:family "Fira Code"))))
+ '(fixed-pitch ((t (:family "FiraCode Nerd Font Mono"))))
  '(highlight-parentheses-highlight ((nil (:weight ultra-bold))) t)
  '(markup-big-face ((t (:inherit markup-gen-face))))
  '(markup-complex-replacement-face ((t (:inherit markup-meta-face :foreground "purple3" :box (:line-width (1 . 1) :color "plum1")))))
