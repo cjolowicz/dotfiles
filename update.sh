@@ -18,9 +18,9 @@ header "pip"
 python3.10 -m pip install --upgrade pip
 python3.10 -m pip install --user --upgrade importmagic epc
 
+header "Spacemacs"
 git -C ~/.emacs.d fetch
 
-header "Spacemacs"
 if ! git -C ~/.emacs.d diff --quiet develop origin/develop
 then
     git -C ~/.emacs.d plog -p --stat --reverse develop..origin/develop
