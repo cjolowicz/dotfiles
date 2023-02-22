@@ -67,6 +67,7 @@ brew install pandoc
 brew install asciidoctor
 brew install direnv
 brew install vim
+brew install fswatch
 
 # Fonts.
 brew tap homebrew/cask-fonts
