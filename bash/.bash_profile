@@ -24,6 +24,7 @@ export EDITOR=emacsclient
 export PYTHON_CONFIGURE_OPTS='--enable-framework --enable-optimizations --with-lto'
 export PY_PYTHON=3.11
 export PY_PYTHON3=3.11
+export PIPX_DEFAULT_PYTHON=3.11
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
