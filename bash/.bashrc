@@ -44,6 +44,7 @@ alias -- -='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias e='envvars'
 alias g='git graph'
 alias c='icd Code/github.com'
 alias d='dirs -v'
@@ -258,6 +259,17 @@ for value in metadata("$app").get_all("$key"):
   print(value)
 EOF
         done
+    fi
+}
+
+# Usage: envvars [GREP-ARG..]
+# ----------------------------------------------------------------------
+# Show environment variables matching the patterns.
+function envvars() {
+    if [ $# -eq 0 ] ; then
+        env | bat -l sh -p
+    else
+        env | grep "$@" | bat -l sh -p
     fi
 }
 
