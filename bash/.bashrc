@@ -273,3 +273,10 @@ function envvars() {
     fi
 }
 
+# Usage: mkcd DIR
+# ----------------------------------------------------------------------
+# Create directory and cd into it.
+function mkcd() {
+    mkdir "$@"
+    cd "$@"
+}
