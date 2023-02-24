@@ -63,7 +63,7 @@ This function should only modify configuration layer settings."
      multiple-cursors
      ;; org
      osx
-     pdf-tools
+     pdf
      php
      protobuf
      ;; (shell :variables
