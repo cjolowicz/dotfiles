@@ -600,9 +600,6 @@ before packages are loaded."
   (spacemacs/set-leader-keys "pt" 'projectile-find-test-file)
   (spacemacs/set-leader-keys "pi" 'projectile-find-test-file)
 
-  ;; Display emojis.
-  (global-emojify-mode)
-
   ;; Enable company-mode in text-mode buffers.
   ;; https://github.com/syl20bnr/spacemacs/pull/15045
   (add-hook 'text-mode-hook #'company-mode)
