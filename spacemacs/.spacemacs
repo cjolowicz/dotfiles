@@ -665,6 +665,22 @@ before packages are loaded."
        (advice-add 'describe-face :before #'my-describe-face-advice)
        (advice-add 'customize-face :before #'my-customize-face-advice)))
 
+  ;; Define the python-toml-docstring mixed mode class
+  (require 'mmm-mode)
+
+  ;; Define the python-toml-docstring mixed mode class
+  (mmm-add-classes
+   '((python-toml-docstring
+      :submode toml-mode
+      :face mmm-code-submode-face
+      :front "\\(\"\"\"TOML\\|'''TOML\\)"
+      :back "\\(\"\"\"\\|'''\\)"
+      :insert ((?t toml-code "TOML code: " @ "\"\"\"TOML" @ "\n" @ str @ "\n" @ "\"\"\"" @))
+      )))
+
+  ;; Associate python-toml-docstring with .py files in python-mode
+  (mmm-add-mode-ext-class 'python-mode "*.py" 'python-toml-docstring)
+
   ;; Use adoc mode for .asciidoc files
   (add-to-list 'auto-mode-alist '("\\.asciidoc\\'" . adoc-mode))
   )
