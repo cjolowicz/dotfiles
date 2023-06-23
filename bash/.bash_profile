@@ -36,6 +36,7 @@ export PY_PYTHON3=3.11
 export PIPX_DEFAULT_PYTHON=python3.11
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+eval "$(register-python-argcomplete nox)"
 
 [[ -r ~/.bashrc ]] && . ~/.bashrc
 [[ -r ~/.profile.private ]] && . ~/.profile.private
