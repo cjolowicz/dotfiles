@@ -41,6 +41,7 @@ brew install dust
 brew install fd
 brew install tavianator/tap/bfs
 brew install hexyl
+brew install delta
 
 # Libraries.
 brew install zlib
