@@ -18,6 +18,15 @@ export PATH="$HOME/.pyenv/versions/3.12-dev/bin:$PATH"
 export PATH="/usr/local/opt/python@3.11/bin:$PATH"
 export PATH="/usr/local/opt/python@3.11/libexec/bin:$PATH"
 
+for directory in $HOME/Code/*
+do
+    if [ -d "$directory" ]
+    then
+	export CDPATH="${CDPATH:-}:$directory"
+    fi
+done
+unset directory
+
 export VISUAL=emacsclient
 export EDITOR=emacsclient
 
