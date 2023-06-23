@@ -66,10 +66,6 @@ This function should only modify configuration layer settings."
      pdf
      php
      protobuf
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
      (python :variables
              python-backend 'lsp
              python-lsp-server 'pylsp
@@ -78,7 +74,12 @@ This function should only modify configuration layer settings."
              python-fill-column 88)
      ruby
      rust
+     (shell :variables shell-default-shell 'vterm)
+     ;; (shell :variables
+     ;;        shell-default-height 30
+     ;;        shell-default-position 'bottom)
      shell-scripts
+     ;; spell-checking
      sql
      syntax-checking
      themes-megapack
