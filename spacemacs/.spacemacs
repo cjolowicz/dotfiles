@@ -641,6 +641,30 @@ before packages are loaded."
       (set-char-table-range composition-function-table (car char-regexp)
                             `([,(cdr char-regexp) 0 font-shape-gstring]))))
 
+  ;; Fix describe-face to default to the actual face at point
+  ;; https://emacs.stackexchange.com/questions/45492/hl-line-face-used-as-default-in-26-1
+  (defun my-face-at-point ()
+    (let ((face (get-text-property (point) 'face)))
+      (or (and (face-list-p face) (car face))
+          (and (symbolp face) face))))
+
+  (defun my-describe-face-advice (&rest ignore)
+    (interactive (list (read-face-name "Describe face"
+                                       (or (my-face-at-point) 'default)
+                                       t)))
+    nil)
+
+  (defun my-customize-face-advice (&rest ignore)
+    (interactive (list (read-face-name "Customize face"
+                                       (or (my-face-at-point) 'default)
+                                       t)))
+    nil)
+
+  (eval-after-load "hl-line"
+    '(progn
+       (advice-add 'describe-face :before #'my-describe-face-advice)
+       (advice-add 'customize-face :before #'my-customize-face-advice)))
+
   ;; Use adoc mode for .asciidoc files
   (add-to-list 'auto-mode-alist '("\\.asciidoc\\'" . adoc-mode))
   )
