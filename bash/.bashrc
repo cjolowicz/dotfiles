@@ -65,6 +65,8 @@ alias path='echo -e ${PATH//:/\\n}'
 alias cat='bat -p'
 alias diff='batdiff'
 alias tree='exatree'
+alias -- -h='usage'
+alias -- --help='usage'
 
 # Usage: fhelp [FUNCTION]...
 # ----------------------------------------------------------------------
