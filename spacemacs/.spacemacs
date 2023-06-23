@@ -705,6 +705,16 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(adoc-gen-face ((t (:foreground "LightBlue4"))))
+ '(adoc-markup-face ((t nil)))
+ '(adoc-meta-hide-face ((t (:inherit adoc-meta-face))))
+ '(adoc-title-0-face ((t nil)))
+ '(adoc-title-1-face ((t (:inherit adoc-title-face :height 1))))
+ '(adoc-title-2-face ((t nil)))
+ '(adoc-title-3-face ((t nil)))
+ '(adoc-title-4-face ((t nil)))
+ '(adoc-title-5-face ((t nil)))
+ '(adoc-verbatim-face ((t nil)))
  '(dired-directory ((t (:inherit font-lock-function-name-face :weight bold))))
  '(fixed-pitch ((t (:family "FiraCode Nerd Font Mono"))))
  '(highlight-parentheses-highlight ((nil (:weight ultra-bold))) t)
