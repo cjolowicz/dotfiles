@@ -57,6 +57,9 @@ This function should only modify configuration layer settings."
      ;; spell-checking
      syntax-checking
      themes-megapack
+     (unicode-fonts :variables
+                    unicode-fonts-force-multi-color-on-mac t
+                    unicode-fonts-enable-ligatures t)
      version-control
      (treemacs :variables treemacs-use-icons-dired nil)
      yaml
