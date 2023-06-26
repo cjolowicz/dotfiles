@@ -59,6 +59,7 @@ This function should only modify configuration layer settings."
      themes-megapack
      version-control
      (treemacs :variables treemacs-use-icons-dired nil)
+     yaml
      )
 
 
