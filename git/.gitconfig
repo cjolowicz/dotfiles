@@ -1,0 +1,44 @@
+[include]
+	path = .gitconfig.d/user.conf
+[core]
+	editor = emacsclient --alternate-editor=
+	excludesfile = ~/.gitignore_global
+  pager = delta
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[tag]
+	forceSignAnnotated = true
+[push]
+	default = current
+[pull]
+	ff = only
+[rebase]
+	autosquash = true
+	updateRefs = true
+[alias]
+	l1 = log --oneline
+	graph = log --graph --all --oneline
+	plog = log
+	pdiff = diff --stat --patch
+	pshow = show
+	title = show --no-patch --pretty=%s
+	haul = !git fetch --prune --all && git merge --ff-only
+	watch = "!f() { gh run list --branch $(git rev-parse --abbrev-ref HEAD) -L 1 --json databaseId -q '.[0].databaseId' | xargs gh run watch; }; f"
+[pager]
+	plog = less -FXR +/^commit.*
+	pdiff = less -FXR~ +/^diff.* +g
+	pshow = less -FXR +/^diff.* +g
+[interactive]
+  diffFilter = delta --color-only
+[color]
+	ui = true
+[delta]
+    navigate = true
+    line-numbers = true
+	  side-by-side = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
