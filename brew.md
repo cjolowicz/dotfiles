@@ -51,6 +51,10 @@
 - pandoc
 - direnv
 - make
+- shellcheck
+- bashate
+- shfmt
+- bash-language-server
 
 ### Editors
 - vim
