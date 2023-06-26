@@ -41,6 +41,7 @@ This function should only modify configuration layer settings."
      asciidoc
      auto-completion
      better-defaults
+     dtrt-indent
      emacs-lisp
      git
      helm
