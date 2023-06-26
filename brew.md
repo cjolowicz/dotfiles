@@ -55,7 +55,7 @@
 ### Editors
 - vim
 - neovim
-- emacs-plus --with-spacemacs-icon --with-native-comp
+- emacs-plus@30 --with-spacemacs-icon --with-native-comp
 
 ### Applications
 - iterm2

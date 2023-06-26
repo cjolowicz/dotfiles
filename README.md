@@ -41,7 +41,7 @@ install-script admin/macos-alias.sh
 ## Emacs
 - [brew](brew.md)
 ```sh
-macos-alias /opt/homebrew/opt/emacs-plus@28/Emacs.app /Applications
+macos-alias /opt/homebrew/opt/emacs-plus@30/Emacs.app /Applications
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 dotfiles spacemacs
 ```
