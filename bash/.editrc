@@ -1,0 +1,2 @@
+python:bind -v
+python:bind ^I rl_complete
