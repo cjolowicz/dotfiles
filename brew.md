@@ -8,6 +8,7 @@
 
 ### Fonts
 - font-fira-code-nerd-font
+- font-cascadia-code
 
 ### Shells
 - bash
