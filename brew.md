@@ -65,3 +65,11 @@
 ### Applications
 - iterm2
 - homebrew/cask/docker
+
+### Python
+- python@3.11
+- python@3.10
+- python@3.9
+- python@3.8
+- python-launcher
+- pipx
