@@ -233,3 +233,10 @@ function yaml() {
         yq eval -P . "$@"
     fi
 }
+
+# Usage: yaml2json [FILE..]
+# ----------------------------------------------------------------------
+# Convert YAML to JSON.
+function yaml2json() {
+    yq eval . "$@" --output-format=json | json
+}
