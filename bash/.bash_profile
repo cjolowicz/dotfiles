@@ -22,6 +22,7 @@ do
         export CDPATH="${CDPATH:-}:$directory"
     fi
 done
+unset package
 unset directory
 
 export VISUAL=emacsclient
