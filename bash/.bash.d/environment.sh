@@ -7,6 +7,9 @@ eval "$(direnv hook bash)"
 # Initialize fzf for a nicer history search.
 . ~/.fzf.bash
 
+# Enable completion for 1Password CLI.
+. <(op completion bash)
+
 # Binding for fzf_cd conflicts with `ESC c` in vi mode.
 bind -m vi-command -r '\ec'
 bind -m vi-insert -r '\ec'
