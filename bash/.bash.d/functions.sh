@@ -87,7 +87,7 @@ function heading() {
 # ----------------------------------------------------------------------
 # Print the help.
 function usage() {
-    $@ --help | bat --language=man --style=plain
+    $@ --help 2>&1 | bat --language=man --style=plain
 }
 
 # Usage: venv [VENV]
