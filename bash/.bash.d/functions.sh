@@ -240,3 +240,13 @@ function yaml() {
 function yaml2json() {
     yq eval . "$@" --output-format=json | json
 }
+
+# Usage: yc CMD [ARG]...
+# ----------------------------------------------------------------------
+# Pretty-print command output as yaml, e.g. `yc ls -l`.
+function yc() {
+    local command="$1"
+    shift
+
+    "$command" "$@" | jc --"$command" | yaml
+}
