@@ -29,7 +29,7 @@ function pushd() {
 # For each FILE, find its pathname using which(1) and invoke bat(1) on
 # the result.
 function wcat() {
-    cat $(which "$@")
+    bat --plain $(which "$@")
 }
 
 # Usage: wedit [FILE]...
