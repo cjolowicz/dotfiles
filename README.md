@@ -15,7 +15,7 @@ chsh -s /opt/homebrew/bin/bash
 
 ## Dotfiles
 ```sh
-for dir in .gnupg .ssh .gitconfig.d .profile.private
+for dir in .gnupg .ssh .gitconfig.d
 do
     scp -r $oldhost:$dir .
 done
