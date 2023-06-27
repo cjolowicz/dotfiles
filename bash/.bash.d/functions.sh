@@ -209,3 +209,15 @@ function mkcd() {
     mkdir "$@"
     cd "$@"
 }
+
+# Usage: json [FILE..]
+# ----------------------------------------------------------------------
+# Pretty-print JSON with pager.
+function json() {
+    if [ -t 1 ]
+    then
+        jq -C . "$@" | LESS=FSRX less
+    else
+        jq . "$@"
+    fi
+}
