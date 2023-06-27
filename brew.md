@@ -73,3 +73,4 @@
 - python@3.8
 - python-launcher
 - pipx
+- pyenv
