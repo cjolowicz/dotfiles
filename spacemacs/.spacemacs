@@ -679,4 +679,14 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+ '(adoc-gen-face ((t (:foreground "LightBlue4"))))
+ '(adoc-markup-face ((t nil)))
+ '(adoc-meta-hide-face ((t (:inherit adoc-meta-face))))
+ '(adoc-title-0-face ((t nil)))
+ '(adoc-title-1-face ((t (:inherit adoc-title-face :height 1))))
+ '(adoc-title-2-face ((t nil)))
+ '(adoc-title-3-face ((t nil)))
+ '(adoc-title-4-face ((t nil)))
+ '(adoc-title-5-face ((t nil)))
+ '(adoc-verbatim-face ((t nil)))
 )
