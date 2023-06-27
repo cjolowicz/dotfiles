@@ -8,3 +8,4 @@
 - black
 - autoflake
 - isort
+- rich-cli
