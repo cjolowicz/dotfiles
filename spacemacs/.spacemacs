@@ -47,6 +47,7 @@ This function should only modify configuration layer settings."
      git
      helm
      ivy
+     javascript
      lsp
      markdown
      multiple-cursors
