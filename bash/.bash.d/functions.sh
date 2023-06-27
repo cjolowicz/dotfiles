@@ -1,3 +1,4 @@
+#!/bin/bash
 # Usage: fhelp [FUNCTION]...
 # ----------------------------------------------------------------------
 # Print the documentation for each FUNCTION defined in this file.
@@ -13,6 +14,14 @@ function fhelp() {
         sed -n -e "/^# Usage: $name/,/^function $name/p" ~/.bashrc |
             sed -e '$d' -e 's/# //'
     done
+}
+
+# Usage: pushd [ARG]...
+# ----------------------------------------------------------------------
+# Push directory on the stack.
+function pushd() {
+    builtin pushd "$@" >/dev/null
+    dirs -v
 }
 
 # Usage: wcat [FILE]...
