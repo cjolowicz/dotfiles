@@ -3,6 +3,7 @@
 ## taps
 - homebrew/cask-fonts
 - d12frosted/emacs-plus
+- homebrew/cask-versions
 
 ## bottles
 
@@ -68,6 +69,13 @@
 - homebrew/cask/docker
 - 1password
 - 1password-cli
+- evernote
+- signal
+- telegram
+- spotify
+- slack
+- virtualbox-beta
+- notion
 
 ### Python
 - python@3.11
