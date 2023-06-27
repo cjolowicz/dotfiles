@@ -10,10 +10,6 @@
 - font-fira-code-nerd-font
 - font-cascadia-code
 
-### Shells
-- bash
-- bash-completion
-
 ### GNU
 - coreutils
 - findutils
@@ -44,14 +40,19 @@
 - git-delta
 - sqlite3
 - xz
-
-### Developer tools
 - git
 - git-extras
+- gh
 - jq
+- yq
+- jc
 - pandoc
 - direnv
 - make
+
+### Bash
+- bash
+- bash-completion
 - shellcheck
 - bashate
 - shfmt
