@@ -13,6 +13,8 @@
 ## Applications
 - Install Dropbox from dropbox.com
   - Enable Dropbox in Accessibility
+- Install Microsoft To Do from App Store
+- Install Parallels from parallels.com
 
 ## iTerm Settings
 - iTerm > Appearance > Tabs > Show tab bar in fullscreen: disable
