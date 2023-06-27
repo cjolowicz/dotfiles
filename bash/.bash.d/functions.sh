@@ -221,3 +221,15 @@ function json() {
         jq . "$@"
     fi
 }
+
+# Usage: yaml [FILE..]
+# ----------------------------------------------------------------------
+# Pretty-print YAML with pager.
+function yaml() {
+    if [ -t 1 ]
+    then
+        yq -C eval -P . "$@" | LESS=FSRX less
+    else
+        yq eval -P . "$@"
+    fi
+}
