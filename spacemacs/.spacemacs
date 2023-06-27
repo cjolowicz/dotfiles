@@ -597,6 +597,30 @@ before packages are loaded."
   ;; Ensure right option key works as AltGr on macOS.
   ;; https://github.com/syl20bnr/spacemacs/issues/5188
   (setq-default mac-right-option-modifier nil)
+
+  ;; Fix describe-face to default to the actual face at point
+  ;; https://emacs.stackexchange.com/questions/45492/hl-line-face-used-as-default-in-26-1
+  (defun my-face-at-point ()
+    (let ((face (get-text-property (point) 'face)))
+      (or (and (face-list-p face) (car face))
+          (and (symbolp face) face))))
+
+  (defun my-describe-face-advice (&rest ignore)
+    (interactive (list (read-face-name "Describe face"
+                                       (or (my-face-at-point) 'default)
+                                       t)))
+    nil)
+
+  (defun my-customize-face-advice (&rest ignore)
+    (interactive (list (read-face-name "Customize face"
+                                       (or (my-face-at-point) 'default)
+                                       t)))
+    nil)
+
+  (eval-after-load "hl-line"
+    '(progn
+       (advice-add 'describe-face :before #'my-describe-face-advice)
+       (advice-add 'customize-face :before #'my-customize-face-advice)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
