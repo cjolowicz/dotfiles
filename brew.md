@@ -66,6 +66,8 @@
 ### Applications
 - iterm2
 - homebrew/cask/docker
+- 1password
+- 1password-cli
 
 ### Python
 - python@3.11
