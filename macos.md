@@ -11,8 +11,6 @@
 - Finder > Sidebar > $user
 
 ## Applications
-- Install 1Password from App Store
-  - Turn on 1Password extension in Safari
 - Install Dropbox from dropbox.com
   - Enable Dropbox in Accessibility
 
