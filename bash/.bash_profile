@@ -29,5 +29,4 @@ export VISUAL=emacsclient
 export EDITOR=emacsclient
 
 . /opt/homebrew/etc/profile.d/bash_completion.sh
-. ~/.profile.private
 . ~/.bashrc
