@@ -45,6 +45,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      helm
+     html
      ivy
      javascript
      lsp
