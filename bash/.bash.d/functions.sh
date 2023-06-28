@@ -32,6 +32,18 @@ function popd() {
     dirs -v
 }
 
+# Usage: rg [ARG]...
+# ----------------------------------------------------------------------
+# Run rg with delta.
+function rg() {
+    if [ -t 1 ]
+    then
+        command rg --json "$@" | delta
+    else
+        command rg "$@"
+    fi
+}
+
 # Usage: wcat [FILE]...
 # ----------------------------------------------------------------------
 # For each FILE, find its pathname using which(1) and invoke bat(1) on
