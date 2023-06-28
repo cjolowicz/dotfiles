@@ -41,11 +41,13 @@
   colorMoved = default
 [delta]
   features = gruvmax-fang
+  commit-style = "#fe8019" bold
+	commit-decoration-style = "#fe8019" bold box
   file-style = "#d65d0e" bold
 	file-added-label = ""
 	file-copied-label = ""
 	file-modified-label = ""
-	file-removed-label = ""
+	file-removed-label = ""
 	file-renamed-label = ""
-  commit-style = "#fe8019" bold
-	commit-decoration-style = "#fe8019" bold box
+  hunk-header-style = syntax
+	hunk-header-decoration-style = "#022b45" ul
