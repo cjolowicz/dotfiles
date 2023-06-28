@@ -1,5 +1,6 @@
 [include]
   path = .gitconfig.d/user.conf
+  path = ~/Code/github.com/dandavison/delta/themes.gitconfig
 [core]
   editor = emacsclient --alternate-editor=
   excludesfile = ~/.gitignore_global
@@ -34,11 +35,11 @@
   diffFilter = delta --color-only
 [color]
   ui = true
-[delta]
-  navigate = true
-  line-numbers = true
-  side-by-side = true
 [merge]
   conflictstyle = diff3
 [diff]
   colorMoved = default
+[delta]
+  features = gruvmax-fang
+	file-added-label = ""
+	file-modified-label = ""
