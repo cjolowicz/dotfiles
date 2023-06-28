@@ -41,6 +41,7 @@
   colorMoved = default
 [delta]
   features = gruvmax-fang
+  navigate = true
   commit-style = "#fe8019" bold
 	commit-decoration-style = "#fe8019" bold box
   file-style = "#d65d0e" bold
