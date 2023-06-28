@@ -41,5 +41,11 @@
   colorMoved = default
 [delta]
   features = gruvmax-fang
+  file-style = "#d65d0e" bold
 	file-added-label = ""
+	file-copied-label = ""
 	file-modified-label = ""
+	file-removed-label = ""
+	file-renamed-label = ""
+  commit-style = "#fe8019" bold
+	commit-decoration-style = "#fe8019" bold box
