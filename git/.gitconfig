@@ -21,16 +21,9 @@
 [alias]
   l1 = log --oneline
   graph = log --graph --all --oneline
-  plog = log
-  pdiff = diff --stat --patch
-  pshow = show
   title = show --no-patch --pretty=%s
   haul = !git fetch --prune --all && git merge --ff-only
   watch = "!f() { gh run list --branch $(git rev-parse --abbrev-ref HEAD) -L 1 --json databaseId -q '.[0].databaseId' | xargs gh run watch; }; f"
-[pager]
-  plog = less -FXR +/^commit.*
-  pdiff = less -FXR~ +/^diff.* +g
-  pshow = less -FXR +/^diff.* +g
 [interactive]
   diffFilter = delta --color-only
 [color]
@@ -42,13 +35,18 @@
 [delta]
   features = gruvmax-fang
   navigate = true
+  side-by-side = true
   commit-style = "#fe8019" bold
-	commit-decoration-style = "#fe8019" bold box
-  file-style = "#d65d0e" bold
-	file-added-label = ""
-	file-copied-label = ""
-	file-modified-label = ""
-	file-removed-label = ""
-	file-renamed-label = ""
+	commit-decoration-style = "#fe8019" bold ul ol
+  file-style = "#458588" bold italic
+	file-decoration-style = "#458588" ul ol
+	file-added-label = ""
+	file-copied-label = ""
+	file-modified-label = ""
+	file-removed-label = ""
+	file-renamed-label = ""
   hunk-header-style = syntax
-	hunk-header-decoration-style = "#022b45" ul
+	hunk-header-decoration-style = "#84786A" ul ol
+	hunk-header-file-style = "#84786A"
+	hunk-header-line-number-style = "#84786A"
+	hunk-label = ""
