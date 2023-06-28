@@ -24,6 +24,14 @@ function pushd() {
     dirs -v
 }
 
+# Usage: popd [ARG]...
+# ----------------------------------------------------------------------
+# Pop directory on the stack.
+function popd() {
+    builtin popd "$@" >/dev/null
+    dirs -v
+}
+
 # Usage: wcat [FILE]...
 # ----------------------------------------------------------------------
 # For each FILE, find its pathname using which(1) and invoke bat(1) on
