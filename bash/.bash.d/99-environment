@@ -12,9 +12,6 @@ prepend CDPATH ~/Code/* .
 export VISUAL=emacsclient
 export EDITOR=emacsclient
 
-# Initialize fzf.
-. ~/.fzf.bash
-
 # Binding for fzf_cd conflicts with `ESC c` in vi mode.
 bind -m vi-command -r '\ec'
 bind -m vi-insert -r '\ec'
