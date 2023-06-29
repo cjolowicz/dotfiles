@@ -31,9 +31,6 @@
 - exa
 - bat
 - fzf
-```
-/opt/homebrew/opt/fzf/install
-```
 - starship
 - vivid
 - dust
@@ -50,6 +47,7 @@
 - pandoc
 - direnv
 - make
+- lesspipe
 
 ### Bash
 - bash
