@@ -15,7 +15,7 @@ function prepend() {
         suffix=${suffix#:}
         suffix=${suffix%:}
 
-        printf -v "$variable" '%s' "${directory}${suffix:+:}${suffix}"  
+        printf -v "$variable" '%s' "${directory}${suffix:+:}${suffix}"
     done
 
     export "$variable"
