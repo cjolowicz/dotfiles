@@ -1,0 +1,16 @@
+#!/bin/bash
+. <(/opt/homebrew/bin/brew shellenv)
+
+. $HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh
+
+for _package in coreutils findutils gawk gnu-sed gnu-tar make grep
+do
+    prepend PATH /opt/homebrew/opt/$_package/libexec/gnubin
+done
+
+for _package in openssl@3
+do
+    prepend PATH /opt/homebrew/opt/$_package/bin
+done
+
+unset _package

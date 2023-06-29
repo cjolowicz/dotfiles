@@ -1,14 +1,19 @@
+#!/bin/bash
+prepend PATH ~/.local/bin
+prepend CDPATH ~/Code/* .
+
 # Initialize prompt using starship.
-eval "$(starship init bash)"
+. <(starship init bash)
 
 # Initialize direnv.
-eval "$(direnv hook bash)"
+. <(direnv hook bash)
 
-# Initialize fzf for a nicer history search.
+# Use emacs to edit files.
+export VISUAL=emacsclient
+export EDITOR=emacsclient
+
+# Initialize fzf.
 . ~/.fzf.bash
-
-# Enable completion for 1Password CLI.
-. <(op completion bash)
 
 # Binding for fzf_cd conflicts with `ESC c` in vi mode.
 bind -m vi-command -r '\ec'

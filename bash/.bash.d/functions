@@ -6,12 +6,12 @@ function fhelp() {
     local name=
 
     if [ $# -eq 0 ] ; then
-        sed -n 's/^# Usage: //p' ~/.bashrc | sort
+        sed -n 's/^# Usage: //p' ~/.bash.d/functions | sort
     fi
 
     for name
     do
-        sed -n -e "/^# Usage: $name/,/^function $name/p" ~/.bashrc |
+        sed -n -e "/^# Usage: $name/,/^function $name/p" ~/.bash.d/functions |
             sed -e '$d' -e 's/# //'
     done
 }
