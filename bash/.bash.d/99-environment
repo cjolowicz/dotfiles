@@ -8,6 +8,9 @@ prepend CDPATH ~/Code/* .
 # Initialize direnv.
 . <(direnv hook bash)
 
+# Enable globstar.
+shopt -s globstar
+
 # Use emacs to edit files.
 export VISUAL=emacsclient
 export EDITOR=emacsclient
