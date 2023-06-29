@@ -1,5 +1,19 @@
 #!/bin/bash
 
-# Don't limit the size of command history.
+# Don't overwrite the history file.
+shopt -s histappend
+
+# Don't add duplicate lines or lines starting with space.
+HISTCONTROL=ignoreboth
+
+# Don't limit the number of commands in the history file.
 HISTSIZE=-1
+
+# Don't limit the size of the history file.
 HISTFILESIZE=-1
+
+# Append each command after it executes.
+starship_precmd_user_func=history_append
+function history_append() {
+    history -a
+}
