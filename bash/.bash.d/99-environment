@@ -2,9 +2,6 @@
 prepend PATH ~/.local/bin
 prepend CDPATH ~/Code/* .
 
-# Initialize direnv.
-. <(direnv hook bash)
-
 # Enable globstar.
 shopt -s globstar
 
