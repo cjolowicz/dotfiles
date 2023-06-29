@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Don't limit the size of command history.
+HISTSIZE=-1
+HISTFILESIZE=-1
