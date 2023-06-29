@@ -4,14 +4,15 @@
 # Print the documentation for each FUNCTION defined in this file.
 function fhelp() {
     local name=
+    local source=${BASH_SOURCE[0]}
 
     if [ $# -eq 0 ] ; then
-        sed -n 's/^# Usage: //p' ~/.bash.d/functions | sort
+        sed -n 's/^# Usage: //p' $source | sort
     fi
 
     for name
     do
-        sed -n -e "/^# Usage: $name/,/^function $name/p" ~/.bash.d/functions |
+        sed -n -e "/^# Usage: $name/,/^function $name/p" $source |
             sed -e '$d' -e 's/# //'
     done
 }
