@@ -2,16 +2,9 @@
 prepend PATH ~/.local/bin
 prepend CDPATH ~/Code/* .
 
-# Enable globstar.
-shopt -s globstar
-
 # Use emacs to edit files.
 export VISUAL=emacsclient
 export EDITOR=emacsclient
-
-# Support ^L in vi mode.
-bind -m vi-command 'Control-l: clear-screen'
-bind -m vi-insert 'Control-l: clear-screen'
 
 # Use bat to view manpages (aka batman).
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -33,3 +26,10 @@ export EXA_COLORS="\
 :tx=38;5;208\
 :sn=38;5;70\
 :sb=38;5;28"
+
+# Enable globstar.
+shopt -s globstar
+
+# Support ^L in vi mode.
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
