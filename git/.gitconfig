@@ -20,6 +20,7 @@
   updateRefs = true
 [alias]
   l1 = log --oneline
+  lp = log --patch --stat
   graph = log --graph --all --oneline
   title = show --no-patch --pretty=%s
   haul = !git fetch --prune --all && git merge --ff-only
