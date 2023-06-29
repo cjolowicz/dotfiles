@@ -2,9 +2,6 @@
 prepend PATH ~/.local/bin
 prepend CDPATH ~/Code/* .
 
-# Initialize prompt using starship.
-. <(starship init bash)
-
 # Initialize direnv.
 . <(direnv hook bash)
 
