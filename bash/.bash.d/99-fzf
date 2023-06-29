@@ -1,0 +1,9 @@
+#!/bin/bash
+# Don't source key bindings here, their location is platform-dependent.
+
+# Remove key binding for __fzf_cd__ because it doesn't fit vi mode.
+bind -m vi-command -r '\ec'
+bind -m vi-insert -r '\ec'
+
+# Display fzf in full screen.
+export FZF_DEFAULT_OPTS='--no-height --no-reverse'
