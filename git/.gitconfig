@@ -7,10 +7,6 @@
   pager = delta
 [init]
   defaultBranch = main
-[commit]
-  gpgsign = true
-[tag]
-  forceSignAnnotated = true
 [push]
   default = current
 [pull]
