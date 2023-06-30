@@ -2,7 +2,7 @@
 
 ## x86_64
 ```sh
-softwareupdate —-install-rosetta
+softwareupdate --install-rosetta
 arch -x86_64 /bin/bash <(
   curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh
 )
