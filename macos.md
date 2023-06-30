@@ -1,6 +1,10 @@
 # MacOS
 - Software Update
 
+```sh
+softwareupdate --install-rosetta
+```
+
 ## System Settings
 - System > Trackpad > Tap to Click
 - System > Keyboard > Keyboard > Modifier Keys > Caps Lock Key > Escape
