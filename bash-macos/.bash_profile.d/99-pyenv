@@ -1,0 +1,2 @@
+#!/bin/bash
+export PYTHON_CONFIGURE_OPTS='--enable-optimizations --with-lto --enable-framework'
