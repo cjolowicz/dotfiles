@@ -597,6 +597,9 @@ before packages are loaded."
   ;; We never intentionally quit Emacs with Cmd-q.
   (global-unset-key (kbd "H-q"))
 
+  ;; Tell magit where we keep our git repositories.
+  (setq magit-repository-directories '(("~/Code/" . 3)))
+
   ;; Ensure right option key works as AltGr on macOS.
   ;; https://github.com/syl20bnr/spacemacs/issues/5188
   (setq-default mac-right-option-modifier nil)
