@@ -48,6 +48,27 @@
 - direnv
 - make
 - lesspipe
+- dog
+- mosh
+- duf
+- bottom
+- sd
+- hexyl
+- mtr
+- zoxide
+- hyperfine
+- croc
+- choose-rust
+- ctop
+- angle-grinder
+- glow
+- jo
+- wader/tap/fq
+- htmlq
+- fx
+- xsv
+- miller
+- moreutils
 
 ### Bash
 - bash
