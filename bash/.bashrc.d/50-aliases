@@ -42,3 +42,6 @@ alias diff='batdiff'
 alias tree='exatree'
 alias -- -h='usage'
 alias -- --help='usage'
+
+# Enable completion for aliases.
+complete -o nospace -F _cd pd
