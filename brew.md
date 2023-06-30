@@ -1,5 +1,17 @@
 # brew
 
+## x86_64
+```sh
+softwareupdate —-install-rosetta
+arch -x86_64 /bin/bash <(
+  curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh
+)
+alias brew@x86_64="arch -x86_64 /usr/local/bin/brew"
+# comment out `disable!` line
+HOMEBREW_NO_INSTALL_FROM_API=1 brew@x86_64 edit python@3.7
+HOMEBREW_NO_INSTALL_FROM_API=1 brew@x86_64 install python@3.7
+```
+
 ## taps
 - homebrew/cask-fonts
 - d12frosted/emacs-plus
