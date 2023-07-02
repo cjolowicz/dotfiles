@@ -4,7 +4,7 @@
 [core]
   editor = emacsclient --alternate-editor=
   excludesfile = ~/.gitignore_global
-  pager = delta
+  pager = delta --side-by-side
 [init]
   defaultBranch = main
 [push]
@@ -32,7 +32,6 @@
 [delta]
   features = gruvmax-fang
   navigate = true
-  side-by-side = true
   commit-style = "#fe8019" bold
 	commit-decoration-style = "#fe8019" bold ul ol
   file-style = "#458588" bold italic
