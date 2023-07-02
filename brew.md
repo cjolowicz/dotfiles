@@ -39,6 +39,19 @@ HOMEBREW_NO_INSTALL_FROM_API=1 brew@x86_64 install python@3.7
 ### Utilities
 - stow
 - tree
+- git-delta
+- sqlite3
+- xz
+- git
+- git-extras
+- gh
+- pandoc
+- direnv
+- make
+- lesspipe
+- moreutils
+
+### Modern Unix
 - ripgrep
 - exa
 - bat
@@ -47,19 +60,9 @@ HOMEBREW_NO_INSTALL_FROM_API=1 brew@x86_64 install python@3.7
 - vivid
 - dust
 - fd
-- git-delta
-- sqlite3
-- xz
-- git
-- git-extras
-- gh
 - jq
 - yq
 - jc
-- pandoc
-- direnv
-- make
-- lesspipe
 - dog
 - mosh
 - duf
@@ -80,7 +83,6 @@ HOMEBREW_NO_INSTALL_FROM_API=1 brew@x86_64 install python@3.7
 - fx
 - xsv
 - miller
-- moreutils
 
 ### Bash
 - bash
