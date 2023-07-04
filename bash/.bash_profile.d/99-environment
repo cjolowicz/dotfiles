@@ -26,10 +26,3 @@ export EXA_COLORS="\
 :tx=38;5;208\
 :sn=38;5;70\
 :sb=38;5;28"
-
-# Enable globstar.
-shopt -s globstar
-
-# Support ^L in vi mode.
-bind -m vi-command 'Control-l: clear-screen'
-bind -m vi-insert 'Control-l: clear-screen'

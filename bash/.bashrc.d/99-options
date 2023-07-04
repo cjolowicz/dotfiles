@@ -1,0 +1,7 @@
+#!/bin/bash
+# Enable globstar.
+shopt -s globstar
+
+# Support ^L in vi mode.
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
