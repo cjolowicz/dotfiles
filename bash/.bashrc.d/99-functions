@@ -50,7 +50,28 @@ function rg() {
 # For each FILE, find its pathname using which(1) and invoke bat(1) on
 # the result.
 function wcat() {
-    bat --plain $(which "$@")
+    local command=
+
+    for command
+    do
+        case $(type -t "$command") in
+            'function')
+                type "$command" | sed 1d | bat --plain --language=bash
+                ;;
+
+            'alias')
+                alias "$command" | bat --plain --language=bash
+                ;;
+
+            'file')
+                bat --plain $(which "$command")
+                ;;
+
+            *)
+                type "$command"
+                ;;
+        esac
+    done
 }
 
 # Usage: wedit [FILE]...
