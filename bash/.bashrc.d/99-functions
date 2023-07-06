@@ -21,16 +21,20 @@ function fhelp() {
 # ----------------------------------------------------------------------
 # Push directory on the stack.
 function pushd() {
-    builtin pushd "$@" >/dev/null
-    dirs -v
+    if builtin pushd "$@" >/dev/null
+    then
+        dirs -v
+    fi
 }
 
 # Usage: popd [ARG]...
 # ----------------------------------------------------------------------
 # Pop directory on the stack.
 function popd() {
-    builtin popd "$@" >/dev/null
-    dirs -v
+    if builtin popd "$@" >/dev/null
+    then
+        dirs -v
+    fi
 }
 
 # Usage: rg [ARG]...
