@@ -45,4 +45,4 @@
 	hunk-header-decoration-style = "#84786A" ul ol
 	hunk-header-file-style = "#84786A"
 	hunk-header-line-number-style = "#84786A"
-	hunk-label = ""
+	hunk-label = ""  # "" - the magit-delta trick doesn't seem to work
