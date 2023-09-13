@@ -16,6 +16,7 @@
   updateRefs = true
 [alias]
   l1 = log --oneline
+  ll = log --pretty='%C(yellow)%h  %C(blue)%<(10)%al  %C(green)%ai  %Creset%s'
   lp = log --patch --stat
 	pp = pull-prune
   graph = log --graph --all --oneline
