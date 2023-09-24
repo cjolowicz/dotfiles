@@ -271,6 +271,30 @@ function mkpd() {
     dirs -v
 }
 
+# Usage: mkpdtemp
+# ----------------------------------------------------------------------
+# Create temporary directory and push it onto the stack.
+function mkpdtemp() {
+    [ -z "$__mkpdtemp_directory" ] || return 1
+
+    __mkpdtemp_directory="$(mktemp -d)"
+    builtin pushd "$__mkpdtemp_directory" >/dev/null
+    dirs -v
+}
+
+# Usage: popdtemp
+# ----------------------------------------------------------------------
+# Pop temporary directory from the stack and remove it.
+function popdtemp() {
+    [ "$(pwd)" = "$__mkpdtemp_directory" ] || return 1
+
+    builtin popd >/dev/null
+    dirs -v
+    rm -rf "$__mkpdtemp_directory"
+
+    unset __mkpdtemp_directory
+}
+
 # Usage: json [FILE..]
 # ----------------------------------------------------------------------
 # Pretty-print JSON with pager.
