@@ -25,3 +25,6 @@ softwareupdate --install-rosetta
 - iTerm > Appearance > Panes > Show per-pane title bar with split panes: disable
 - iTerm > Profiles > Default > Text > Font: Fira Code Nerd Font 13p
 - iTerm > Profiles > Default > Text > Font > Use ligatures > On
+
+## Printer Driver
+- https://support.hp.com/us-en/drivers/selfservice/closure/samsung-xpress-sl-m2020-laser-printer-series/16462592?ssfFlag=true&sku=
