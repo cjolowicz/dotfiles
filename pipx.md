@@ -9,3 +9,4 @@
 - autoflake
 - isort
 - rich-cli
+- virtualenv
