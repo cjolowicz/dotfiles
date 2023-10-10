@@ -133,7 +133,25 @@ function heading() {
 # ----------------------------------------------------------------------
 # Print the help.
 function usage() {
-    $@ --help 2>&1 | bat --language=help --style=plain
+    case $(type -t $1) in
+        'function')
+            fhelp "$@"
+            ;;
+
+        'keyword' | 'builtin')
+            help "$@"
+            ;;
+
+        'alias' | 'file')
+            "$@" --help 2>&1
+            ;;
+
+        *)
+            echo "$1: not found" >&2
+            return 1
+            ;;
+
+    esac | bat --language=help --style=plain
 }
 
 # Usage: venv [VENV]
