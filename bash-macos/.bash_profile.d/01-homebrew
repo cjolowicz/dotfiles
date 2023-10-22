@@ -8,6 +8,11 @@ do
     prepend PATH /opt/homebrew/opt/$_package/libexec/gnubin
 done
 
+for _package in man-db
+do
+    prepend PATH /opt/homebrew/opt/$_package/libexec/bin
+done
+
 for _package in openssl@3
 do
     prepend PATH /opt/homebrew/opt/$_package/bin
