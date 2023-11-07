@@ -40,7 +40,7 @@ alias path='echo -e ${PATH//:/\\n}'
 alias cat='bat -p'
 alias diff='batdiff'
 alias tree='exatree'
-alias -- -h='usage'
+alias -- -h='usage -h'
 alias -- --help='usage'
 
 # Enable completion for aliases.
