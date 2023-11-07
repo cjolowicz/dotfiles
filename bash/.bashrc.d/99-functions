@@ -129,10 +129,19 @@ function heading() {
     printf "\n==> ${bold}%s${reset} <==\n\n" "$*"
 }
 
-# Usage: usage COMMAND [ARG]..
+# Usage: usage [-h] COMMAND [ARG]..
 # ----------------------------------------------------------------------
 # Print the help.
 function usage() {
+    option=--help
+
+    case $1 in
+        -h)
+            option=-h
+            shift
+            ;;
+    esac
+
     case $(type -t $1) in
         'function')
             fhelp "$@"
@@ -143,7 +152,7 @@ function usage() {
             ;;
 
         'alias' | 'file')
-            "$@" --help 2>&1
+            "$@" "$option" 2>&1
             ;;
 
         *)
