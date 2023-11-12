@@ -362,3 +362,23 @@ function yc() {
 
     "$command" "$@" | jc --"$command" | yaml
 }
+
+# Usage: ruff-rule RULE
+# ----------------------------------------------------------------------
+# Pretty-print `ruff rule` output using Rich.
+function ruff-rule() {
+    local rule="$1"
+    shift
+
+    ruff rule "$rule" | rich -mW72 -
+}
+
+# Usage: ruff-config SETTING
+# ----------------------------------------------------------------------
+# Pretty-print `ruff config` output using Rich.
+function ruff-config() {
+    local setting="$1"
+    shift
+
+    ruff config "$setting" | rich -mW72 -
+}
