@@ -370,7 +370,7 @@ function ruff-rule() {
     local rule="$1"
     shift
 
-    ruff rule "$rule" | rich -mW72 -
+    ruff rule "$rule" | rich --markdown --width=72 -
 }
 
 # Usage: ruff-config SETTING
@@ -380,5 +380,5 @@ function ruff-config() {
     local setting="$1"
     shift
 
-    ruff config "$setting" | rich -mW72 -
+    ruff config "$setting" | rich --markdown --width=72 -
 }
