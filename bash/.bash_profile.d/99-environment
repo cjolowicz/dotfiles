@@ -27,7 +27,7 @@ export EXA_COLORS="\
 :sn=38;5;70\
 :sb=38;5;28"
 
-# Use Python 3.11 by default.
-export PY_PYTHON=3.11
+# Use Python 3.12 by default.
+export PY_PYTHON=3.12
 export PY_PYTHON3=$PY_PYTHON
 export PIPX_DEFAULT_PYTHON=python$PY_PYTHON
