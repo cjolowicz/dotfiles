@@ -122,3 +122,6 @@ HOMEBREW_NO_INSTALL_FROM_API=1 brew@x86_64 install python@3.7
 - python-launcher
 - pipx
 - pyenv
+
+### More
+- rlwrap
