@@ -1,0 +1,38 @@
+# https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+. <(kubectl completion bash)
+
+alias k=kubectl
+complete -o default -F __start_kubectl k
+
+# Usage: ky [ARG]..
+# ----------------------------------------------------------------------
+# Invoke kubectl with syntax-highlighted and paged YAML output.
+function ky() {
+    kubectl "$@" -o yaml | yaml
+}
+
+# Usage: kq [-r] JQ-PROG [ARG]..
+# ----------------------------------------------------------------------
+# Invoke kubectl and pipe through jq.
+function kq() {
+    local options=()
+    local page=true
+
+    case $1 in
+        -r)
+            options+=(-r)
+            page=false
+            shift
+            ;;
+    esac
+
+    options+=("$1")
+    shift
+
+    if $page
+    then
+        kubectl "$@" -o json | jq "${options[@]}" | json
+    else
+        kubectl "$@" -o json | jq "${options[@]}"
+    fi
+}
