@@ -214,7 +214,7 @@ function batdiff() {
 # ----------------------------------------------------------------------
 # Display tree using exa.
 function exatree() {
-    ll --tree --color=always "$@" | LESS=FXSr less
+    ll --tree --color=always "$@" | LESS=rFXS less
 }
 
 # Usage: shebang COMMAND
@@ -242,7 +242,7 @@ function metadata() {
     local python=$(shebang $app)
 
     if $json ; then
-        $python <<EOF | jq -C . | LESS=FSRX less
+        $python <<EOF | jq -C . | LESS=rFXS less
 import json
 from importlib.metadata import metadata
 print(json.dumps(metadata("$app").json))
@@ -328,7 +328,7 @@ function popdtemp() {
 function json() {
     if [ -t 1 ]
     then
-        jq -C . "$@" | LESS=FSRX less
+        jq -C . "$@" | LESS=rFXS less
     else
         jq . "$@"
     fi
@@ -340,7 +340,7 @@ function json() {
 function yaml() {
     if [ -t 1 ]
     then
-        yq -C eval -P . "$@" | LESS=FSRX less
+        yq -C eval -P . "$@" | LESS=rFXS less
     else
         yq eval -P . "$@"
     fi
