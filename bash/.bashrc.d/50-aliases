@@ -44,6 +44,7 @@ alias cat='bat -p'
 alias diff='batdiff'
 alias tree='exatree'
 alias utc="date --utc"
+alias json2csv="csv2json --format=csv"
 alias -- -h='usage -h'
 alias -- --help='usage'
 
