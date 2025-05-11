@@ -69,6 +69,7 @@ This function should only modify configuration layer settings."
      syntax-checking
      themes-megapack
      (treemacs :variables treemacs-use-icons-dired nil)
+     typescript
      (unicode-fonts :variables
                     unicode-fonts-force-multi-color-on-mac t
                     unicode-fonts-enable-ligatures t)
@@ -640,42 +641,40 @@ This function is called at the very end of Spacemacs initialization."
    ;; Your init file should contain only one such instance.
    ;; If there is more than one, they won't work right.
    '(package-selected-packages
-     '(bmx-mode powershell cargo counsel-gtags flycheck-rust ggtags ron-mode
-                rust-mode toml-mode ac-ispell auto-complete auto-yasnippet
-                browse-at-remote code-review emojify deferred a flycheck-pos-tip
-                pos-tip forge yaml ghub closql emacsql treepy fuzzy gh-md
-                git-gutter-fringe fringe-helper git-gutter git-link git-messenger
-                git-modes git-timemachine gitignore-templates helm-c-yasnippet
-                helm-company company helm-git-grep helm-ls-git helm-lsp
-                lsp-origami origami lsp-treemacs lsp-ui lsp-mode markdown-toc
-                markdown-mode mmm-mode mwim smeargle treemacs-magit magit
-                magit-section git-commit with-editor transient unfill
-                yasnippet-snippets yasnippet ws-butler writeroom-mode winum
-                which-key volatile-highlights vim-powerline vi-tilde-fringe
-                uuidgen use-package undo-tree treemacs-projectile treemacs-persp
-                treemacs-icons-dired treemacs-evil toc-org term-cursor symon
-                symbol-overlay string-inflection string-edit-at-point
-                spacemacs-whitespace-cleanup spacemacs-purpose-popwin spaceline
-                space-doc restart-emacs request rainbow-delimiters quickrun popwin
-                pcre2el password-generator paradox overseer org-superstar
-                open-junk-file nameless multi-line macrostep lorem-ipsum link-hint
-                inspector info+ indent-guide hybrid-mode hungry-delete holy-mode
-                hl-todo highlight-parentheses highlight-numbers
-                highlight-indentation hide-comnt help-fns+ helm-xref helm-themes
-                helm-swoop helm-purpose helm-projectile helm-org helm-mode-manager
-                helm-make helm-descbinds helm-ag google-translate golden-ratio
-                flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse
-                expand-region evil-visualstar evil-visual-mark-mode
-                evil-unimpaired evil-tutor evil-textobj-line evil-surround
-                evil-numbers evil-nerd-commenter evil-mc evil-matchit
-                evil-lisp-state evil-lion evil-indent-plus evil-iedit-state
-                evil-goggles evil-exchange evil-evilified-state evil-escape
-                evil-easymotion evil-collection evil-cleverparens evil-args
-                evil-anzu eval-sexp-fu emr elisp-slime-nav elisp-def editorconfig
-                dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs
-                define-word column-enforce-mode clean-aindent-mode
-                centered-cursor-mode auto-highlight-symbol auto-compile
-                all-the-icons aggressive-indent ace-link ace-jump-helm-line)))
+     '(a ac-ispell ace-jump-helm-line ace-link add-node-modules-path
+         aggressive-indent all-the-icons auto-compile auto-complete
+         auto-highlight-symbol auto-yasnippet bmx-mode browse-at-remote cargo
+         centered-cursor-mode clean-aindent-mode closql code-review
+         column-enforce-mode company counsel-gtags deferred define-word devdocs
+         diminish dired-quick-sort dotenv-mode drag-stuff dumb-jump editorconfig
+         elisp-def elisp-slime-nav emacsql emojify emr eval-sexp-fu evil-anzu
+         evil-args evil-cleverparens evil-collection evil-easymotion evil-escape
+         evil-evilified-state evil-exchange evil-goggles evil-iedit-state
+         evil-indent-plus evil-lion evil-lisp-state evil-matchit evil-mc
+         evil-nerd-commenter evil-numbers evil-surround evil-textobj-line
+         evil-tutor evil-unimpaired evil-visual-mark-mode evil-visualstar
+         expand-region eyebrowse fancy-battery flx-ido flycheck-elsa
+         flycheck-package flycheck-pos-tip flycheck-rust forge fringe-helper fuzzy
+         ggtags gh-md ghub git-commit git-gutter git-gutter-fringe git-link
+         git-messenger git-modes git-timemachine gitignore-templates golden-ratio
+         google-translate grizzl helm-ag helm-c-yasnippet helm-company
+         helm-descbinds helm-git-grep helm-ls-git helm-lsp helm-make
+         helm-mode-manager helm-org helm-projectile helm-purpose helm-swoop
+         helm-themes helm-xref help-fns+ hide-comnt highlight-indentation
+         highlight-numbers highlight-parentheses hl-todo holy-mode hungry-delete
+         hybrid-mode import-js indent-guide info+ inspector link-hint lorem-ipsum
+         lsp-mode lsp-origami lsp-treemacs lsp-ui macrostep magit magit-section
+         markdown-mode markdown-toc mmm-mode multi-line mwim nameless
+         open-junk-file org-superstar origami overseer paradox password-generator
+         pcre2el popwin pos-tip powershell quickrun rainbow-delimiters request
+         restart-emacs ron-mode rust-mode smeargle space-doc spaceline
+         spacemacs-purpose-popwin spacemacs-whitespace-cleanup
+         string-edit-at-point string-inflection symbol-overlay symon term-cursor
+         toc-org toml-mode transient treemacs-evil treemacs-icons-dired
+         treemacs-magit treemacs-persp treemacs-projectile treepy typescript-mode
+         undo-tree unfill use-package uuidgen vi-tilde-fringe vim-powerline
+         volatile-highlights which-key winum with-editor writeroom-mode ws-butler
+         yaml yasnippet yasnippet-snippets)))
   (custom-set-faces
    ;; custom-set-faces was added by Custom.
    ;; If you edit it by hand, you could mess it up, so be careful.
