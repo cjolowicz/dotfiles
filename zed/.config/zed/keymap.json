@@ -1,0 +1,169 @@
+[
+  {
+    "context": "VimControl && !menu || EmptyPane || SharedScreen",
+    "bindings": {
+      // Quit
+      "space q q": "zed::Quit",
+
+      // Zed
+      "space z k": "zed::OpenKeymap",
+      "space z K": "zed::OpenDefaultKeymap",
+      "space z ,": "zed::OpenSettings",
+      "space z ;": "zed::OpenDefaultSettings",
+      "space z a": "zed::About",
+      "space z L": "zed::OpenLog",
+      "space z T": "zed::OpenTasks",
+      "space z X": "zed::Extensions",
+
+      // Toggles
+      "space T F": "zed::ToggleFullScreen",
+      "space T z": "workspace::ToggleZoom",
+      "space T v": "workspace::ToggleVimMode",
+      "space T c": "workspace::ToggleCenteredLayout",
+
+      // Docks
+      "space d h": "workspace::ToggleLeftDock",
+      "space d l": "workspace::ToggleRightDock",
+      "space d j": "workspace::ToggleBottomDock",
+      "space d d": "workspace::CloseAllDocks",
+
+      // Windows
+      "space w o": "workspace::Open",
+      "space w w": "workspace::ActivateNextWindow",
+      "space w W": "workspace::ActivatePreviousWindow",
+      "space w n": "workspace::NewWindow",
+      "space w d": "workspace::CloseWindow",
+      "space w =": "zed::IncreaseBufferFontSize",
+      "space w -": "zed::DecreaseBufferFontSize",
+      "space w 0": "zed::ResetBufferFontSize",
+      "space w +": "zed::IncreaseUiFontSize",
+      "space w _": "zed::DecreaseUiFontSize",
+
+      // Files
+      "space f f": "file_finder::Toggle",
+      "space f S": "workspace::SaveAll",
+      "space f c": "workspace::SaveAs",
+      "space f n": "workspace::NewFile",
+      "space f s": "workspace::Save",
+      "space f F": "workspace::SaveWithoutFormat",
+      "space f o": "workspace::OpenFiles",
+
+      // Panes
+      "space p \\": "pane::SplitLeft",
+      "space p /": "pane::SplitRight",
+      "space p |": "pane::SplitVertical",
+      "space p =": "pane::SplitUp",
+      "space p -": "pane::SplitDown",
+      "space p _": "pane::SplitHorizontal",
+      "space p p": "workspace::ActivateNextPane",
+      "space p P": "workspace::ActivatePreviousPane",
+      "space p n /": "workspace::NewFileSplitVertical",
+      "space p n -": "workspace::NewFileSplitHorizontal",
+      "space p k": "workspace::ActivatePaneUp",
+      "space p h": "workspace::ActivatePaneLeft",
+      "space p j": "workspace::ActivatePaneDown",
+      "space p l": "workspace::ActivatePaneRight",
+      "space p K": "workspace::SwapPaneUp",
+      "space p H": "workspace::SwapPaneLeft",
+      "space p J": "workspace::SwapPaneDown",
+      "space p L": "workspace::SwapPaneRight",
+      "space p D": "workspace::CloseAllItemsAndPanes",
+      "space p X": "workspace::CloseInactiveTabsAndPanes",
+      //"space p ?": "pane::DeploySearch",
+      //"space p ?": "pane::JoinAll",
+      //"space p ?": "pane::JoinIntoNext",
+      //"space p ?": "pane::TogglePinTab",
+      //"space p ?": "pane::AlternateFile",
+      //"space p ?": "pane::RevealInProjectPanel",
+      //"space p ?": "pane::TogglePreviewTab",
+
+      // Items
+      "space b d": "pane::CloseActiveItem",
+      "space b n": "pane::ActivateNextItem",
+      "space b N": "pane::ActivatePreviousItem",
+      "space b O": "pane::ReopenClosedItem",
+      "space b D": "pane::CloseAllItems",
+      //"space b ?": "pane::CloseCleanItems",
+      //"space b ?": "pane::CloseInactiveItems",
+      //"space b ?": "pane::CloseItemsToTheRight",
+      //"space b ?": "pane::CloseItemsToTheLeft",
+      "space b H": "pane::SwapItemLeft",
+      "space b L": "pane::SwapItemRight",
+      "space b 1": ["pane::ActivateItem", 1],
+      "space b 2": ["pane::ActivateItem", 2],
+      "space b 3": ["pane::ActivateItem", 3],
+      "space b 4": ["pane::ActivateItem", 4],
+      "space b 5": ["pane::ActivateItem", 5],
+      "space b 6": ["pane::ActivateItem", 6],
+      "space b 7": ["pane::ActivateItem", 7],
+      "space b 8": ["pane::ActivateItem", 8],
+      "space b 9": ["pane::ActivateItem", 9],
+
+      // Git
+      "space g s": "git_panel::ToggleFocus",
+      "space g d": "git::Diff",
+      "space g c": "git::Commit",
+      "space g f": "git::Fetch",
+      "space g p": "git::Push",
+
+      // Terminal
+      "space t t": "workspace::NewTerminal",
+      "space t o": "workspace::OpenInTerminal",
+      "space t p": "workspace::NewCenterTerminal",
+
+      // Miscellaneous
+      "space /": "workspace::NewSearch",
+      "space W L": "workspace::Reload",
+      "space W W": "workspace::Welcome"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "[ e": "editor::MoveLineUp",
+      "] e": "editor::MoveLineDown",
+      "[ E": "editor::DuplicateLineUp",
+      "] E": "editor::DuplicateLineDown"
+    }
+  }
+  //"space W ?": "workspace::RestoreBanner",
+  //"space W ?": "workspace::CopyPath",
+  //"space W ?": "workspace::CopyRelativePath",
+  //"space W ?": "workspace::SuppressNotification",
+  //"space W ?": "workspace::AddFolderToProject",
+  //"space W ?": "workspace::OpenComponentPreview",
+  //"space W ?": "workspace::ClearAllNotifications",
+  //"space W ?": "workspace::Unfollow",
+  //"space W ?": "workspace::FollowNextCollaborator",
+  //"space W ?": "workspace::MoveFocusedPanelToNextPosition"
+  //"space p ?": "pane::GoForward",
+  //"space p ?": "pane::GoBack",
+  //"space z ?": "zed::CopySystemSpecsIntoClipboard",
+  //"space z ?": "zed::OpenProjectDebugTasks",
+  //"space z ?": "zed::ImportVsCodeSettings",
+  //"space z ?": "zed::OpenProjectSettings",
+  //"space z ?": "zed::OpenAccountSettings",
+  //"space z ?": "zed::InstallDevExtension",
+  //"space z ?": "zed::OpenSettingsEditor",
+  //"space z ?": "zed::OpenServerSettings",
+  //"space z ?": "zed::ReloadExtensions",
+  //"space z ?": "zed::OpenTelemetryLog",
+  //"space z ?": "zed::OpenProjectTasks",
+  //"space z ?": "zed::ResetUiFontSize",
+  //"space z ?": "zed::RequestFeature",
+  //"space z ?": "zed::OpenDebugTasks",
+  //"space z ?": "zed::ResetDatabase",
+  //"space z ?": "zed::DebugElements",
+  //"space z ?": "zed::OpenLicenses",
+  //"space z ?": "zed::OpenZedRepo",
+  //"space z ?": ["zed::OpenBrowser", { "url": "https://zed.dev" }],
+  //"space z ?": ["zed::OpenZedUrl", { "url": "https://zed.dev" }],
+  //"space z ?": "zed::HideOthers",
+  //"space z ?": "zed::Hide",
+  //"space z ?": "zed::TestPanic",
+  //"space z ?": "zed::NoAction",
+  //"space z ?": "zed::Minimize",
+  //"space z ?": "zed::Zoom",
+  //"space z ?": "zed::EmailZed",
+  //"space z ?": "zed::ShowAll",
+]
