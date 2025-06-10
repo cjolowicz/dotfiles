@@ -1,11 +1,26 @@
 [
   {
+    "context": "Workspace",
+    "bindings": { "space w d": "workspace::CloseWindow" }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      // Docks
+      "space d h": "workspace::ToggleLeftDock",
+      "space d l": "workspace::ToggleRightDock",
+      "space d j": "workspace::ToggleBottomDock",
+      "space d d": "workspace::CloseAllDocks"
+    }
+  },
+  {
     "context": "VimControl && !menu || EmptyPane || SharedScreen",
     "bindings": {
       // Quit
       "space q q": "zed::Quit",
 
       // Zed
+      "space z A": "agent::NewThread",
       "space z k": "zed::OpenKeymap",
       "space z K": "zed::OpenDefaultKeymap",
       "space z ,": "zed::OpenSettings",
@@ -14,6 +29,7 @@
       "space z L": "zed::OpenLog",
       "space z T": "zed::OpenTasks",
       "space z X": "zed::Extensions",
+      "space z t": "theme_selector::Toggle",
 
       // Toggles
       "space T F": "zed::ToggleFullScreen",
