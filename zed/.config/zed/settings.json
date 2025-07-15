@@ -1,5 +1,6 @@
 {
   "agent": {
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "anthropic",
       "model": "claude-3-7-sonnet-thinking-latest"
@@ -7,6 +8,24 @@
     "version": "2"
   },
   "buffer_font_size": 13,
+  "context_servers": {
+    "cloudflare-docs": {
+      "command": {
+        "path": "npx",
+        "args": ["mcp-remote", "https://bindings.mcp.cloudflare.com/sse"],
+        "env": null
+      },
+      "settings": {}
+    },
+    "cloudflare": {
+      "command": {
+        "path": "npx",
+        "args": ["mcp-remote", "https://docs.mcp.cloudflare.com/sse"],
+        "env": null
+      },
+      "settings": {}
+    }
+  },
   "cursor_blink": false,
   "features": {
     "edit_prediction_provider": "copilot"
@@ -49,7 +68,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Gruvbox Dark Soft"
+    "dark": "Gruvbox Light"
   },
   "toolbar": {
     "breadcrumbs": true,
