@@ -1,31 +1,44 @@
 {
+  "context_servers": {
+    "cloudflare-bindings": {
+      "source": "custom",
+      "enabled": true,
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://bindings.mcp.cloudflare.com/sse"
+      ],
+      "env": {}
+    },
+    "cloudflare": {
+      "source": "custom",
+      "enabled": true,
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://docs.mcp.cloudflare.com/sse"
+      ],
+      "env": {}
+    },
+    "cloudflare-docs": {
+      "source": "custom",
+      "enabled": true,
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://docs.mcp.cloudflare.com/sse"
+      ],
+      "env": {}
+    }
+  },
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-3-7-sonnet-thinking-latest"
-    },
-    "version": "2"
-  },
-  "buffer_font_size": 13,
-  "context_servers": {
-    "cloudflare-docs": {
-      "command": {
-        "path": "npx",
-        "args": ["mcp-remote", "https://bindings.mcp.cloudflare.com/sse"],
-        "env": null
-      },
-      "settings": {}
-    },
-    "cloudflare": {
-      "command": {
-        "path": "npx",
-        "args": ["mcp-remote", "https://docs.mcp.cloudflare.com/sse"],
-        "env": null
-      },
-      "settings": {}
+      "model": "claude-opus-4-thinking-latest"
     }
   },
+  "buffer_font_size": 13,
   "cursor_blink": false,
   "features": {
     "edit_prediction_provider": "copilot"
@@ -68,7 +81,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Gruvbox Light"
+    "dark": "Ayu Dark"
   },
   "toolbar": {
     "breadcrumbs": true,
