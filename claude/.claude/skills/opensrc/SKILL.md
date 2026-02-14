@@ -51,7 +51,7 @@ opensrc/
 }
 ```
 
-GitHub repos stored as `opensrc/<owner>--<repo>/` (double-dash separator).
+GitHub repos stored as `opensrc/repos/github.com/<owner>/<repo>/`.
 
 ## File Modifications
 
@@ -75,7 +75,7 @@ npx opensrc vercel/ai
 cat opensrc/sources.json
 
 # 3. Explore structure
-ls opensrc/vercel--ai/src/
+ls opensrc/repos/github.com/vercel/ai/src/
 
 # 4. Read source files directly
 # Files are plain source — use Read tool on opensrc/<source>/path/to/file.ts
@@ -108,6 +108,6 @@ npx opensrc react
 
 ```bash
 npx opensrc owner/repo
-cd opensrc/owner--repo/
+cd opensrc/repos/github.com/owner/repo/
 # Now run index-knowledge or explore the codebase
 ```
