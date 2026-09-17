@@ -382,3 +382,19 @@ function ruff-config() {
 
     ruff config "$setting" | rich --markdown --width=72 -
 }
+
+# Usage: path PATH
+# ----------------------------------------------------------------------
+# Print each component of PATH (default: PATH) on a separate line.
+function path() {
+    local var=PATH
+
+    if [ $# -gt 0 ]
+    then
+        var="$1"
+	shift
+    fi
+
+    echo -e "${!var//:/\\n}"
+}
+
